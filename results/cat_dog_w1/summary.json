@@ -1,0 +1,46 @@
+{
+  "args": {
+    "repo": "score_sde_pytorch",
+    "config": "vp/cifar10_ddpmpp_continuous",
+    "ckpt": "checkpoints/vp/cifar10_ddpmpp_continuous/checkpoint_8.pth",
+    "classifier": "checkpoints/cifar10_noisy_classifier.pt",
+    "mu": "cat",
+    "nu": "dog",
+    "guidance": 1.0,
+    "couplings": [
+      "reversed",
+      "same",
+      "antithetic",
+      "independent"
+    ],
+    "n": 16,
+    "batch": 8,
+    "steps": 500,
+    "seed": 0,
+    "clip": null,
+    "out": "results/cat_dog_w1"
+  },
+  "dim": 3072,
+  "D_mu_est": 10929.132642103552,
+  "D_nu_est": {
+    "reversed": 11280.657640340878,
+    "same": 10981.277646303315,
+    "antithetic": 11158.667515007222,
+    "independent": 11153.695330009708
+  },
+  "E|X-Y|^2": {
+    "reversed": 1238.4306640625,
+    "same": 51.571434020996094,
+    "antithetic": 3035.2939453125,
+    "independent": 1641.05859375
+  },
+  "E|X-Y|^2_stderr": {
+    "reversed": 164.1063690185547,
+    "same": 8.723461151123047,
+    "antithetic": 251.34286499023438,
+    "independent": 138.1280975341797
+  },
+  "empirical_OT(X, Y_independent)": 1002.7834817928042,
+  "mean_X": -0.0002641041355673224,
+  "mean_Y": -0.06281246989965439
+}
