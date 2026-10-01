@@ -82,6 +82,7 @@ class FollmerResult:
     energy: torch.Tensor             # ½ ∫ |v|² dt per sample  (estimates D(μ‖γ) in expectation)
     energy_no_last: torch.Tensor     # same, excluding the final (singular) step
     snapshots: dict = field(default_factory=dict)  # t -> x̂_1(X_t, t)
+    states: dict = field(default_factory=dict)     # t -> X_t (the raw state), at the same times
 
 
 @torch.no_grad()
@@ -97,14 +98,15 @@ def follmer_sample(denoiser, path, device, labels=None, snapshot_ts=(), clip=Non
     x = torch.zeros(shape, device=device)
     energy = torch.zeros(shape[0], dtype=torch.float64)  # on CPU: MPS has no float64
     energy_nl = torch.zeros_like(energy)
-    snaps, pending = {}, sorted(snapshot_ts)
+    snaps, states, pending = {}, {}, sorted(snapshot_ts)
     for k in range(path.N):
         t, dt = grid[k].item(), (grid[k + 1] - grid[k]).item()
         x1_hat = denoiser(x, t, labels)
         if clip is not None:
             x1_hat = x1_hat.clamp(-clip, clip)
         if pending and t >= pending[0]:
-            snaps[pending.pop(0)] = x1_hat.detach().cpu()
+            ts = pending.pop(0)
+            snaps[ts], states[ts] = x1_hat.detach().cpu(), x.detach().cpu()
         v = (x1_hat - x) / (1.0 - t)
         e = 0.5 * dt * v.flatten(1).pow(2).sum(1).cpu().double()
         energy += e
@@ -113,7 +115,7 @@ def follmer_sample(denoiser, path, device, labels=None, snapshot_ts=(), clip=Non
         x = x + v * dt + path.increment(k).to(device)
         if verbose and (k % max(1, path.N // 10) == 0):
             print(f"  step {k}/{path.N}  t={t:.4f}")
-    return FollmerResult(x.cpu(), energy, energy_nl, snaps)
+    return FollmerResult(x.cpu(), energy, energy_nl, snaps, states)
 
 
 class GaussianDenoiser:
