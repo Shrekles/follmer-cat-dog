@@ -1,0 +1,35 @@
+{
+  "args": {
+    "repo": "score_sde_pytorch",
+    "config": "vp/cifar10_ddpmpp_continuous",
+    "mu": "separate_models/checkpoints/cat.pth",
+    "nu": "separate_models/checkpoints/dog.pth",
+    "names": [
+      "cat",
+      "dog"
+    ],
+    "n": 16,
+    "batch": 8,
+    "steps": 400,
+    "frames": 80,
+    "seed": 0,
+    "out": "separate_models/results/pairs"
+  },
+  "dim": 3072,
+  "E|X-Y|^2": {
+    "reversed": 1106.55810546875,
+    "same": 129.34446716308594,
+    "antithetic": 3142.0927734375,
+    "independent": 1640.8917236328125
+  },
+  "stderr": {
+    "reversed": 173.72537231445312,
+    "same": 28.106800079345703,
+    "antithetic": 280.89984130859375,
+    "independent": 138.1673583984375
+  },
+  "empirical_OT(X, Y_independent)": 933.2006411367547,
+  "D_mu_est": 10684.458115859734,
+  "D_nu_est": 10741.95023071356,
+  "2D_mu+2D_nu": 42852.81669314659
+}

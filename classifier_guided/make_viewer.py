@@ -4,15 +4,19 @@ For each Brownian path B it shows three processes side by side as t goes from 0 
     cat driven by B   |   dog driven by the same B   |   dog driven by B̂_t = B_1 − B_{1−t}
 in two views: the model's current guess x̂_1(X_t, t), or the raw state X_t.
 
-    python make_viewer.py --ckpt checkpoints/vp/cifar10_ddpmpp_continuous/checkpoint_8.pth \
-        --classifier checkpoints/cifar10_noisy_classifier.pt          # samples, then writes the HTML
-    python make_viewer.py --html-only                                  # rebuild the HTML from saved frames
+    python classifier_guided/make_viewer.py --ckpt checkpoints/vp/cifar10_ddpmpp_continuous/checkpoint_8.pth \
+        --classifier classifier_guided/checkpoints/cifar10_noisy_classifier.pt          # samples, then writes the HTML
+    python classifier_guided/make_viewer.py --html-only                                  # rebuild the HTML from saved frames
 """
+import os
+import sys
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "common"))
+
 import argparse
 import base64
 import io
 import json
-import os
 import time
 
 import torch
@@ -66,8 +70,10 @@ def sprite(frames, centered):
     return "data:image/png;base64," + base64.b64encode(buf.getvalue()).decode()
 
 
-def build_html(args):
-    d = torch.load(f"{args.out}/frames.pt", weights_only=False)
+def build_html(out, runs=RUNS, note=None):
+    """Write {out}/viewer.html from {out}/frames.pt. `p_class` in frames.pt is optional."""
+    d = torch.load(f"{out}/frames.pt", weights_only=False)
+    pc = d.get("p_class")
     guess, state = d["guess"], d["state"]          # (F, 3, n, C, H, W)
     nF, _, n = guess.shape[:3]
     sq = lambda a, b: (a - b).flatten(1).pow(2).sum(1)
@@ -78,15 +84,18 @@ def build_html(args):
             "sprite": sprite(rows, d["centered"]),
             "same": [round(v, 1) for v in sq(guess[:, 0, i], guess[:, 1, i]).tolist()],
             "rev": [round(v, 1) for v in sq(guess[:, 0, i], guess[:, 2, i]).tolist()],
-            "p": [round(v, 2) for v in d["p_class"][:, i].tolist()],
+            "p": [round(v, 2) for v in pc[:, i].tolist()] if pc is not None else None,
         })
-    best = int(d["p_class"].min(0).values.argmax())
-    data = {"ts": d["ts"], "tile": guess.shape[-1], "runs": RUNS, "paths": paths, "best": best,
-            "w": d["w"], "steps": d["steps"]}
+    best = int(pc.min(0).values.argmax()) if pc is not None else -1
+    if note is None:
+        note = (f"{n} Brownian paths, {d['steps']} Euler steps, classifier guidance w = {d['w']:g}. "
+                "★ marks the path whose three final images the classifier rated most clearly cat / dog / dog. "
+                f"At w = {d['w']:g} the targets are sharpened versions of the CIFAR-10 cat and dog distributions.")
+    data = {"ts": d["ts"], "tile": guess.shape[-1], "runs": runs, "paths": paths, "best": best, "note": note}
     html = TEMPLATE.replace("__DATA__", json.dumps(data))
-    with open(f"{args.out}/viewer.html", "w") as f:
+    with open(f"{out}/viewer.html", "w") as f:
         f.write(html)
-    print(f"wrote {args.out}/viewer.html  ({len(html) / 1e6:.1f} MB, {n} paths × {nF} frames)")
+    print(f"wrote {out}/viewer.html  ({len(html) / 1e6:.1f} MB, {n} paths × {nF} frames)")
 
 
 TEMPLATE = r"""<!doctype html>
@@ -170,7 +179,7 @@ TEMPLATE = r"""<!doctype html>
 <script>
 const D = __DATA__;
 const F = D.ts.length, S = D.tile;
-let path = D.best, mode = 0, f = F - 1, timer = null;
+let path = Math.max(0, D.best), mode = 0, f = F - 1, timer = null;
 const $ = id => document.getElementById(id);
 const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
 
@@ -210,7 +219,7 @@ function sync() {
   [...$("paths").children].forEach((b, i) => b.setAttribute("aria-pressed", i === path));
   $("modes").querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", +b.dataset.m === mode));
   const p = D.paths[path].p;
-  probs.forEach((el, r) => el.textContent = `classifier on final image: ${Math.round(p[r] * 100)}% ${r === 0 ? "cat" : "dog"}`);
+  probs.forEach((el, r) => el.textContent = p ? `classifier on final image: ${Math.round(p[r] * 100)}% ${r === 0 ? "cat" : "dog"}` : "");
   draw();
 }
 
@@ -248,10 +257,7 @@ function chart() {
   g.beginPath(); g.moveTo(X(D.ts[f]), T); g.lineTo(X(D.ts[f]), H - Bm); g.stroke(); g.setLineDash([]);
 }
 
-$("note").innerHTML = `${D.paths.length} Brownian paths, ${D.steps} Euler steps, classifier guidance w = ${D.w}.
-  ★ marks the path whose three final images the classifier rated most clearly cat / dog / dog.
-  "Model's guess" is E[X<sub>1</sub> | X<sub>t</sub>]; "Raw state" is X<sub>t</sub> itself, which starts at 0 (grey) and is noisy until late.
-  At w = ${D.w} the targets are sharpened versions of the CIFAR-10 cat and dog distributions.`;
+$("note").innerHTML = D.note + ` "Model's guess" is E[X<sub>1</sub> | X<sub>t</sub>]; "Raw state" is X<sub>t</sub> itself, which starts at 0 (grey) and is noisy until late.`;
 window.addEventListener("resize", chart);
 window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", chart);
 sync();
@@ -272,13 +278,13 @@ def main():
     p.add_argument("--frames", type=int, default=80)
     p.add_argument("--steps", type=int, default=400)
     p.add_argument("--seed", type=int, default=2)
-    p.add_argument("--out", default="results/viewer")
+    p.add_argument("--out", default="classifier_guided/results/viewer")
     p.add_argument("--html-only", action="store_true", help="rebuild the HTML from saved frames.pt")
     args = p.parse_args()
     os.makedirs(args.out, exist_ok=True)
     if not args.html_only:
         sample(args)
-    build_html(args)
+    build_html(args.out)
 
 
 if __name__ == "__main__":

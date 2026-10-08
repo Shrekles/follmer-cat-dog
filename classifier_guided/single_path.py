@@ -10,11 +10,15 @@ figure is saved per path, and the path whose three endpoints the classifier find
 cat / dog / dog is also saved as `best.png`. That is a selection step, so the figure is
 illustrative, not a random draw.
 
-    python single_path.py --ckpt checkpoints/vp/cifar10_ddpmpp_continuous/checkpoint_8.pth \
-        --classifier checkpoints/cifar10_noisy_classifier.pt --w 6 --n 8 --steps 400
+    python classifier_guided/single_path.py --ckpt checkpoints/vp/cifar10_ddpmpp_continuous/checkpoint_8.pth \
+        --classifier classifier_guided/checkpoints/cifar10_noisy_classifier.pt --w 6 --n 8 --steps 400
 """
-import argparse
 import os
+import sys
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "common"))
+
+import argparse
 import time
 
 import torch
@@ -38,7 +42,7 @@ def main():
     p.add_argument("--n", type=int, default=8, help="candidate paths")
     p.add_argument("--steps", type=int, default=400)
     p.add_argument("--seed", type=int, default=2)
-    p.add_argument("--out", default="results/single_path")
+    p.add_argument("--out", default="classifier_guided/results/single_path")
     args = p.parse_args()
 
     device = get_device()

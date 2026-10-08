@@ -13,12 +13,16 @@ and we report E|X − Y|² for each coupling. We also report the path energies �
 All runs for one path go through the network in one batch: the score model is
 unconditional, and only the classifier-guidance term depends on the class.
 
-    python run_cat_dog.py --ckpt checkpoints/vp/cifar10_ddpmpp_continuous/checkpoint_8.pth \
-        --classifier checkpoints/cifar10_noisy_classifier.pt --n 16 --steps 1000
+    python classifier_guided/run_cat_dog.py --ckpt checkpoints/vp/cifar10_ddpmpp_continuous/checkpoint_8.pth \
+        --classifier classifier_guided/checkpoints/cifar10_noisy_classifier.pt --n 16 --steps 1000
 """
+import os
+import sys
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "common"))
+
 import argparse
 import json
-import os
 import time
 
 import torch
@@ -60,7 +64,7 @@ def main():
     p.add_argument("--steps", type=int, default=1000)
     p.add_argument("--seed", type=int, default=0)
     p.add_argument("--clip", type=float, default=None, help="clamp x̂_1 to [-clip, clip] (breaks exactness)")
-    p.add_argument("--out", default="results/cat_dog")
+    p.add_argument("--out", default="classifier_guided/results/cat_dog")
     args = p.parse_args()
 
     device = get_device()

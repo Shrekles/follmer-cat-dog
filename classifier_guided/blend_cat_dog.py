@@ -5,11 +5,15 @@ with class guidance  w · [(1−λ_j) ∇log p(cat|y) + λ_j ∇log p(dog|y)],  
 Because every column shares ω, the pose, layout and colours stay fixed while the class moves.
 The endpoints (λ = 0, 1) are the w-tilted cat and dog laws (exact conditionals only when w = 1).
 
-    python blend_cat_dog.py --ckpt checkpoints/vp/cifar10_ddpmpp_continuous/checkpoint_8.pth \
-        --classifier checkpoints/cifar10_noisy_classifier.pt --w 6 --n 8 --k 7 --steps 500
+    python classifier_guided/blend_cat_dog.py --ckpt checkpoints/vp/cifar10_ddpmpp_continuous/checkpoint_8.pth \
+        --classifier classifier_guided/checkpoints/cifar10_noisy_classifier.pt --w 6 --n 8 --k 7 --steps 500
 """
-import argparse
 import os
+import sys
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "common"))
+
+import argparse
 import time
 
 import torch
@@ -34,7 +38,7 @@ def main():
     p.add_argument("--k", type=int, default=7, help="blend steps per row (columns)")
     p.add_argument("--steps", type=int, default=500)
     p.add_argument("--seed", type=int, default=0)
-    p.add_argument("--out", default="results/blend")
+    p.add_argument("--out", default="classifier_guided/results/blend")
     args = p.parse_args()
 
     device = get_device()

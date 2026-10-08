@@ -4,13 +4,17 @@ It must be trained on all 10 classes with the *same* forward SDE and data scalin
 the score model, so that  ∇log p_s(y) + ∇log p_s(c|y) = ∇log p_s(y|c)  exactly.
 (A cat-vs-dog-only classifier would give the wrong Bayes posterior.)
 
-    python noisy_classifier.py --repo score_sde_pytorch --config vp/cifar10_ddpmpp_continuous \
-        --out checkpoints/cifar10_noisy_classifier.pt --epochs 30
+    python classifier_guided/noisy_classifier.py --repo score_sde_pytorch --config vp/cifar10_ddpmpp_continuous \
+        --out classifier_guided/checkpoints/cifar10_noisy_classifier.pt --epochs 30
 """
+import os
+import sys
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "common"))
+
 import argparse
 import importlib
 import math
-import os
 import time
 
 import torch
@@ -94,7 +98,7 @@ def main():
     p.add_argument("--repo", default="score_sde_pytorch")
     p.add_argument("--config", default="vp/cifar10_ddpmpp_continuous")
     p.add_argument("--data", default="data")
-    p.add_argument("--out", default="checkpoints/cifar10_noisy_classifier.pt")
+    p.add_argument("--out", default="classifier_guided/checkpoints/cifar10_noisy_classifier.pt")
     p.add_argument("--epochs", type=int, default=30)
     p.add_argument("--bs", type=int, default=128)
     p.add_argument("--lr", type=float, default=1e-3)

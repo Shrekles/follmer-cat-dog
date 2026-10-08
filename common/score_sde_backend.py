@@ -97,7 +97,15 @@ def build_sde(sde_lib, config):
 
 
 def load_score_model(repo, config_name, ckpt_path, device):
-    """config_name like 'vp/cifar10_ddpmpp_continuous'. Loads EMA weights."""
+    """config_name like 'vp/cifar10_ddpmpp_continuous'. Loads EMA weights. Returns a score function."""
+    config, sde, eps, model = load_model(repo, config_name, ckpt_path, device)
+    _, mutils = import_score_sde(repo)
+    score_fn = mutils.get_score_fn(sde, model, train=False, continuous=config.training.continuous)
+    return config, sde, eps, score_fn
+
+
+def load_model(repo, config_name, ckpt_path, device):
+    """Same, but returns the network itself (EMA weights loaded), e.g. for fine-tuning."""
     sde_lib, mutils = import_score_sde(repo)
     config = importlib.import_module("configs." + config_name.replace("/", ".")).get_config()
     config.device = device
@@ -113,8 +121,7 @@ def load_score_model(repo, config_name, ckpt_path, device):
         p.data.copy_(s.to(device))
     model.eval()
     sde, eps = build_sde(sde_lib, config)
-    score_fn = mutils.get_score_fn(sde, model, train=False, continuous=config.training.continuous)
-    return config, sde, eps, score_fn
+    return config, sde, eps, model
 
 
 class SNRMap:

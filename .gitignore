@@ -1,7 +1,9 @@
 __pycache__/
 .DS_Store
 .claude/
-data/
 logs/
-checkpoints/vp/
-results/**/*.pt
+*.nosync/
+/data
+/checkpoints
+separate_models/checkpoints
+**/results/**/*.pt
