@@ -13,6 +13,7 @@ path B̂_t = B₁ − B₁₋ₜ.
 | Folder | What |
 |---|---|
 | [`separate_models/`](separate_models) | **Experiment 2 (matches the math).** Two separate unconditional models, one trained only on cats and one only on dogs. No classifier. |
+| [`optimal_transport/`](optimal_transport) | **Experiment 3.** The optimal coupling between the two models: composed probability-flow ODEs (cat → noise → dog), a learned Brenier map, and a Gaussian check against the exact Brenier map. |
 | [`classifier_guided/`](classifier_guided) | **Experiment 1 (first proof of concept).** One all-class model, steered toward cat or dog by a classifier. Includes the blend images above and a time-slider viewer. |
 | [`common/`](common) | Shared code: the path-driven Föllmer sampler, the loader that turns a score_sde model into a Föllmer drift, the Gaussian check, the CIFAR-10 download. |
 | `score_sde_pytorch/` | Git submodule: [Yang Song's repo](https://github.com/yang-song/score_sde_pytorch), which provides the network architecture and the pretrained CIFAR-10 model. |

@@ -1,0 +1,45 @@
+{
+  "args": {
+    "repo": "score_sde_pytorch",
+    "config": "vp/cifar10_ddpmpp_continuous",
+    "cat": "separate_models/checkpoints/cat.pth",
+    "dog": "separate_models/checkpoints/dog.pth",
+    "n": 16,
+    "batch": 8,
+    "steps": 400,
+    "seed": 0,
+    "out": "separate_models/results/fwd_bwd"
+  },
+  "rows": [
+    "fwd cat",
+    "fwd dog",
+    "bwd cat",
+    "bwd dog"
+  ],
+  "E|X-Y|^2": {
+    "fwd cat | fwd dog": {
+      "mean": 129.34445190429688,
+      "stderr": 28.10678482055664
+    },
+    "fwd cat | bwd cat": {
+      "mean": 1022.7442626953125,
+      "stderr": 188.87330627441406
+    },
+    "fwd cat | bwd dog": {
+      "mean": 1106.5579833984375,
+      "stderr": 173.72535705566406
+    },
+    "fwd dog | bwd cat": {
+      "mean": 964.1239013671875,
+      "stderr": 182.01097106933594
+    },
+    "fwd dog | bwd dog": {
+      "mean": 1013.7344360351562,
+      "stderr": 164.04129028320312
+    },
+    "bwd cat | bwd dog": {
+      "mean": 145.74986267089844,
+      "stderr": 31.509286880493164
+    }
+  }
+}

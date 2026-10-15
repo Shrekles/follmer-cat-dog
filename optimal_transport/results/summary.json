@@ -1,0 +1,36 @@
+{
+  "exact OT, 5000 train cats vs 5000 train dogs": 591.9,
+  "exact OT, 1000 test cats vs 1000 test dogs": 660.4,
+  "cat_to_dog: composed flows": {
+    "mean": 101.6,
+    "stderr": 3.4
+  },
+  "cat_to_dog: learned Brenier map": {
+    "mean": 244.5,
+    "stderr": 5.4
+  },
+  "cat_to_dog: composed-flow cycle error": {
+    "mean": 0.0,
+    "stderr": 0.0
+  },
+  "dog_to_cat: composed flows": {
+    "mean": 104.7,
+    "stderr": 3.4
+  },
+  "dog_to_cat: learned Brenier map": {
+    "mean": 255.6,
+    "stderr": 5.2
+  },
+  "dog_to_cat: composed-flow cycle error": {
+    "mean": 0.0,
+    "stderr": 0.0
+  },
+  "model cat vs model dog, same noise": {
+    "mean": 87.9,
+    "stderr": 5.5
+  },
+  "train cats: learned map vs exact-OT partner": {
+    "mean": 406.7,
+    "stderr": 17.6
+  }
+}
