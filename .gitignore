@@ -7,3 +7,4 @@ logs/
 /checkpoints
 separate_models/checkpoints
 **/results/**/*.pt
+optimal_transport/iterations/iter_01_judge_and_eval/small.pt
