@@ -1,0 +1,155 @@
+{
+ "runs": {
+  "prior_cat_c3": {
+   "judge_cat": {
+    "rate": 0.806640625,
+    "stderr": 0.017453707023621787,
+    "mean_prob": 0.7953847646713257,
+    "n": 512
+   },
+   "judge_dog": {
+    "rate": 0.068359375,
+    "stderr": 0.011152911864873823,
+    "mean_prob": 0.0781249850988388,
+    "n": 512
+   },
+   "judge_target": {
+    "rate": 0.806640625,
+    "stderr": 0.017453707023621787,
+    "mean_prob": 0.7953847646713257,
+    "n": 512
+   },
+   "class_histogram": [
+    4,
+    1,
+    18,
+    413,
+    15,
+    35,
+    10,
+    3,
+    9,
+    4
+   ],
+   "kid_vs_all_test_target": {
+    "kid_x1e3": 5.202077983589959,
+    "se_x1e3": 0.7475608726963401,
+    "n_x": 512,
+    "n_y": 1000
+   },
+   "meta": {
+    "ckpt": "iter03/cat_c3.pth",
+    "seed": 0,
+    "steps": 200,
+    "eps": 0.001,
+    "n": 512
+   },
+   "target": "cat"
+  },
+  "dog_to_cat_iter03_c3": {
+   "cost": {
+    "mean": 113.57539851404727,
+    "stderr": 3.4558756564400706,
+    "n": 512
+   },
+   "judge_target_on_outputs": {
+    "rate": 0.76171875,
+    "stderr": 0.018828133864024755,
+    "mean_prob": 0.7528759241104126,
+    "n": 512
+   },
+   "judge_source_on_outputs": {
+    "rate": 0.123046875,
+    "stderr": 0.014517388654478613,
+    "mean_prob": 0.1274346560239792,
+    "n": 512
+   },
+   "judge_source_on_inputs": {
+    "rate": 0.884765625,
+    "stderr": 0.014111402042815701,
+    "mean_prob": 0.8771462440490723,
+    "n": 512
+   },
+   "judge_target_on_inputs": {
+    "rate": 0.07421875,
+    "stderr": 0.0115844662247249,
+    "mean_prob": 0.07631850987672806,
+    "n": 512
+   },
+   "output_class_histogram": [
+    14,
+    2,
+    12,
+    390,
+    10,
+    63,
+    8,
+    8,
+    4,
+    1
+   ],
+   "output_range": [
+    -1.1346355676651,
+    1.1858190298080444
+   ],
+   "frac_output_pixels_outside_[-1,1]": 0.00727081298828125,
+   "cost_clamped": {
+    "mean": 113.53538062609732,
+    "stderr": 3.4525685766286904,
+    "n": 512
+   },
+   "kid_vs_all_test_target": {
+    "kid_x1e3": 2.284293337246446,
+    "se_x1e3": 0.6200282368808985,
+    "n_x": 512,
+    "n_y": 1000
+   },
+   "meta": {
+    "k": 200,
+    "s": 1.0,
+    "w": 0.0,
+    "valid_coupling": true,
+    "note": "composed PF-ODE: latents encoded (iter02) by the unchanged source model, decoded by the iter03 CIFAR-refined target model",
+    "run": {
+     "direction": "dog_to_cat",
+     "n": 512,
+     "steps": 200,
+     "eps": 0.001,
+     "encoder": "out/dog.pth",
+     "latents": "/vol/iter02/latents_dog_to_cat.pt",
+     "tgt_ckpt": "iter03/cat_c3.pth",
+     "minutes": 5.007826089859009
+    },
+    "file": "/vol/iter03/transport_dog_to_cat_iter03_c3.pt"
+   }
+  }
+ },
+ "kid_refs": {},
+ "ceilings": {
+  "all_test_cat": {
+   "rate": 0.851,
+   "stderr": 0.011260506205317771,
+   "mean_prob": 0.8410322070121765,
+   "n": 1000
+  },
+  "first512_test_cat": {
+   "rate": 0.853515625,
+   "stderr": 0.01562666884093275,
+   "mean_prob": 0.848031222820282,
+   "n": 512
+  },
+  "all_test_dog": {
+   "rate": 0.877,
+   "stderr": 0.010386096475577337,
+   "mean_prob": 0.8709170818328857,
+   "n": 1000
+  },
+  "first512_test_dog": {
+   "rate": 0.884765625,
+   "stderr": 0.014111402042815701,
+   "mean_prob": 0.8771462440490723,
+   "n": 512
+  }
+ },
+ "minutes": 0.10170282125473022
+}

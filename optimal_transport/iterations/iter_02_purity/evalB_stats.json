@@ -1,0 +1,156 @@
+{
+ "runs": {
+  "prior_dog_cinic": {
+   "judge_cat": {
+    "rate": 0.185546875,
+    "stderr": 0.017180068403447567,
+    "mean_prob": 0.18833045661449432,
+    "n": 512
+   },
+   "judge_dog": {
+    "rate": 0.560546875,
+    "stderr": 0.021934476106038096,
+    "mean_prob": 0.5500362515449524,
+    "n": 512
+   },
+   "judge_target": {
+    "rate": 0.560546875,
+    "stderr": 0.021934476106038096,
+    "mean_prob": 0.5500362515449524,
+    "n": 512
+   },
+   "class_histogram": [
+    12,
+    1,
+    23,
+    95,
+    41,
+    287,
+    14,
+    22,
+    10,
+    7
+   ],
+   "kid_vs_all_test_target": {
+    "kid_x1e3": 8.0774218891011,
+    "se_x1e3": 1.2140256585553288,
+    "n_x": 512,
+    "n_y": 1000
+   },
+   "meta": {
+    "ckpt": "iter02/dog_cinic.pth",
+    "seed": 0,
+    "steps": 200,
+    "eps": 0.001,
+    "n": 512
+   },
+   "target": "dog"
+  },
+  "cat_to_dog_cinic_w0": {
+   "cost": {
+    "mean": 95.65541204251349,
+    "stderr": 3.3362594616687753,
+    "n": 512
+   },
+   "judge_target_on_outputs": {
+    "rate": 0.47265625,
+    "stderr": 0.0220640190401251,
+    "mean_prob": 0.45849528908729553,
+    "n": 512
+   },
+   "judge_source_on_outputs": {
+    "rate": 0.21875,
+    "stderr": 0.018269811458857137,
+    "mean_prob": 0.22619067132472992,
+    "n": 512
+   },
+   "judge_source_on_inputs": {
+    "rate": 0.853515625,
+    "stderr": 0.01562666884093275,
+    "mean_prob": 0.848031222820282,
+    "n": 512
+   },
+   "judge_target_on_inputs": {
+    "rate": 0.07421875,
+    "stderr": 0.0115844662247249,
+    "mean_prob": 0.07210630923509598,
+    "n": 512
+   },
+   "output_class_histogram": [
+    27,
+    10,
+    33,
+    112,
+    26,
+    242,
+    10,
+    39,
+    4,
+    9
+   ],
+   "output_range": [
+    -1.3748587369918823,
+    1.3282108306884766
+   ],
+   "frac_output_pixels_outside_[-1,1]": 0.019213994964957237,
+   "cost_clamped": {
+    "mean": 95.4386652763933,
+    "stderr": 3.3185278326182774,
+    "n": 512
+   },
+   "kid_vs_all_test_target": {
+    "kid_x1e3": 14.258523994346906,
+    "se_x1e3": 1.7562609864398837,
+    "n_x": 512,
+    "n_y": 1000
+   },
+   "meta": {
+    "k": 200,
+    "s": 1.0,
+    "w": 0.0,
+    "valid_coupling": true,
+    "note": "composed PF-ODE (encode source model, decode target model): valid coupling up to model/ODE error",
+    "run": {
+     "direction": "cat_to_dog",
+     "n": 512,
+     "steps": 200,
+     "eps": 0.001,
+     "w": 0.0,
+     "encoder": "out/cat.pth",
+     "src_ckpt": "out/cat.pth",
+     "tgt_ckpt": "iter02/dog_cinic.pth",
+     "minutes": 4.969830032189687
+    },
+    "file": "/vol/iter02/transport_cat_to_dog_cinic_w0.pt"
+   }
+  }
+ },
+ "kid_refs": {},
+ "ceilings": {
+  "all_test_cat": {
+   "rate": 0.851,
+   "stderr": 0.011260506205317771,
+   "mean_prob": 0.8410322070121765,
+   "n": 1000
+  },
+  "first512_test_cat": {
+   "rate": 0.853515625,
+   "stderr": 0.01562666884093275,
+   "mean_prob": 0.848031222820282,
+   "n": 512
+  },
+  "all_test_dog": {
+   "rate": 0.877,
+   "stderr": 0.010386096475577337,
+   "mean_prob": 0.8709170818328857,
+   "n": 1000
+  },
+  "first512_test_dog": {
+   "rate": 0.884765625,
+   "stderr": 0.014111402042815701,
+   "mean_prob": 0.8771462440490723,
+   "n": 512
+  }
+ },
+ "minutes": 0.09324620167414348
+}

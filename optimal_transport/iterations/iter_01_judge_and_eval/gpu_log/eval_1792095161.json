@@ -1,0 +1,10 @@
+{
+ "container_minutes": 0.12838903268178303,
+ "results": [
+  {
+   "task": "judge_eval",
+   "minutes": 0.0843953291575114
+  }
+ ],
+ "client_wall_minutes": 0.3449295481046041
+}

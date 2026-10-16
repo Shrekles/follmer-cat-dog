@@ -1,0 +1,26 @@
+{
+ "test_first512": {
+  "median": 408.4625244140625,
+  "mean": 442.702880859375,
+  "q05": 176.8557891845703
+ },
+ "sets": {
+  "prior_cat_c3": {
+   "median": 407.8817138671875,
+   "mean": 428.8639221191406,
+   "q05": 216.68162536621094,
+   "ratio_to_test_median": 0.9985780715942383,
+   "frac_below_10pct_test_median": 0.0,
+   "memorisation_flag": false
+  },
+  "prior_cat_old": {
+   "median": 406.363037109375,
+   "mean": 424.4746398925781,
+   "q05": 209.99142456054688,
+   "ratio_to_test_median": 0.994860053062439,
+   "frac_below_10pct_test_median": 0.0,
+   "memorisation_flag": false
+  }
+ },
+ "minutes": 0.012272004286448162
+}

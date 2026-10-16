@@ -1,0 +1,607 @@
+{
+ "judge": {
+  "arch": "ResNet-18 (CIFAR variant), trained from scratch on CIFAR-10 train split only",
+  "epochs": 1,
+  "batch": 512,
+  "max_lr": 0.2,
+  "wd": 0.0005,
+  "n_train": 2048,
+  "test_acc": 0.10350000113248825,
+  "test_per_class_acc": {
+   "airplane": 0.9959999918937683,
+   "automobile": 0.0,
+   "bird": 0.017999999225139618,
+   "cat": 0.0,
+   "deer": 0.020999999716877937,
+   "dog": 0.0,
+   "frog": 0.0,
+   "horse": 0.0,
+   "ship": 0.0,
+   "truck": 0.0
+  },
+  "test_cat_called_cat": 0.0,
+  "test_dog_called_dog": 0.0,
+  "test_cat_pred_hist": [
+   992,
+   0,
+   5,
+   0,
+   3,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "test_dog_pred_hist": [
+   994,
+   0,
+   5,
+   0,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "test_mean_prob_cat_on_cats": 0.004786278586834669,
+  "test_mean_prob_dog_on_dogs": 0.0028050614055246115,
+  "train_minutes": 0.09155271848042806,
+  "recheck_all_test_cat": {
+   "rate": 0.0,
+   "stderr": 0.0,
+   "mean_prob": 0.004786278121173382,
+   "n": 1000
+  },
+  "recheck_all_test_dog": {
+   "rate": 0.0,
+   "stderr": 0.0,
+   "mean_prob": 0.0028050614055246115,
+   "n": 1000
+  }
+ },
+ "directions": {
+  "cat_to_dog": {
+   "s0.4": {
+    "cost": {
+     "mean": 63.28697109222412,
+     "stderr": 4.5245162429087795,
+     "n": 4
+    },
+    "judge_target_on_outputs": {
+     "rate": 0.0,
+     "stderr": 0.0,
+     "mean_prob": 0.00038971222238615155,
+     "n": 4
+    },
+    "judge_source_on_outputs": {
+     "rate": 0.0,
+     "stderr": 0.0,
+     "mean_prob": 0.0004928353591822088,
+     "n": 4
+    },
+    "judge_source_on_inputs": {
+     "rate": 0.0,
+     "stderr": 0.0,
+     "mean_prob": 0.001199705759063363,
+     "n": 4
+    },
+    "judge_target_on_inputs": {
+     "rate": 0.0,
+     "stderr": 0.0,
+     "mean_prob": 0.0009730134624987841,
+     "n": 4
+    },
+    "output_class_histogram": [
+     4,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "output_range": [
+     -1.4218218326568604,
+     1.4044287204742432
+    ],
+    "frac_output_pixels_outside_[-1,1]": 0.012044270522892475,
+    "meta": {
+     "k": 4,
+     "s": 0.4006,
+     "encode_steps": 4,
+     "decode_steps": 4,
+     "signal_coef_alpha": 0.4411281787523373,
+     "noise_std": 0.897444109630592,
+     "valid_coupling": false,
+     "file": "smoke_transport_cat_to_dog_B.pt",
+     "run": {
+      "direction": "cat_to_dog",
+      "n": 4,
+      "steps": 10,
+      "eps": 0.001,
+      "cat_ckpt": "out/cat.pth",
+      "dog_ckpt": "out/dog.pth",
+      "minutes": 0.09112130800882975
+     }
+    }
+   },
+   "s0.6": {
+    "cost": {
+     "mean": 73.59646701812744,
+     "stderr": 4.586958933339616,
+     "n": 4
+    },
+    "judge_target_on_outputs": {
+     "rate": 0.0,
+     "stderr": 0.0,
+     "mean_prob": 0.00014543323777616024,
+     "n": 4
+    },
+    "judge_source_on_outputs": {
+     "rate": 0.0,
+     "stderr": 0.0,
+     "mean_prob": 0.00018908429774455726,
+     "n": 4
+    },
+    "judge_source_on_inputs": {
+     "rate": 0.0,
+     "stderr": 0.0,
+     "mean_prob": 0.001199705759063363,
+     "n": 4
+    },
+    "judge_target_on_inputs": {
+     "rate": 0.0,
+     "stderr": 0.0,
+     "mean_prob": 0.0009730134624987841,
+     "n": 4
+    },
+    "output_class_histogram": [
+     4,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "output_range": [
+     -1.444192886352539,
+     1.3908360004425049
+    ],
+    "frac_output_pixels_outside_[-1,1]": 0.012369791977107525,
+    "meta": {
+     "k": 6,
+     "s": 0.6003999999999999,
+     "encode_steps": 6,
+     "decode_steps": 6,
+     "signal_coef_alpha": 0.16147437849419105,
+     "noise_std": 0.9868769047302276,
+     "valid_coupling": false,
+     "file": "smoke_transport_cat_to_dog_B.pt",
+     "run": {
+      "direction": "cat_to_dog",
+      "n": 4,
+      "steps": 10,
+      "eps": 0.001,
+      "cat_ckpt": "out/cat.pth",
+      "dog_ckpt": "out/dog.pth",
+      "minutes": 0.09112130800882975
+     }
+    }
+   },
+   "s0.8": {
+    "cost": {
+     "mean": 90.1599349975586,
+     "stderr": 10.729632793374696,
+     "n": 4
+    },
+    "judge_target_on_outputs": {
+     "rate": 0.0,
+     "stderr": 0.0,
+     "mean_prob": 7.527028355980292e-05,
+     "n": 4
+    },
+    "judge_source_on_outputs": {
+     "rate": 0.0,
+     "stderr": 0.0,
+     "mean_prob": 0.00010039449261967093,
+     "n": 4
+    },
+    "judge_source_on_inputs": {
+     "rate": 0.0,
+     "stderr": 0.0,
+     "mean_prob": 0.001199705759063363,
+     "n": 4
+    },
+    "judge_target_on_inputs": {
+     "rate": 0.0,
+     "stderr": 0.0,
+     "mean_prob": 0.0009730134624987841,
+     "n": 4
+    },
+    "output_class_histogram": [
+     4,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "output_range": [
+     -1.4241290092468262,
+     1.349290370941162
+    ],
+    "frac_output_pixels_outside_[-1,1]": 0.011800129897892475,
+    "meta": {
+     "k": 8,
+     "s": 0.8002,
+     "encode_steps": 8,
+     "decode_steps": 8,
+     "signal_coef_alpha": 0.039731847891455674,
+     "noise_std": 0.999210378380414,
+     "valid_coupling": false,
+     "file": "smoke_transport_cat_to_dog_B.pt",
+     "run": {
+      "direction": "cat_to_dog",
+      "n": 4,
+      "steps": 10,
+      "eps": 0.001,
+      "cat_ckpt": "out/cat.pth",
+      "dog_ckpt": "out/dog.pth",
+      "minutes": 0.09112130800882975
+     }
+    }
+   },
+   "s1.0": {
+    "cost": {
+     "mean": 98.47955894470215,
+     "stderr": 12.794190755013128,
+     "n": 4
+    },
+    "judge_target_on_outputs": {
+     "rate": 0.0,
+     "stderr": 0.0,
+     "mean_prob": 5.0572904001455754e-05,
+     "n": 4
+    },
+    "judge_source_on_outputs": {
+     "rate": 0.0,
+     "stderr": 0.0,
+     "mean_prob": 6.853198283351958e-05,
+     "n": 4
+    },
+    "judge_source_on_inputs": {
+     "rate": 0.0,
+     "stderr": 0.0,
+     "mean_prob": 0.001199705759063363,
+     "n": 4
+    },
+    "judge_target_on_inputs": {
+     "rate": 0.0,
+     "stderr": 0.0,
+     "mean_prob": 0.0009730134624987841,
+     "n": 4
+    },
+    "output_class_histogram": [
+     4,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "output_range": [
+     -1.3899257183074951,
+     1.3418484926223755
+    ],
+    "frac_output_pixels_outside_[-1,1]": 0.011067708022892475,
+    "meta": {
+     "k": 10,
+     "s": 1.0,
+     "encode_steps": 10,
+     "decode_steps": 10,
+     "signal_coef_alpha": 0.006571586494929619,
+     "noise_std": 0.9999784068923386,
+     "valid_coupling": true,
+     "file": "smoke_transport_cat_to_dog_B.pt",
+     "run": {
+      "direction": "cat_to_dog",
+      "n": 4,
+      "steps": 10,
+      "eps": 0.001,
+      "cat_ckpt": "out/cat.pth",
+      "dog_ckpt": "out/dog.pth",
+      "minutes": 0.09112130800882975
+     }
+    }
+   }
+  },
+  "dog_to_cat": {
+   "s0.4": {
+    "cost": {
+     "mean": 54.43581295013428,
+     "stderr": 3.017993246198368,
+     "n": 4
+    },
+    "judge_target_on_outputs": {
+     "rate": 0.0,
+     "stderr": 0.0,
+     "mean_prob": 0.0018881980795413256,
+     "n": 4
+    },
+    "judge_source_on_outputs": {
+     "rate": 0.0,
+     "stderr": 0.0,
+     "mean_prob": 0.0016063349321484566,
+     "n": 4
+    },
+    "judge_source_on_inputs": {
+     "rate": 0.0,
+     "stderr": 0.0,
+     "mean_prob": 0.0006960436585359275,
+     "n": 4
+    },
+    "judge_target_on_inputs": {
+     "rate": 0.0,
+     "stderr": 0.0,
+     "mean_prob": 0.0008495125803165138,
+     "n": 4
+    },
+    "output_class_histogram": [
+     4,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "output_range": [
+     -1.5016810894012451,
+     1.349886178970337
+    ],
+    "frac_output_pixels_outside_[-1,1]": 0.014811198227107525,
+    "meta": {
+     "k": 4,
+     "s": 0.4006,
+     "encode_steps": 4,
+     "decode_steps": 4,
+     "signal_coef_alpha": 0.4411281787523373,
+     "noise_std": 0.897444109630592,
+     "valid_coupling": false,
+     "file": "smoke_transport_dog_to_cat_A.pt",
+     "run": {
+      "direction": "dog_to_cat",
+      "n": 4,
+      "steps": 10,
+      "eps": 0.001,
+      "cat_ckpt": "out/cat.pth",
+      "dog_ckpt": "out/dog.pth",
+      "minutes": 0.05316389799118042
+     }
+    }
+   },
+   "s0.6": {
+    "cost": {
+     "mean": 79.65383338928223,
+     "stderr": 7.252686739529176,
+     "n": 4
+    },
+    "judge_target_on_outputs": {
+     "rate": 0.0,
+     "stderr": 0.0,
+     "mean_prob": 0.006459975615143776,
+     "n": 4
+    },
+    "judge_source_on_outputs": {
+     "rate": 0.0,
+     "stderr": 0.0,
+     "mean_prob": 0.0057555572129786015,
+     "n": 4
+    },
+    "judge_source_on_inputs": {
+     "rate": 0.0,
+     "stderr": 0.0,
+     "mean_prob": 0.0006960436585359275,
+     "n": 4
+    },
+    "judge_target_on_inputs": {
+     "rate": 0.0,
+     "stderr": 0.0,
+     "mean_prob": 0.0008495125803165138,
+     "n": 4
+    },
+    "output_class_histogram": [
+     4,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "output_range": [
+     -1.5088685750961304,
+     1.2553945779800415
+    ],
+    "frac_output_pixels_outside_[-1,1]": 0.01888020895421505,
+    "meta": {
+     "k": 6,
+     "s": 0.6003999999999999,
+     "encode_steps": 6,
+     "decode_steps": 6,
+     "signal_coef_alpha": 0.16147437849419105,
+     "noise_std": 0.9868769047302276,
+     "valid_coupling": false,
+     "file": "smoke_transport_dog_to_cat_B.pt",
+     "run": {
+      "direction": "dog_to_cat",
+      "n": 4,
+      "steps": 10,
+      "eps": 0.001,
+      "cat_ckpt": "out/cat.pth",
+      "dog_ckpt": "out/dog.pth",
+      "minutes": 0.051244926452636716
+     }
+    }
+   },
+   "s0.8": {
+    "cost": {
+     "mean": 91.2162971496582,
+     "stderr": 8.167179666845568,
+     "n": 4
+    },
+    "judge_target_on_outputs": {
+     "rate": 0.0,
+     "stderr": 0.0,
+     "mean_prob": 0.009275801479816437,
+     "n": 4
+    },
+    "judge_source_on_outputs": {
+     "rate": 0.0,
+     "stderr": 0.0,
+     "mean_prob": 0.008327770978212357,
+     "n": 4
+    },
+    "judge_source_on_inputs": {
+     "rate": 0.0,
+     "stderr": 0.0,
+     "mean_prob": 0.0006960436585359275,
+     "n": 4
+    },
+    "judge_target_on_inputs": {
+     "rate": 0.0,
+     "stderr": 0.0,
+     "mean_prob": 0.0008495125803165138,
+     "n": 4
+    },
+    "output_class_histogram": [
+     4,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "output_range": [
+     -1.5267300605773926,
+     1.206434965133667
+    ],
+    "frac_output_pixels_outside_[-1,1]": 0.01871744729578495,
+    "meta": {
+     "k": 8,
+     "s": 0.8002,
+     "encode_steps": 8,
+     "decode_steps": 8,
+     "signal_coef_alpha": 0.039731847891455674,
+     "noise_std": 0.999210378380414,
+     "valid_coupling": false,
+     "file": "smoke_transport_dog_to_cat_B.pt",
+     "run": {
+      "direction": "dog_to_cat",
+      "n": 4,
+      "steps": 10,
+      "eps": 0.001,
+      "cat_ckpt": "out/cat.pth",
+      "dog_ckpt": "out/dog.pth",
+      "minutes": 0.051244926452636716
+     }
+    }
+   },
+   "s1.0": {
+    "cost": {
+     "mean": 97.8371524810791,
+     "stderr": 8.416036272126778,
+     "n": 4
+    },
+    "judge_target_on_outputs": {
+     "rate": 0.0,
+     "stderr": 0.0,
+     "mean_prob": 0.010350631549954414,
+     "n": 4
+    },
+    "judge_source_on_outputs": {
+     "rate": 0.0,
+     "stderr": 0.0,
+     "mean_prob": 0.009331508539617062,
+     "n": 4
+    },
+    "judge_source_on_inputs": {
+     "rate": 0.0,
+     "stderr": 0.0,
+     "mean_prob": 0.0006960436585359275,
+     "n": 4
+    },
+    "judge_target_on_inputs": {
+     "rate": 0.0,
+     "stderr": 0.0,
+     "mean_prob": 0.0008495125803165138,
+     "n": 4
+    },
+    "output_class_histogram": [
+     4,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "output_range": [
+     -1.524125099182129,
+     1.2114455699920654
+    ],
+    "frac_output_pixels_outside_[-1,1]": 0.01871744729578495,
+    "meta": {
+     "k": 10,
+     "s": 1.0,
+     "encode_steps": 10,
+     "decode_steps": 10,
+     "signal_coef_alpha": 0.006571586494929619,
+     "noise_std": 0.9999784068923386,
+     "valid_coupling": true,
+     "file": "smoke_transport_dog_to_cat_A.pt",
+     "run": {
+      "direction": "dog_to_cat",
+      "n": 4,
+      "steps": 10,
+      "eps": 0.001,
+      "cat_ckpt": "out/cat.pth",
+      "dog_ckpt": "out/dog.pth",
+      "minutes": 0.05316389799118042
+     }
+    }
+   }
+  }
+ },
+ "judge_eval_minutes": 0.0064728101094563804
+}

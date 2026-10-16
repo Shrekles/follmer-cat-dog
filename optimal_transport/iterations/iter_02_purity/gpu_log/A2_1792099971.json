@@ -1,0 +1,30 @@
+{
+ "container_minutes": 39.378468894958495,
+ "results": [
+  {
+   "task": "encode_latents cat_to_dog",
+   "minutes": 4.836271425088246
+  },
+  {
+   "task": "guided_decode cat_to_dog w0.5",
+   "minutes": 9.709072522322337
+  },
+  {
+   "task": "guided_decode cat_to_dog w1.5",
+   "minutes": 9.708805882930756
+  },
+  {
+   "task": "encode_latents dog_to_cat",
+   "minutes": 4.854006008307139
+  },
+  {
+   "task": "guided_decode dog_to_cat w1.0",
+   "minutes": 9.708282136917115
+  },
+  {
+   "task": "eval_runs evalA",
+   "minutes": 0.28776410420735676
+  }
+ ],
+ "client_wall_minutes": 39.471816996733345
+}

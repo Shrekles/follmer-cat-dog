@@ -1,0 +1,76 @@
+{
+ "container_minutes": 0.43025951385498046,
+ "results": [
+  {
+   "task": "train_judge",
+   "minutes": 0.09357052644093831,
+   "meta": {
+    "arch": "ResNet-18 (CIFAR variant), trained from scratch on CIFAR-10 train split only",
+    "epochs": 1,
+    "batch": 512,
+    "max_lr": 0.2,
+    "wd": 0.0005,
+    "n_train": 2048,
+    "test_acc": 0.10350000113248825,
+    "test_per_class_acc": {
+     "airplane": 0.9959999918937683,
+     "automobile": 0.0,
+     "bird": 0.017999999225139618,
+     "cat": 0.0,
+     "deer": 0.020999999716877937,
+     "dog": 0.0,
+     "frog": 0.0,
+     "horse": 0.0,
+     "ship": 0.0,
+     "truck": 0.0
+    },
+    "test_cat_called_cat": 0.0,
+    "test_dog_called_dog": 0.0,
+    "test_cat_pred_hist": [
+     992,
+     0,
+     5,
+     0,
+     3,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "test_dog_pred_hist": [
+     994,
+     0,
+     5,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "test_mean_prob_cat_on_cats": 0.004786278586834669,
+    "test_mean_prob_dog_on_dogs": 0.0028050614055246115,
+    "train_minutes": 0.09155271848042806
+   }
+  },
+  {
+   "task": "transport_pf cat_to_dog [4, 6, 8, 10]",
+   "minutes": 0.09119451443354289
+  },
+  {
+   "task": "transport_pf dog_to_cat [4, 10]",
+   "minutes": 0.05321931838989258
+  },
+  {
+   "task": "transport_pf dog_to_cat [6, 8]",
+   "minutes": 0.05129762093226115
+  },
+  {
+   "task": "judge_eval",
+   "minutes": 0.00664748748143514
+  }
+ ],
+ "client_wall_minutes": 0.5387728015581766
+}

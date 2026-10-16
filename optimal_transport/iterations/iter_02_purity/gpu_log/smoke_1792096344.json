@@ -1,0 +1,59 @@
+{
+ "container_minutes": 1.000182557106018,
+ "results": [
+  {
+   "task": "prior_samples ['cat', 'dog']",
+   "minutes": 0.08257710536321004
+  },
+  {
+   "task": "encode_latents cat_to_dog",
+   "minutes": 0.028342556953430176
+  },
+  {
+   "task": "guided_decode cat_to_dog w0.5",
+   "minutes": 0.050140245755513506
+  },
+  {
+   "task": "chain_b",
+   "sub": [
+    {
+     "task": "build_cinic smoke",
+     "ok": true,
+     "info": {
+      "status": 200,
+      "content_length": "4264",
+      "url": "https://datashare.ed.ac.uk/bitstream/handle/10283/3192/CINIC-10.tar.gz"
+     },
+     "minutes": 0.008317601680755616
+    },
+    {
+     "task": "finetune_dog_cinic",
+     "steps": 20,
+     "images_seen": 2560,
+     "accum": 1,
+     "loss_log": [],
+     "peak_mem_gb": 10.160150527954102,
+     "minutes": 0.22368560234705606
+    },
+    {
+     "task": "prior_samples ['dog_cinic']",
+     "minutes": 0.029659942785898844
+    },
+    {
+     "task": "guided_decode cat_to_dog cinic_w0",
+     "minutes": 0.030728224913279215
+    },
+    {
+     "task": "eval_runs smoke_evalB",
+     "minutes": 0.09416794379552205
+    }
+   ],
+   "minutes": 0.5686500986417135
+  },
+  {
+   "task": "eval_runs smoke_evalA",
+   "minutes": 0.09258794784545898
+  }
+ ],
+ "client_wall_minutes": 1.35581978559494
+}

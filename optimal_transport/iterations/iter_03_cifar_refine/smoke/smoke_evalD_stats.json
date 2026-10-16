@@ -1,0 +1,201 @@
+{
+ "runs": {
+  "prior_dog_c3": {
+   "judge_cat": {
+    "rate": 0.0,
+    "stderr": 0.0,
+    "mean_prob": 0.06070612370967865,
+    "n": 4
+   },
+   "judge_dog": {
+    "rate": 0.5,
+    "stderr": 0.25,
+    "mean_prob": 0.41881340742111206,
+    "n": 4
+   },
+   "judge_target": {
+    "rate": 0.5,
+    "stderr": 0.25,
+    "mean_prob": 0.41881340742111206,
+    "n": 4
+   },
+   "class_histogram": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    2,
+    0,
+    0,
+    0
+   ],
+   "kid_vs_all_test_target": {
+    "kid_x1e3": 80.55460220129262,
+    "se_x1e3": 14.899224042892456,
+    "n_x": 4,
+    "n_y": 1000
+   },
+   "meta": {
+    "ckpt": "iter03/smoke_dog_c3.pth",
+    "seed": 0,
+    "steps": 10,
+    "eps": 0.001,
+    "n": 4
+   },
+   "target": "dog"
+  },
+  "cat_to_dog_iter03_c3": {
+   "cost": {
+    "mean": 99.17596817016602,
+    "stderr": 12.981796294518892,
+    "n": 4
+   },
+   "judge_target_on_outputs": {
+    "rate": 0.0,
+    "stderr": 0.0,
+    "mean_prob": 0.003509711939841509,
+    "n": 4
+   },
+   "judge_source_on_outputs": {
+    "rate": 0.0,
+    "stderr": 0.0,
+    "mean_prob": 0.015773238614201546,
+    "n": 4
+   },
+   "judge_source_on_inputs": {
+    "rate": 1.0,
+    "stderr": 0.0,
+    "mean_prob": 0.9993503093719482,
+    "n": 4
+   },
+   "judge_target_on_inputs": {
+    "rate": 0.0,
+    "stderr": 0.0,
+    "mean_prob": 0.0005844515981152654,
+    "n": 4
+   },
+   "output_class_histogram": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    3,
+    0,
+    0,
+    0
+   ],
+   "output_range": [
+    -1.3037968873977661,
+    1.5988969802856445
+   ],
+   "frac_output_pixels_outside_[-1,1]": 0.013020833022892475,
+   "cost_clamped": {
+    "mean": 97.84766387939453,
+    "stderr": 13.409283045533755,
+    "n": 4
+   },
+   "kid_vs_all_test_target": {
+    "kid_x1e3": 166.09335620442954,
+    "se_x1e3": 11.647787876427174,
+    "n_x": 4,
+    "n_y": 1000
+   },
+   "meta": {
+    "k": 10,
+    "s": 1.0,
+    "w": 0.0,
+    "valid_coupling": true,
+    "note": "composed PF-ODE: latents encoded (iter02) by the unchanged source model, decoded by the iter03 CIFAR-refined target model",
+    "run": {
+     "direction": "cat_to_dog",
+     "n": 4,
+     "steps": 10,
+     "eps": 0.001,
+     "encoder": "out/cat.pth",
+     "latents": "/vol/iter02/latents_cat_to_dog.pt",
+     "tgt_ckpt": "iter03/smoke_dog_c3.pth",
+     "minutes": 0.023136643568674724
+    },
+    "file": "/vol/iter03/smoke_transport_cat_to_dog_iter03_c3.pt"
+   }
+  },
+  "prior_dog_c3_mid": {
+   "judge_cat": {
+    "rate": 0.0,
+    "stderr": 0.0,
+    "mean_prob": 0.06070612370967865,
+    "n": 4
+   },
+   "judge_dog": {
+    "rate": 0.5,
+    "stderr": 0.25,
+    "mean_prob": 0.41881340742111206,
+    "n": 4
+   },
+   "judge_target": {
+    "rate": 0.5,
+    "stderr": 0.25,
+    "mean_prob": 0.41881340742111206,
+    "n": 4
+   },
+   "class_histogram": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    2,
+    0,
+    0,
+    0
+   ],
+   "kid_vs_all_test_target": {
+    "kid_x1e3": 80.55460220129262,
+    "se_x1e3": 14.899224042892456,
+    "n_x": 4,
+    "n_y": 1000
+   },
+   "meta": {
+    "ckpt": "iter03/smoke_dog_c3_mid.pth",
+    "seed": 0,
+    "steps": 10,
+    "eps": 0.001,
+    "n": 4
+   },
+   "target": "dog"
+  }
+ },
+ "kid_refs": {},
+ "ceilings": {
+  "all_test_cat": {
+   "rate": 0.851,
+   "stderr": 0.011260506205317771,
+   "mean_prob": 0.8410322070121765,
+   "n": 1000
+  },
+  "first512_test_cat": {
+   "rate": 0.853515625,
+   "stderr": 0.01562666884093275,
+   "mean_prob": 0.848031222820282,
+   "n": 512
+  },
+  "all_test_dog": {
+   "rate": 0.877,
+   "stderr": 0.010386096475577337,
+   "mean_prob": 0.8709170818328857,
+   "n": 1000
+  },
+  "first512_test_dog": {
+   "rate": 0.884765625,
+   "stderr": 0.014111402042815701,
+   "mean_prob": 0.8771462440490723,
+   "n": 512
+  }
+ },
+ "minutes": 0.07955600023269653
+}

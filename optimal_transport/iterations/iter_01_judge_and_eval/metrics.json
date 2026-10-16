@@ -1,0 +1,371 @@
+{
+ "judge": {
+  "arch": "ResNet-18 (CIFAR variant), trained from scratch on CIFAR-10 train split only",
+  "epochs": 30,
+  "test_acc": 0.9294999837875366,
+  "test_cat_called_cat": 0.8510000109672546,
+  "test_dog_called_dog": 0.8769999742507935,
+  "test_mean_prob_cat_on_cats": 0.8410322666168213,
+  "test_mean_prob_dog_on_dogs": 0.8709169626235962,
+  "test_per_class_acc": {
+   "airplane": 0.9399999976158142,
+   "automobile": 0.972000002861023,
+   "bird": 0.9129999876022339,
+   "cat": 0.8510000109672546,
+   "deer": 0.9430000185966492,
+   "dog": 0.8769999742507935,
+   "frog": 0.9449999928474426,
+   "horse": 0.9390000104904175,
+   "ship": 0.9649999737739563,
+   "truck": 0.949999988079071
+  },
+  "test_cat_pred_hist": [
+   11,
+   1,
+   18,
+   851,
+   21,
+   70,
+   20,
+   3,
+   2,
+   3
+  ],
+  "test_dog_pred_hist": [
+   3,
+   1,
+   12,
+   76,
+   16,
+   877,
+   6,
+   7,
+   1,
+   1
+  ],
+  "train_minutes": 2.569004317124685
+ },
+ "transport": {
+  "cat_to_dog": {
+   "s0.4": {
+    "valid_coupling": false,
+    "s": 0.4006,
+    "signal_coef_alpha": 0.4411281787523373,
+    "steps_encode_decode": [
+     80,
+     80
+    ],
+    "cost_mean": 26.671562888659537,
+    "cost_stderr": 0.7561235997608077,
+    "n": 512,
+    "judge_target_rate_on_outputs": 0.5625,
+    "judge_target_rate_stderr": 0.021923773750628563,
+    "judge_target_mean_prob_on_outputs": 0.5534159541130066,
+    "judge_source_rate_on_outputs": 0.318359375,
+    "judge_source_rate_on_inputs": 0.853515625,
+    "judge_source_mean_prob_on_inputs": 0.848031222820282,
+    "output_class_histogram": [
+     11,
+     3,
+     12,
+     163,
+     12,
+     288,
+     11,
+     7,
+     0,
+     5
+    ],
+    "frac_output_pixels_outside_[-1,1]": 0.0074704489670693874
+   },
+   "s0.6": {
+    "valid_coupling": false,
+    "s": 0.6003999999999999,
+    "signal_coef_alpha": 0.16147437849419105,
+    "steps_encode_decode": [
+     120,
+     120
+    ],
+    "cost_mean": 62.20110394991934,
+    "cost_stderr": 2.2519503170344675,
+    "n": 512,
+    "judge_target_rate_on_outputs": 0.70703125,
+    "judge_target_rate_stderr": 0.02011383917637217,
+    "judge_target_mean_prob_on_outputs": 0.6898947954177856,
+    "judge_source_rate_on_outputs": 0.193359375,
+    "judge_source_rate_on_inputs": 0.853515625,
+    "judge_source_mean_prob_on_inputs": 0.848031222820282,
+    "output_class_histogram": [
+     6,
+     2,
+     9,
+     99,
+     10,
+     362,
+     10,
+     9,
+     1,
+     4
+    ],
+    "frac_output_pixels_outside_[-1,1]": 0.008465449325740337
+   },
+   "s0.8": {
+    "valid_coupling": false,
+    "s": 0.8002,
+    "signal_coef_alpha": 0.039731847891455674,
+    "steps_encode_decode": [
+     160,
+     160
+    ],
+    "cost_mean": 89.77050717547536,
+    "cost_stderr": 3.1018466192980054,
+    "n": 512,
+    "judge_target_rate_on_outputs": 0.740234375,
+    "judge_target_rate_stderr": 0.019379407012319532,
+    "judge_target_mean_prob_on_outputs": 0.7379531860351562,
+    "judge_source_rate_on_outputs": 0.1640625,
+    "judge_source_rate_on_inputs": 0.853515625,
+    "judge_source_mean_prob_on_inputs": 0.848031222820282,
+    "output_class_histogram": [
+     4,
+     0,
+     11,
+     84,
+     13,
+     379,
+     7,
+     8,
+     1,
+     5
+    ],
+    "frac_output_pixels_outside_[-1,1]": 0.006134668830782175
+   },
+   "s1.0": {
+    "valid_coupling": true,
+    "s": 1.0,
+    "signal_coef_alpha": 0.006571586494929619,
+    "steps_encode_decode": [
+     200,
+     200
+    ],
+    "cost_mean": 101.59600150212646,
+    "cost_stderr": 3.3916569219200383,
+    "n": 512,
+    "judge_target_rate_on_outputs": 0.748046875,
+    "judge_target_rate_stderr": 0.019186214727043363,
+    "judge_target_mean_prob_on_outputs": 0.7434836626052856,
+    "judge_source_rate_on_outputs": 0.162109375,
+    "judge_source_rate_on_inputs": 0.853515625,
+    "judge_source_mean_prob_on_inputs": 0.848031222820282,
+    "output_class_histogram": [
+     4,
+     0,
+     11,
+     83,
+     16,
+     383,
+     5,
+     7,
+     0,
+     3
+    ],
+    "frac_output_pixels_outside_[-1,1]": 0.0054028830491006374
+   }
+  },
+  "dog_to_cat": {
+   "s0.4": {
+    "valid_coupling": false,
+    "s": 0.4006,
+    "signal_coef_alpha": 0.4411281787523373,
+    "steps_encode_decode": [
+     80,
+     80
+    ],
+    "cost_mean": 28.39876158721745,
+    "cost_stderr": 0.7810292689176247,
+    "n": 512,
+    "judge_target_rate_on_outputs": 0.58203125,
+    "judge_target_rate_stderr": 0.021797670192638164,
+    "judge_target_mean_prob_on_outputs": 0.5704851746559143,
+    "judge_source_rate_on_outputs": 0.306640625,
+    "judge_source_rate_on_inputs": 0.884765625,
+    "judge_source_mean_prob_on_inputs": 0.8771462440490723,
+    "output_class_histogram": [
+     9,
+     4,
+     14,
+     298,
+     12,
+     157,
+     6,
+     9,
+     1,
+     2
+    ],
+    "frac_output_pixels_outside_[-1,1]": 0.0049648284912109375
+   },
+   "s0.6": {
+    "valid_coupling": false,
+    "s": 0.6003999999999999,
+    "signal_coef_alpha": 0.16147437849419105,
+    "steps_encode_decode": [
+     120,
+     120
+    ],
+    "cost_mean": 65.67344368249178,
+    "cost_stderr": 2.2110999039588886,
+    "n": 512,
+    "judge_target_rate_on_outputs": 0.71875,
+    "judge_target_rate_stderr": 0.019870107372437308,
+    "judge_target_mean_prob_on_outputs": 0.7079963684082031,
+    "judge_source_rate_on_outputs": 0.1640625,
+    "judge_source_rate_on_inputs": 0.884765625,
+    "judge_source_mean_prob_on_inputs": 0.8771462440490723,
+    "output_class_histogram": [
+     10,
+     3,
+     17,
+     368,
+     6,
+     84,
+     7,
+     13,
+     2,
+     2
+    ],
+    "frac_output_pixels_outside_[-1,1]": 0.006064733024686575
+   },
+   "s0.8": {
+    "valid_coupling": false,
+    "s": 0.8002,
+    "signal_coef_alpha": 0.039731847891455674,
+    "steps_encode_decode": [
+     160,
+     160
+    ],
+    "cost_mean": 92.79225250147283,
+    "cost_stderr": 3.0877487411481948,
+    "n": 512,
+    "judge_target_rate_on_outputs": 0.73046875,
+    "judge_target_rate_stderr": 0.01960967531012262,
+    "judge_target_mean_prob_on_outputs": 0.7238953709602356,
+    "judge_source_rate_on_outputs": 0.138671875,
+    "judge_source_rate_on_inputs": 0.884765625,
+    "judge_source_mean_prob_on_inputs": 0.8771462440490723,
+    "output_class_histogram": [
+     16,
+     3,
+     19,
+     374,
+     5,
+     71,
+     9,
+     10,
+     3,
+     2
+    ],
+    "frac_output_pixels_outside_[-1,1]": 0.00759124755859375
+   },
+   "s1.0": {
+    "valid_coupling": true,
+    "s": 1.0,
+    "signal_coef_alpha": 0.006571586494929619,
+    "steps_encode_decode": [
+     200,
+     200
+    ],
+    "cost_mean": 104.68118065036833,
+    "cost_stderr": 3.388528035271357,
+    "n": 512,
+    "judge_target_rate_on_outputs": 0.74609375,
+    "judge_target_rate_stderr": 0.01923527573088666,
+    "judge_target_mean_prob_on_outputs": 0.7272852659225464,
+    "judge_source_rate_on_outputs": 0.12890625,
+    "judge_source_rate_on_inputs": 0.884765625,
+    "judge_source_mean_prob_on_inputs": 0.8771462440490723,
+    "output_class_histogram": [
+     15,
+     4,
+     14,
+     382,
+     9,
+     66,
+     7,
+     8,
+     6,
+     1
+    ],
+    "frac_output_pixels_outside_[-1,1]": 0.0088564557954669
+   }
+  }
+ },
+ "gpu_minutes": {
+  "jobs": [
+   {
+    "file": "A_1792094172.json",
+    "container_minutes": 14.393262720108032,
+    "tasks": [
+     [
+      "train_judge",
+      2.57
+     ],
+     [
+      "transport_pf dog_to_cat [80, 200]",
+      11.69
+     ]
+    ]
+   },
+   {
+    "file": "B_1792095118.json",
+    "container_minutes": 30.1694073677063,
+    "tasks": [
+     [
+      "transport_pf cat_to_dog [80, 120, 160, 200]",
+      19.0
+     ],
+     [
+      "transport_pf dog_to_cat [120, 160]",
+      11.04
+     ]
+    ]
+   },
+   {
+    "file": "eval_1792095161.json",
+    "container_minutes": 0.12838903268178303,
+    "tasks": [
+     [
+      "judge_eval",
+      0.08
+     ]
+    ]
+   },
+   {
+    "file": "smoke_1792093292.json",
+    "container_minutes": 0.43025951385498046,
+    "tasks": [
+     [
+      "train_judge",
+      0.09
+     ],
+     [
+      "transport_pf cat_to_dog [4, 6, 8, 10]",
+      0.09
+     ],
+     [
+      "transport_pf dog_to_cat [4, 10]",
+      0.05
+     ],
+     [
+      "transport_pf dog_to_cat [6, 8]",
+      0.05
+     ],
+     [
+      "judge_eval",
+      0.01
+     ]
+    ]
+   }
+  ],
+  "total_container_minutes": 45.12131863435109
+ }
+}

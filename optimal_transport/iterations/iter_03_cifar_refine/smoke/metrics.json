@@ -1,0 +1,418 @@
+{
+ "summary_table": {
+  "prior_dog_c3": {
+   "judge_target": 0.5,
+   "judge_target_se": 0.25,
+   "judge_cat": 0.0,
+   "judge_dog": 0.5,
+   "class_histogram": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    2,
+    0,
+    0,
+    0
+   ],
+   "kid_x1e3": 80.55460220129262,
+   "kid_se_x1e3": 14.899224042892456
+  },
+  "cat_to_dog_iter03_c3": {
+   "cost": 99.17596817016602,
+   "cost_se": 12.981796294518892,
+   "cost_clamped": 97.84766387939453,
+   "cost_clamped_se": 13.409283045533755,
+   "judge_target": 0.0,
+   "judge_target_se": 0.0,
+   "judge_source": 0.0,
+   "kid_x1e3": 166.09335620442954,
+   "kid_se_x1e3": 11.647787876427174
+  },
+  "prior_dog_c3_mid": {
+   "judge_target": 0.5,
+   "judge_target_se": 0.25,
+   "judge_cat": 0.0,
+   "judge_dog": 0.5,
+   "class_histogram": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    2,
+    0,
+    0,
+    0
+   ],
+   "kid_x1e3": 80.55460220129262,
+   "kid_se_x1e3": 14.899224042892456
+  }
+ },
+ "reference_iter02_eval": {
+  "baseline_cat_to_dog_iter01": {
+   "cost": 101.59600150212646,
+   "cost_se": 3.3916569219200383,
+   "cost_clamped": 101.57595610618591,
+   "cost_clamped_se": 3.3905427437694233,
+   "judge_target": 0.748046875,
+   "judge_target_se": 0.019186214727043363,
+   "judge_source": 0.162109375,
+   "kid_x1e3": 2.9229329661335512,
+   "kid_se_x1e3": 0.9209465351887047
+  },
+  "baseline_dog_to_cat_iter01": {
+   "cost": 104.68118065036833,
+   "cost_se": 3.388528035271357,
+   "cost_clamped": 104.63544454984367,
+   "cost_clamped_se": 3.3848197910883027,
+   "judge_target": 0.74609375,
+   "judge_target_se": 0.01923527573088666,
+   "judge_source": 0.12890625,
+   "kid_x1e3": 2.1578578631240575,
+   "kid_se_x1e3": 0.6356195663101971
+  },
+  "prior_dog": {
+   "judge_target": 0.794921875,
+   "judge_target_se": 0.01784378216100891,
+   "judge_cat": 0.111328125,
+   "judge_dog": 0.794921875,
+   "class_histogram": [
+    2,
+    0,
+    8,
+    57,
+    22,
+    407,
+    2,
+    11,
+    3,
+    0
+   ],
+   "kid_x1e3": 3.278679669592055,
+   "kid_se_x1e3": 0.7694762898609042
+  },
+  "prior_cat": {
+   "judge_target": 0.80078125,
+   "judge_target_se": 0.01765172174501271,
+   "judge_cat": 0.80078125,
+   "judge_dog": 0.072265625,
+   "class_histogram": [
+    4,
+    1,
+    20,
+    410,
+    18,
+    37,
+    7,
+    4,
+    9,
+    2
+   ],
+   "kid_x1e3": 4.42294281294453,
+   "kid_se_x1e3": 0.6950619863346219
+  }
+ },
+ "criteria": {
+  "cat_to_dog": {
+   "1_judge_ge_0.79_and_le_ceiling_plus_0.02": false,
+   "2_kid_le_baseline_within_1se": false,
+   "2_strict_kid_le_baseline": false,
+   "3_clamped_cost_le_110": true,
+   "4_prior_judge_up": false,
+   "4_prior_kid_le_old": false,
+   "4_no_memorisation_flag": true,
+   "values": {
+    "judge": 0.0,
+    "judge_base": 0.748046875,
+    "ceiling": 0.877,
+    "kid": 166.09335620442954,
+    "kid_se": 11.647787876427174,
+    "kid_base": 2.9229329661335512,
+    "kid_base_se": 0.9209465351887047,
+    "kid_diff_combined_se": 11.68413903267673,
+    "cost_clamped": 97.84766387939453,
+    "cost_base_clamped": 101.57595610618591,
+    "prior_judge": 0.5,
+    "prior_judge_old": 0.794921875,
+    "prior_kid": 80.55460220129262,
+    "prior_kid_old": 3.278679669592055,
+    "memo_ratio": 0.8175913095474243
+   },
+   "5_by_eye": "see REPORT.md"
+  }
+ },
+ "memorisation": {
+  "memo_dog": {
+   "test_first512": {
+    "median": 432.197265625,
+    "mean": 450.1306457519531,
+    "q05": 189.636962890625
+   },
+   "sets": {
+    "prior_dog_c3": {
+     "median": 353.3607177734375,
+     "mean": 390.24591064453125,
+     "q05": 331.2786560058594,
+     "ratio_to_test_median": 0.8175913095474243,
+     "frac_below_10pct_test_median": 0.0,
+     "memorisation_flag": false
+    },
+    "prior_dog_old": {
+     "median": 410.29248046875,
+     "mean": 424.720947265625,
+     "q05": 209.3323974609375,
+     "ratio_to_test_median": 0.9493176341056824,
+     "frac_below_10pct_test_median": 0.0,
+     "memorisation_flag": false
+    },
+    "prior_dog_c3_mid": {
+     "median": 353.3607177734375,
+     "mean": 390.24591064453125,
+     "q05": 331.2786560058594,
+     "ratio_to_test_median": 0.8175913095474243,
+     "frac_below_10pct_test_median": 0.0,
+     "memorisation_flag": false
+    }
+   },
+   "minutes": 0.011104893684387208
+  }
+ },
+ "judge_ceilings": {
+  "all_test_cat": {
+   "rate": 0.851,
+   "stderr": 0.011260506205317771,
+   "mean_prob": 0.8410322070121765,
+   "n": 1000
+  },
+  "first512_test_cat": {
+   "rate": 0.853515625,
+   "stderr": 0.01562666884093275,
+   "mean_prob": 0.848031222820282,
+   "n": 512
+  },
+  "all_test_dog": {
+   "rate": 0.877,
+   "stderr": 0.010386096475577337,
+   "mean_prob": 0.8709170818328857,
+   "n": 1000
+  },
+  "first512_test_dog": {
+   "rate": 0.884765625,
+   "stderr": 0.014111402042815701,
+   "mean_prob": 0.8771462440490723,
+   "n": 512
+  }
+ },
+ "gpu": [
+  {
+   "file": "smoke_1792101420.json",
+   "container_minutes": 0.8801629543304443,
+   "finetune": {
+    "steps": 20,
+    "images_seen": 5120,
+    "accum": 1,
+    "cap_min": 40.0,
+    "peak_mem_gb": 19.258358001708984,
+    "minutes": 0.37854183117548623
+   },
+   "loss_log_last": [
+    [
+     10,
+     0.027530577406287192,
+     0.2261253555615743,
+     5e-06
+    ],
+    [
+     15,
+     0.027393637970089913,
+     0.2928285519282023,
+     7.5e-06
+    ],
+    [
+     20,
+     0.026317235454916953,
+     0.3595233956972758,
+     1e-05
+    ]
+   ]
+  }
+ ],
+ "runs": {
+  "prior_dog_c3": {
+   "judge_cat": {
+    "rate": 0.0,
+    "stderr": 0.0,
+    "mean_prob": 0.06070612370967865,
+    "n": 4
+   },
+   "judge_dog": {
+    "rate": 0.5,
+    "stderr": 0.25,
+    "mean_prob": 0.41881340742111206,
+    "n": 4
+   },
+   "judge_target": {
+    "rate": 0.5,
+    "stderr": 0.25,
+    "mean_prob": 0.41881340742111206,
+    "n": 4
+   },
+   "class_histogram": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    2,
+    0,
+    0,
+    0
+   ],
+   "kid_vs_all_test_target": {
+    "kid_x1e3": 80.55460220129262,
+    "se_x1e3": 14.899224042892456,
+    "n_x": 4,
+    "n_y": 1000
+   },
+   "meta": {
+    "ckpt": "iter03/smoke_dog_c3.pth",
+    "seed": 0,
+    "steps": 10,
+    "eps": 0.001,
+    "n": 4
+   },
+   "target": "dog",
+   "_from": "evalD"
+  },
+  "cat_to_dog_iter03_c3": {
+   "cost": {
+    "mean": 99.17596817016602,
+    "stderr": 12.981796294518892,
+    "n": 4
+   },
+   "judge_target_on_outputs": {
+    "rate": 0.0,
+    "stderr": 0.0,
+    "mean_prob": 0.003509711939841509,
+    "n": 4
+   },
+   "judge_source_on_outputs": {
+    "rate": 0.0,
+    "stderr": 0.0,
+    "mean_prob": 0.015773238614201546,
+    "n": 4
+   },
+   "judge_source_on_inputs": {
+    "rate": 1.0,
+    "stderr": 0.0,
+    "mean_prob": 0.9993503093719482,
+    "n": 4
+   },
+   "judge_target_on_inputs": {
+    "rate": 0.0,
+    "stderr": 0.0,
+    "mean_prob": 0.0005844515981152654,
+    "n": 4
+   },
+   "output_class_histogram": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    3,
+    0,
+    0,
+    0
+   ],
+   "output_range": [
+    -1.3037968873977661,
+    1.5988969802856445
+   ],
+   "frac_output_pixels_outside_[-1,1]": 0.013020833022892475,
+   "cost_clamped": {
+    "mean": 97.84766387939453,
+    "stderr": 13.409283045533755,
+    "n": 4
+   },
+   "kid_vs_all_test_target": {
+    "kid_x1e3": 166.09335620442954,
+    "se_x1e3": 11.647787876427174,
+    "n_x": 4,
+    "n_y": 1000
+   },
+   "meta": {
+    "k": 10,
+    "s": 1.0,
+    "w": 0.0,
+    "valid_coupling": true,
+    "note": "composed PF-ODE: latents encoded (iter02) by the unchanged source model, decoded by the iter03 CIFAR-refined target model",
+    "run": {
+     "direction": "cat_to_dog",
+     "n": 4,
+     "steps": 10,
+     "eps": 0.001,
+     "encoder": "out/cat.pth",
+     "latents": "/vol/iter02/latents_cat_to_dog.pt",
+     "tgt_ckpt": "iter03/smoke_dog_c3.pth",
+     "minutes": 0.023136643568674724
+    },
+    "file": "/vol/iter03/smoke_transport_cat_to_dog_iter03_c3.pt"
+   },
+   "_from": "evalD"
+  },
+  "prior_dog_c3_mid": {
+   "judge_cat": {
+    "rate": 0.0,
+    "stderr": 0.0,
+    "mean_prob": 0.06070612370967865,
+    "n": 4
+   },
+   "judge_dog": {
+    "rate": 0.5,
+    "stderr": 0.25,
+    "mean_prob": 0.41881340742111206,
+    "n": 4
+   },
+   "judge_target": {
+    "rate": 0.5,
+    "stderr": 0.25,
+    "mean_prob": 0.41881340742111206,
+    "n": 4
+   },
+   "class_histogram": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    2,
+    0,
+    0,
+    0
+   ],
+   "kid_vs_all_test_target": {
+    "kid_x1e3": 80.55460220129262,
+    "se_x1e3": 14.899224042892456,
+    "n_x": 4,
+    "n_y": 1000
+   },
+   "meta": {
+    "ckpt": "iter03/smoke_dog_c3_mid.pth",
+    "seed": 0,
+    "steps": 10,
+    "eps": 0.001,
+    "n": 4
+   },
+   "target": "dog",
+   "_from": "evalD"
+  }
+ }
+}

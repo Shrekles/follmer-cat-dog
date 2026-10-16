@@ -1,0 +1,333 @@
+{
+ "judge": {
+  "arch": "ResNet-18 (CIFAR variant), trained from scratch on CIFAR-10 train split only",
+  "epochs": 1,
+  "test_acc": 0.10350000113248825,
+  "test_cat_called_cat": 0.0,
+  "test_dog_called_dog": 0.0,
+  "test_mean_prob_cat_on_cats": 0.004786278586834669,
+  "test_mean_prob_dog_on_dogs": 0.0028050614055246115,
+  "test_per_class_acc": {
+   "airplane": 0.9959999918937683,
+   "automobile": 0.0,
+   "bird": 0.017999999225139618,
+   "cat": 0.0,
+   "deer": 0.020999999716877937,
+   "dog": 0.0,
+   "frog": 0.0,
+   "horse": 0.0,
+   "ship": 0.0,
+   "truck": 0.0
+  },
+  "test_cat_pred_hist": [
+   992,
+   0,
+   5,
+   0,
+   3,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "test_dog_pred_hist": [
+   994,
+   0,
+   5,
+   0,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "train_minutes": 0.09155271848042806
+ },
+ "transport": {
+  "cat_to_dog": {
+   "s0.4": {
+    "valid_coupling": false,
+    "s": 0.4006,
+    "signal_coef_alpha": 0.4411281787523373,
+    "steps_encode_decode": [
+     4,
+     4
+    ],
+    "cost_mean": 63.28697109222412,
+    "cost_stderr": 4.5245162429087795,
+    "n": 4,
+    "judge_target_rate_on_outputs": 0.0,
+    "judge_target_rate_stderr": 0.0,
+    "judge_target_mean_prob_on_outputs": 0.00038971222238615155,
+    "judge_source_rate_on_outputs": 0.0,
+    "judge_source_rate_on_inputs": 0.0,
+    "judge_source_mean_prob_on_inputs": 0.001199705759063363,
+    "output_class_histogram": [
+     4,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "frac_output_pixels_outside_[-1,1]": 0.012044270522892475
+   },
+   "s0.6": {
+    "valid_coupling": false,
+    "s": 0.6003999999999999,
+    "signal_coef_alpha": 0.16147437849419105,
+    "steps_encode_decode": [
+     6,
+     6
+    ],
+    "cost_mean": 73.59646701812744,
+    "cost_stderr": 4.586958933339616,
+    "n": 4,
+    "judge_target_rate_on_outputs": 0.0,
+    "judge_target_rate_stderr": 0.0,
+    "judge_target_mean_prob_on_outputs": 0.00014543323777616024,
+    "judge_source_rate_on_outputs": 0.0,
+    "judge_source_rate_on_inputs": 0.0,
+    "judge_source_mean_prob_on_inputs": 0.001199705759063363,
+    "output_class_histogram": [
+     4,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "frac_output_pixels_outside_[-1,1]": 0.012369791977107525
+   },
+   "s0.8": {
+    "valid_coupling": false,
+    "s": 0.8002,
+    "signal_coef_alpha": 0.039731847891455674,
+    "steps_encode_decode": [
+     8,
+     8
+    ],
+    "cost_mean": 90.1599349975586,
+    "cost_stderr": 10.729632793374696,
+    "n": 4,
+    "judge_target_rate_on_outputs": 0.0,
+    "judge_target_rate_stderr": 0.0,
+    "judge_target_mean_prob_on_outputs": 7.527028355980292e-05,
+    "judge_source_rate_on_outputs": 0.0,
+    "judge_source_rate_on_inputs": 0.0,
+    "judge_source_mean_prob_on_inputs": 0.001199705759063363,
+    "output_class_histogram": [
+     4,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "frac_output_pixels_outside_[-1,1]": 0.011800129897892475
+   },
+   "s1.0": {
+    "valid_coupling": true,
+    "s": 1.0,
+    "signal_coef_alpha": 0.006571586494929619,
+    "steps_encode_decode": [
+     10,
+     10
+    ],
+    "cost_mean": 98.47955894470215,
+    "cost_stderr": 12.794190755013128,
+    "n": 4,
+    "judge_target_rate_on_outputs": 0.0,
+    "judge_target_rate_stderr": 0.0,
+    "judge_target_mean_prob_on_outputs": 5.0572904001455754e-05,
+    "judge_source_rate_on_outputs": 0.0,
+    "judge_source_rate_on_inputs": 0.0,
+    "judge_source_mean_prob_on_inputs": 0.001199705759063363,
+    "output_class_histogram": [
+     4,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "frac_output_pixels_outside_[-1,1]": 0.011067708022892475
+   }
+  },
+  "dog_to_cat": {
+   "s0.4": {
+    "valid_coupling": false,
+    "s": 0.4006,
+    "signal_coef_alpha": 0.4411281787523373,
+    "steps_encode_decode": [
+     4,
+     4
+    ],
+    "cost_mean": 54.43581295013428,
+    "cost_stderr": 3.017993246198368,
+    "n": 4,
+    "judge_target_rate_on_outputs": 0.0,
+    "judge_target_rate_stderr": 0.0,
+    "judge_target_mean_prob_on_outputs": 0.0018881980795413256,
+    "judge_source_rate_on_outputs": 0.0,
+    "judge_source_rate_on_inputs": 0.0,
+    "judge_source_mean_prob_on_inputs": 0.0006960436585359275,
+    "output_class_histogram": [
+     4,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "frac_output_pixels_outside_[-1,1]": 0.014811198227107525
+   },
+   "s0.6": {
+    "valid_coupling": false,
+    "s": 0.6003999999999999,
+    "signal_coef_alpha": 0.16147437849419105,
+    "steps_encode_decode": [
+     6,
+     6
+    ],
+    "cost_mean": 79.65383338928223,
+    "cost_stderr": 7.252686739529176,
+    "n": 4,
+    "judge_target_rate_on_outputs": 0.0,
+    "judge_target_rate_stderr": 0.0,
+    "judge_target_mean_prob_on_outputs": 0.006459975615143776,
+    "judge_source_rate_on_outputs": 0.0,
+    "judge_source_rate_on_inputs": 0.0,
+    "judge_source_mean_prob_on_inputs": 0.0006960436585359275,
+    "output_class_histogram": [
+     4,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "frac_output_pixels_outside_[-1,1]": 0.01888020895421505
+   },
+   "s0.8": {
+    "valid_coupling": false,
+    "s": 0.8002,
+    "signal_coef_alpha": 0.039731847891455674,
+    "steps_encode_decode": [
+     8,
+     8
+    ],
+    "cost_mean": 91.2162971496582,
+    "cost_stderr": 8.167179666845568,
+    "n": 4,
+    "judge_target_rate_on_outputs": 0.0,
+    "judge_target_rate_stderr": 0.0,
+    "judge_target_mean_prob_on_outputs": 0.009275801479816437,
+    "judge_source_rate_on_outputs": 0.0,
+    "judge_source_rate_on_inputs": 0.0,
+    "judge_source_mean_prob_on_inputs": 0.0006960436585359275,
+    "output_class_histogram": [
+     4,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "frac_output_pixels_outside_[-1,1]": 0.01871744729578495
+   },
+   "s1.0": {
+    "valid_coupling": true,
+    "s": 1.0,
+    "signal_coef_alpha": 0.006571586494929619,
+    "steps_encode_decode": [
+     10,
+     10
+    ],
+    "cost_mean": 97.8371524810791,
+    "cost_stderr": 8.416036272126778,
+    "n": 4,
+    "judge_target_rate_on_outputs": 0.0,
+    "judge_target_rate_stderr": 0.0,
+    "judge_target_mean_prob_on_outputs": 0.010350631549954414,
+    "judge_source_rate_on_outputs": 0.0,
+    "judge_source_rate_on_inputs": 0.0,
+    "judge_source_mean_prob_on_inputs": 0.0006960436585359275,
+    "output_class_histogram": [
+     4,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "frac_output_pixels_outside_[-1,1]": 0.01871744729578495
+   }
+  }
+ },
+ "gpu_minutes": {
+  "jobs": [
+   {
+    "file": "smoke_1792093292.json",
+    "container_minutes": 0.43025951385498046,
+    "tasks": [
+     [
+      "train_judge",
+      0.09
+     ],
+     [
+      "transport_pf cat_to_dog [4, 6, 8, 10]",
+      0.09
+     ],
+     [
+      "transport_pf dog_to_cat [4, 10]",
+      0.05
+     ],
+     [
+      "transport_pf dog_to_cat [6, 8]",
+      0.05
+     ],
+     [
+      "judge_eval",
+      0.01
+     ]
+    ]
+   }
+  ],
+  "total_container_minutes": 0.43025951385498046
+ }
+}

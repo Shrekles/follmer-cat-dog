@@ -1,0 +1,26 @@
+{
+ "test_first512": {
+  "median": 432.197265625,
+  "mean": 450.1306457519531,
+  "q05": 189.636962890625
+ },
+ "sets": {
+  "prior_dog_c3": {
+   "median": 411.2996826171875,
+   "mean": 426.4252624511719,
+   "q05": 213.9188232421875,
+   "ratio_to_test_median": 0.9516480565071106,
+   "frac_below_10pct_test_median": 0.0,
+   "memorisation_flag": false
+  },
+  "prior_dog_old": {
+   "median": 410.29248046875,
+   "mean": 424.720947265625,
+   "q05": 209.3323974609375,
+   "ratio_to_test_median": 0.9493176341056824,
+   "frac_below_10pct_test_median": 0.0,
+   "memorisation_flag": false
+  }
+ },
+ "minutes": 0.0029558897018432616
+}

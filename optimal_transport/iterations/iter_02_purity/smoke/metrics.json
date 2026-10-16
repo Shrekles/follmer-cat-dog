@@ -1,0 +1,413 @@
+{
+ "summary_table": [
+  {
+   "run": "prior_cat",
+   "judge_target": 0.25,
+   "judge_cat": 0.25,
+   "judge_dog": 0.0,
+   "kid_x1e3": 121.4449270096356,
+   "kid_se_x1e3": 20.311657339334488
+  },
+  {
+   "run": "prior_dog",
+   "judge_target": 0.5,
+   "judge_cat": 0.0,
+   "judge_dog": 0.5,
+   "kid_x1e3": 80.86306349565132,
+   "kid_se_x1e3": 14.851728454232216
+  },
+  {
+   "run": "cat_to_dog_w0.5",
+   "cost": 150.05535888671875,
+   "cost_se": 23.130874098093106,
+   "cost_clamped": 148.89698028564453,
+   "cost_clamped_se": 22.968536566232153,
+   "judge_target": 0.5,
+   "judge_source": 0.5,
+   "valid_coupling": false,
+   "w": 0.5,
+   "kid_x1e3": 136.41251769437713,
+   "kid_se_x1e3": 21.785350516438484
+  },
+  {
+   "run": "prior_dog_cinic",
+   "judge_target": 0.5,
+   "judge_cat": 0.0,
+   "judge_dog": 0.5,
+   "kid_x1e3": 81.0015677288658,
+   "kid_se_x1e3": 14.83867410570383
+  },
+  {
+   "run": "cat_to_dog_cinic_w0",
+   "cost": 98.55084228515625,
+   "cost_se": 12.752450493825021,
+   "cost_clamped": 97.62333679199219,
+   "cost_clamped_se": 12.970642262505962,
+   "judge_target": 0.0,
+   "judge_source": 1.0,
+   "valid_coupling": true,
+   "w": 0.0,
+   "kid_x1e3": 160.33392342807363,
+   "kid_se_x1e3": 19.450483843684196
+  }
+ ],
+ "kid_refs": {
+  "train512_dog_vs_test_dog": {
+   "kid_x1e3": 0.3615376687684524,
+   "se_x1e3": 0.5111215868964791,
+   "n_x": 512,
+   "n_y": 1000
+  },
+  "test512_cat_vs_test_dog": {
+   "kid_x1e3": 30.57696632699969,
+   "se_x1e3": 1.8581231124699116,
+   "n_x": 512,
+   "n_y": 1000
+  },
+  "train512_cat_vs_test_cat": {
+   "kid_x1e3": 0.08834672519286713,
+   "se_x1e3": 0.40085267391987145,
+   "n_x": 512,
+   "n_y": 1000
+  },
+  "test512_dog_vs_test_cat": {
+   "kid_x1e3": 29.677533545064527,
+   "se_x1e3": 2.455941867083311,
+   "n_x": 512,
+   "n_y": 1000
+  }
+ },
+ "judge_ceilings": {
+  "all_test_cat": {
+   "rate": 0.851,
+   "stderr": 0.011260506205317771,
+   "mean_prob": 0.8410322070121765,
+   "n": 1000
+  },
+  "first512_test_cat": {
+   "rate": 0.853515625,
+   "stderr": 0.01562666884093275,
+   "mean_prob": 0.848031222820282,
+   "n": 512
+  },
+  "all_test_dog": {
+   "rate": 0.877,
+   "stderr": 0.010386096475577337,
+   "mean_prob": 0.8709170818328857,
+   "n": 1000
+  },
+  "first512_test_dog": {
+   "rate": 0.884765625,
+   "stderr": 0.014111402042815701,
+   "mean_prob": 0.8771462440490723,
+   "n": 512
+  }
+ },
+ "gpu": [
+  {
+   "file": "smoke_1792096344.json",
+   "container_minutes": 1.000182557106018
+  }
+ ],
+ "runs": {
+  "prior_cat": {
+   "judge_cat": {
+    "rate": 0.25,
+    "stderr": 0.21650635094610965,
+    "mean_prob": 0.2550199627876282,
+    "n": 4
+   },
+   "judge_dog": {
+    "rate": 0.0,
+    "stderr": 0.0,
+    "mean_prob": 3.915634806617163e-06,
+    "n": 4
+   },
+   "judge_target": {
+    "rate": 0.25,
+    "stderr": 0.21650635094610965,
+    "mean_prob": 0.2550199627876282,
+    "n": 4
+   },
+   "class_histogram": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    2,
+    0,
+    1,
+    0
+   ],
+   "kid_vs_all_test_target": {
+    "kid_x1e3": 121.4449270096356,
+    "se_x1e3": 20.311657339334488,
+    "n_x": 4,
+    "n_y": 1000
+   },
+   "meta": {
+    "ckpt": "out/cat.pth",
+    "seed": 0,
+    "steps": 10,
+    "eps": 0.001,
+    "n": 4
+   },
+   "target": "cat",
+   "_from": "evalA"
+  },
+  "prior_dog": {
+   "judge_cat": {
+    "rate": 0.0,
+    "stderr": 0.0,
+    "mean_prob": 0.0618252158164978,
+    "n": 4
+   },
+   "judge_dog": {
+    "rate": 0.5,
+    "stderr": 0.25,
+    "mean_prob": 0.41721606254577637,
+    "n": 4
+   },
+   "judge_target": {
+    "rate": 0.5,
+    "stderr": 0.25,
+    "mean_prob": 0.41721606254577637,
+    "n": 4
+   },
+   "class_histogram": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    2,
+    0,
+    0,
+    0
+   ],
+   "kid_vs_all_test_target": {
+    "kid_x1e3": 80.86306349565132,
+    "se_x1e3": 14.851728454232216,
+    "n_x": 4,
+    "n_y": 1000
+   },
+   "meta": {
+    "ckpt": "out/dog.pth",
+    "seed": 0,
+    "steps": 10,
+    "eps": 0.001,
+    "n": 4
+   },
+   "target": "dog",
+   "_from": "evalA"
+  },
+  "cat_to_dog_w0.5": {
+   "cost": {
+    "mean": 150.05535888671875,
+    "stderr": 23.130874098093106,
+    "n": 4
+   },
+   "judge_target_on_outputs": {
+    "rate": 0.5,
+    "stderr": 0.25,
+    "mean_prob": 0.5516842007637024,
+    "n": 4
+   },
+   "judge_source_on_outputs": {
+    "rate": 0.5,
+    "stderr": 0.25,
+    "mean_prob": 0.4268855154514313,
+    "n": 4
+   },
+   "judge_source_on_inputs": {
+    "rate": 1.0,
+    "stderr": 0.0,
+    "mean_prob": 0.9993503093719482,
+    "n": 4
+   },
+   "judge_target_on_inputs": {
+    "rate": 0.0,
+    "stderr": 0.0,
+    "mean_prob": 0.0005844515981152654,
+    "n": 4
+   },
+   "output_class_histogram": [
+    0,
+    0,
+    0,
+    2,
+    0,
+    2,
+    0,
+    0,
+    0,
+    0
+   ],
+   "output_range": [
+    -1.295896053314209,
+    1.3070616722106934
+   ],
+   "frac_output_pixels_outside_[-1,1]": 0.011800129897892475,
+   "cost_clamped": {
+    "mean": 148.89698028564453,
+    "stderr": 22.968536566232153,
+    "n": 4
+   },
+   "kid_vs_all_test_target": {
+    "kid_x1e3": 136.41251769437713,
+    "se_x1e3": 21.785350516438484,
+    "n_x": 4,
+    "n_y": 1000
+   },
+   "meta": {
+    "k": 10,
+    "s": 1.0,
+    "w": 0.5,
+    "valid_coupling": false,
+    "note": "density-ratio guided decode, score (1+w)s_tgt - w s_src with w=0.5: samples a tilted law ~ p_tgt^(1+w)/p_src^w, NOT the target marginal; diagnostic only, NOT a coupling of mu and nu",
+    "run": {
+     "direction": "cat_to_dog",
+     "n": 4,
+     "steps": 10,
+     "eps": 0.001,
+     "w": 0.5,
+     "encoder": "out/cat.pth",
+     "src_ckpt": "out/cat.pth",
+     "tgt_ckpt": "out/dog.pth",
+     "minutes": 0.050084900856018064
+    },
+    "file": "/vol/iter02/smoke_transport_cat_to_dog_w0.5.pt"
+   },
+   "_from": "evalA"
+  },
+  "prior_dog_cinic": {
+   "judge_cat": {
+    "rate": 0.0,
+    "stderr": 0.0,
+    "mean_prob": 0.06097506359219551,
+    "n": 4
+   },
+   "judge_dog": {
+    "rate": 0.5,
+    "stderr": 0.25,
+    "mean_prob": 0.41911640763282776,
+    "n": 4
+   },
+   "judge_target": {
+    "rate": 0.5,
+    "stderr": 0.25,
+    "mean_prob": 0.41911640763282776,
+    "n": 4
+   },
+   "class_histogram": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    2,
+    0,
+    0,
+    0
+   ],
+   "kid_vs_all_test_target": {
+    "kid_x1e3": 81.0015677288658,
+    "se_x1e3": 14.83867410570383,
+    "n_x": 4,
+    "n_y": 1000
+   },
+   "meta": {
+    "ckpt": "iter02/smoke_dog_cinic.pth",
+    "seed": 0,
+    "steps": 10,
+    "eps": 0.001,
+    "n": 4
+   },
+   "target": "dog",
+   "_from": "evalB"
+  },
+  "cat_to_dog_cinic_w0": {
+   "cost": {
+    "mean": 98.55084228515625,
+    "stderr": 12.752450493825021,
+    "n": 4
+   },
+   "judge_target_on_outputs": {
+    "rate": 0.0,
+    "stderr": 0.0,
+    "mean_prob": 0.047390904277563095,
+    "n": 4
+   },
+   "judge_source_on_outputs": {
+    "rate": 1.0,
+    "stderr": 0.0,
+    "mean_prob": 0.9504758715629578,
+    "n": 4
+   },
+   "judge_source_on_inputs": {
+    "rate": 1.0,
+    "stderr": 0.0,
+    "mean_prob": 0.9993503093719482,
+    "n": 4
+   },
+   "judge_target_on_inputs": {
+    "rate": 0.0,
+    "stderr": 0.0,
+    "mean_prob": 0.0005844515981152654,
+    "n": 4
+   },
+   "output_class_histogram": [
+    0,
+    0,
+    0,
+    4,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "output_range": [
+    -1.3898015022277832,
+    1.3330525159835815
+   ],
+   "frac_output_pixels_outside_[-1,1]": 0.01123046875,
+   "cost_clamped": {
+    "mean": 97.62333679199219,
+    "stderr": 12.970642262505962,
+    "n": 4
+   },
+   "kid_vs_all_test_target": {
+    "kid_x1e3": 160.33392342807363,
+    "se_x1e3": 19.450483843684196,
+    "n_x": 4,
+    "n_y": 1000
+   },
+   "meta": {
+    "k": 10,
+    "s": 1.0,
+    "w": 0.0,
+    "valid_coupling": true,
+    "note": "composed PF-ODE (encode source model, decode target model): valid coupling up to model/ODE error",
+    "run": {
+     "direction": "cat_to_dog",
+     "n": 4,
+     "steps": 10,
+     "eps": 0.001,
+     "w": 0.0,
+     "encoder": "out/cat.pth",
+     "src_ckpt": "out/cat.pth",
+     "tgt_ckpt": "iter02/smoke_dog_cinic.pth",
+     "minutes": 0.030680044492085775
+    },
+    "file": "/vol/iter02/smoke_transport_cat_to_dog_cinic_w0.pt"
+   },
+   "_from": "evalB"
+  }
+ }
+}

@@ -1,0 +1,102 @@
+{
+ "container_minutes": 0.8801629543304443,
+ "results": [
+  {
+   "task": "chain dog",
+   "sub": [
+    {
+     "task": "finetune_cifar dog",
+     "steps": 20,
+     "images_seen": 5120,
+     "accum": 1,
+     "loss_log": [
+      [
+       5,
+       0.028611426800489427,
+       0.15942941109339395,
+       2.5e-06
+      ],
+      [
+       10,
+       0.027530577406287192,
+       0.2261253555615743,
+       5e-06
+      ],
+      [
+       15,
+       0.027393637970089913,
+       0.2928285519282023,
+       7.5e-06
+      ],
+      [
+       20,
+       0.026317235454916953,
+       0.3595233956972758,
+       1e-05
+      ]
+     ],
+     "cap_min": 40.0,
+     "mid_saved_at_end": true,
+     "peak_mem_gb": 19.258358001708984,
+     "minutes": 0.37854183117548623
+    },
+    {
+     "task": "prior_samples ['dog_c3']",
+     "minutes": 0.030860300858815512
+    },
+    {
+     "task": "decode_saved cat_to_dog iter03_c3",
+     "minutes": 0.023325765132904054
+    },
+    {
+     "task": "prior_samples ['dog_c3_mid']",
+     "minutes": 0.023737009366353354
+    },
+    {
+     "task": "memo_check dog",
+     "result": {
+      "test_first512": {
+       "median": 432.197265625,
+       "mean": 450.1306457519531,
+       "q05": 189.636962890625
+      },
+      "sets": {
+       "prior_dog_c3": {
+        "median": 353.3607177734375,
+        "mean": 390.24591064453125,
+        "q05": 331.2786560058594,
+        "ratio_to_test_median": 0.8175913095474243,
+        "frac_below_10pct_test_median": 0.0,
+        "memorisation_flag": false
+       },
+       "prior_dog_old": {
+        "median": 410.29248046875,
+        "mean": 424.720947265625,
+        "q05": 209.3323974609375,
+        "ratio_to_test_median": 0.9493176341056824,
+        "frac_below_10pct_test_median": 0.0,
+        "memorisation_flag": false
+       },
+       "prior_dog_c3_mid": {
+        "median": 353.3607177734375,
+        "mean": 390.24591064453125,
+        "q05": 331.2786560058594,
+        "ratio_to_test_median": 0.8175913095474243,
+        "frac_below_10pct_test_median": 0.0,
+        "memorisation_flag": false
+       }
+      },
+      "minutes": 0.011104893684387208
+     },
+     "minutes": 0.011104893684387208
+    },
+    {
+     "task": "eval_runs smoke_evalD",
+     "minutes": 0.07968530257542929
+    }
+   ],
+   "minutes": 0.8777165571848552
+  }
+ ],
+ "client_wall_minutes": 1.035801366964976
+}

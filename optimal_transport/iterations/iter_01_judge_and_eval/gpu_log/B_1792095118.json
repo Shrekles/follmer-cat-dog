@@ -1,0 +1,14 @@
+{
+ "container_minutes": 30.1694073677063,
+ "results": [
+  {
+   "task": "transport_pf cat_to_dog [80, 120, 160, 200]",
+   "minutes": 18.996900419394176
+  },
+  {
+   "task": "transport_pf dog_to_cat [120, 160]",
+   "minutes": 11.035671397050221
+  }
+ ],
+ "client_wall_minutes": 30.252533352375032
+}

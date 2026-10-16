@@ -1,0 +1,156 @@
+{
+ "runs": {
+  "prior_dog_cinic": {
+   "judge_cat": {
+    "rate": 0.0,
+    "stderr": 0.0,
+    "mean_prob": 0.06097506359219551,
+    "n": 4
+   },
+   "judge_dog": {
+    "rate": 0.5,
+    "stderr": 0.25,
+    "mean_prob": 0.41911640763282776,
+    "n": 4
+   },
+   "judge_target": {
+    "rate": 0.5,
+    "stderr": 0.25,
+    "mean_prob": 0.41911640763282776,
+    "n": 4
+   },
+   "class_histogram": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    2,
+    0,
+    0,
+    0
+   ],
+   "kid_vs_all_test_target": {
+    "kid_x1e3": 81.0015677288658,
+    "se_x1e3": 14.83867410570383,
+    "n_x": 4,
+    "n_y": 1000
+   },
+   "meta": {
+    "ckpt": "iter02/smoke_dog_cinic.pth",
+    "seed": 0,
+    "steps": 10,
+    "eps": 0.001,
+    "n": 4
+   },
+   "target": "dog"
+  },
+  "cat_to_dog_cinic_w0": {
+   "cost": {
+    "mean": 98.55084228515625,
+    "stderr": 12.752450493825021,
+    "n": 4
+   },
+   "judge_target_on_outputs": {
+    "rate": 0.0,
+    "stderr": 0.0,
+    "mean_prob": 0.047390904277563095,
+    "n": 4
+   },
+   "judge_source_on_outputs": {
+    "rate": 1.0,
+    "stderr": 0.0,
+    "mean_prob": 0.9504758715629578,
+    "n": 4
+   },
+   "judge_source_on_inputs": {
+    "rate": 1.0,
+    "stderr": 0.0,
+    "mean_prob": 0.9993503093719482,
+    "n": 4
+   },
+   "judge_target_on_inputs": {
+    "rate": 0.0,
+    "stderr": 0.0,
+    "mean_prob": 0.0005844515981152654,
+    "n": 4
+   },
+   "output_class_histogram": [
+    0,
+    0,
+    0,
+    4,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "output_range": [
+    -1.3898015022277832,
+    1.3330525159835815
+   ],
+   "frac_output_pixels_outside_[-1,1]": 0.01123046875,
+   "cost_clamped": {
+    "mean": 97.62333679199219,
+    "stderr": 12.970642262505962,
+    "n": 4
+   },
+   "kid_vs_all_test_target": {
+    "kid_x1e3": 160.33392342807363,
+    "se_x1e3": 19.450483843684196,
+    "n_x": 4,
+    "n_y": 1000
+   },
+   "meta": {
+    "k": 10,
+    "s": 1.0,
+    "w": 0.0,
+    "valid_coupling": true,
+    "note": "composed PF-ODE (encode source model, decode target model): valid coupling up to model/ODE error",
+    "run": {
+     "direction": "cat_to_dog",
+     "n": 4,
+     "steps": 10,
+     "eps": 0.001,
+     "w": 0.0,
+     "encoder": "out/cat.pth",
+     "src_ckpt": "out/cat.pth",
+     "tgt_ckpt": "iter02/smoke_dog_cinic.pth",
+     "minutes": 0.030680044492085775
+    },
+    "file": "/vol/iter02/smoke_transport_cat_to_dog_cinic_w0.pt"
+   }
+  }
+ },
+ "kid_refs": {},
+ "ceilings": {
+  "all_test_cat": {
+   "rate": 0.851,
+   "stderr": 0.011260506205317771,
+   "mean_prob": 0.8410322070121765,
+   "n": 1000
+  },
+  "first512_test_cat": {
+   "rate": 0.853515625,
+   "stderr": 0.01562666884093275,
+   "mean_prob": 0.848031222820282,
+   "n": 512
+  },
+  "all_test_dog": {
+   "rate": 0.877,
+   "stderr": 0.010386096475577337,
+   "mean_prob": 0.8709170818328857,
+   "n": 1000
+  },
+  "first512_test_dog": {
+   "rate": 0.884765625,
+   "stderr": 0.014111402042815701,
+   "mean_prob": 0.8771462440490723,
+   "n": 512
+  }
+ },
+ "minutes": 0.09404219388961792
+}
