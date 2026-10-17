@@ -1,0 +1,33 @@
+{
+ "container_minutes": 19.967905350526173,
+ "results": [
+  {
+   "task": "eval05",
+   "minutes": 19.939326218763988,
+   "downloads": [
+    "iter05/flow_grid_big.png",
+    "iter05/flow_grid_dog_to_cat_big.png",
+    "iter05/steering_grid_big.png",
+    "iter05/best_pairs_big.png",
+    "iter05/best_pairs_dog_to_cat_big.png",
+    "iter05/best_pairs_cat_to_dog_M1_big.png",
+    "iter05/best_pairs_dog_to_cat_M2_big.png",
+    "iter05/best_pairs_cat_to_dog_M3_big.png",
+    "iter05/best_pairs_dog_to_cat_M4_big.png",
+    "iter05/best_pairs_cat_to_dog_FT_big.png",
+    "iter05/best_pairs_dog_to_cat_FT_big.png",
+    "iter05/same_noise_both_models_big.png",
+    "iter05/compare_cat_to_dog_big.png",
+    "iter05/compare_dog_to_cat_big.png",
+    "iter05/cat_to_dog_iter05_lowest_ptarget_big.png",
+    "iter05/cat_to_dog_M1_lowest_ptarget_big.png",
+    "iter05/cat_to_dog_M3_lowest_ptarget_big.png",
+    "iter05/dog_to_cat_iter05_lowest_ptarget_big.png",
+    "iter05/dog_to_cat_M2_lowest_ptarget_big.png",
+    "iter05/dog_to_cat_M4_lowest_ptarget_big.png",
+    "iter05/eval05.json",
+    "iter05/evalT_stats.json"
+   ]
+  }
+ ]
+}

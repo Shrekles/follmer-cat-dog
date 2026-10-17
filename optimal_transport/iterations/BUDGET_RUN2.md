@@ -8,3 +8,7 @@ iter | job | GPU-min | running total (cap 600)
 04 | resume_cat (40 min from cat_s12129 -> s22457 + stats on 4 new snapshots; container 41.70 min + ~0.5 startup) | 42.2 | 184.4
 04 | resume_dog (40 min from dog_s12386 -> s22697 + stats; container 41.73 min + ~0.5 startup) | 42.2 | 226.6
 04 | eval (composed ODE 512+512, 200 Heun; standard eval; flow/steering/best-pairs/same-noise figures; container 7.03 min + ~0.5 startup) | 7.5 | 234.1
+05 | smoke (20 resume steps cat + snap eval n16/5 steps + eval05 n8/10 steps, all figures; container 1.69 min + ~0.5 startup) | 2.2 | 236.3
+05 | train_cat (container A: 45-min cosine resume 2e-4->2e-6 from iter04/cat_last.pth, 11,666 steps, + snapshot eval of 6 snapshots at n512/200 steps; container 53.69 min + ~0.5 startup) | 54.2 | 290.5
+05 | train_dog (container B: same for dog, 11,723 steps; container 53.48 min + ~0.5 startup) | 54.0 | 344.5
+05 | eval (composed ODE 512+512 with iter05 picks, +/- Tweedie; mixed pairs M1-M4; FT/iter04 re-scored +/- Tweedie; latent Gaussianity; all figures; container 19.97 min + ~0.5 startup) | 20.5 | 365.0

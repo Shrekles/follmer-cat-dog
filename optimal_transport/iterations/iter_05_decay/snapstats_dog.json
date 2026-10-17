@@ -1,0 +1,442 @@
+{
+ "cls": "dog",
+ "n_samples": 512,
+ "heun_steps": 200,
+ "eps": 0.001,
+ "noise": "prior_z(n), seed 0",
+ "kid_floor_train512_vs_test": {
+  "kid_x1e3": 0.3615376687684524,
+  "se_x1e3": 0.4100491350982338,
+  "n_x": 512,
+  "n_y": 1000
+ },
+ "ceiling_all_test": {
+  "rate": 0.877,
+  "stderr": 0.010386096475577337,
+  "mean_prob": 0.8709170818328857,
+  "n": 1000
+ },
+ "snapshots": {
+  "dog_e9999_s28586": {
+   "step": 28586,
+   "ema": 0.9999,
+   "reference": false,
+   "train_minutes": 110.0055977622668,
+   "ckpt": "iter05/dog_e9999_s28586.pth",
+   "prior_file": "/vol/iter05/prior_dog_e9999_s28586.pt",
+   "judge_target": {
+    "rate": 0.802734375,
+    "stderr": 0.017586388235192155,
+    "mean_prob": 0.7891711592674255,
+    "n": 512
+   },
+   "judge_cat": {
+    "rate": 0.11328125,
+    "stderr": 0.014006737245989812,
+    "mean_prob": 0.12186732888221741,
+    "n": 512
+   },
+   "judge_dog": {
+    "rate": 0.802734375,
+    "stderr": 0.017586388235192155,
+    "mean_prob": 0.7891711592674255,
+    "n": 512
+   },
+   "class_histogram": [
+    2,
+    0,
+    5,
+    58,
+    16,
+    411,
+    13,
+    6,
+    0,
+    1
+   ],
+   "kid_vs_all_test": {
+    "kid_x1e3": 9.788678506505999,
+    "se_x1e3": 0.9327016887255013,
+    "n_x": 512,
+    "n_y": 1000
+   },
+   "judge_target_tweedie": {
+    "rate": 0.810546875,
+    "stderr": 0.017318288654747868,
+    "mean_prob": 0.8001664876937866,
+    "n": 512
+   },
+   "kid_vs_all_test_tweedie": {
+    "kid_x1e3": 10.057307326272635,
+    "se_x1e3": 0.9944593766704202,
+    "n_x": 512,
+    "n_y": 1000
+   },
+   "frac_pixels_outside_[-1,1]": 0.0258026123046875,
+   "frac_samples_saturated": 0.01171875,
+   "frac_samples_saturated_tweedie": 0.01171875,
+   "memo": {
+    "median": 418.035888671875,
+    "mean": 433.3907470703125,
+    "q05": 214.23587036132812,
+    "ratio_to_test_median": 0.9672340154647827,
+    "frac_below_10pct_test_median": 0.0,
+    "memorisation_flag": false
+   }
+  },
+  "dog_e9995_s31505": {
+   "step": 31505,
+   "ema": 0.9995,
+   "reference": false,
+   "train_minutes": 121.25633706649145,
+   "ckpt": "iter05/dog_e9995_s31505.pth",
+   "prior_file": "/vol/iter05/prior_dog_e9995_s31505.pt",
+   "judge_target": {
+    "rate": 0.79296875,
+    "stderr": 0.01790651240664172,
+    "mean_prob": 0.778559684753418,
+    "n": 512
+   },
+   "judge_cat": {
+    "rate": 0.134765625,
+    "stderr": 0.015091119809549278,
+    "mean_prob": 0.13974529504776,
+    "n": 512
+   },
+   "judge_dog": {
+    "rate": 0.79296875,
+    "stderr": 0.01790651240664172,
+    "mean_prob": 0.778559684753418,
+    "n": 512
+   },
+   "class_histogram": [
+    2,
+    0,
+    4,
+    69,
+    11,
+    406,
+    14,
+    6,
+    0,
+    0
+   ],
+   "kid_vs_all_test": {
+    "kid_x1e3": 10.814457932650345,
+    "se_x1e3": 0.9414379019290209,
+    "n_x": 512,
+    "n_y": 1000
+   },
+   "judge_target_tweedie": {
+    "rate": 0.79296875,
+    "stderr": 0.01790651240664172,
+    "mean_prob": 0.7868503928184509,
+    "n": 512
+   },
+   "kid_vs_all_test_tweedie": {
+    "kid_x1e3": 12.474486735766455,
+    "se_x1e3": 1.1622905731201172,
+    "n_x": 512,
+    "n_y": 1000
+   },
+   "frac_pixels_outside_[-1,1]": 0.01379521656781435,
+   "frac_samples_saturated": 0.0078125,
+   "frac_samples_saturated_tweedie": 0.0078125,
+   "memo": {
+    "median": 374.73681640625,
+    "mean": 389.78607177734375,
+    "q05": 204.44361877441406,
+    "ratio_to_test_median": 0.8670504093170166,
+    "frac_below_10pct_test_median": 0.0,
+    "memorisation_flag": false
+   }
+  },
+  "dog_e9999_s31505": {
+   "step": 31505,
+   "ema": 0.9999,
+   "reference": false,
+   "train_minutes": 121.25633706649145,
+   "ckpt": "iter05/dog_e9999_s31505.pth",
+   "prior_file": "/vol/iter05/prior_dog_e9999_s31505.pt",
+   "judge_target": {
+    "rate": 0.787109375,
+    "stderr": 0.018090927391404592,
+    "mean_prob": 0.7770935297012329,
+    "n": 512
+   },
+   "judge_cat": {
+    "rate": 0.125,
+    "stderr": 0.014615849167085708,
+    "mean_prob": 0.12888255715370178,
+    "n": 512
+   },
+   "judge_dog": {
+    "rate": 0.787109375,
+    "stderr": 0.018090927391404592,
+    "mean_prob": 0.7770935297012329,
+    "n": 512
+   },
+   "class_histogram": [
+    3,
+    0,
+    5,
+    64,
+    16,
+    403,
+    13,
+    7,
+    0,
+    1
+   ],
+   "kid_vs_all_test": {
+    "kid_x1e3": 10.770804571562653,
+    "se_x1e3": 0.9842189028859138,
+    "n_x": 512,
+    "n_y": 1000
+   },
+   "judge_target_tweedie": {
+    "rate": 0.794921875,
+    "stderr": 0.01784378216100891,
+    "mean_prob": 0.78966224193573,
+    "n": 512
+   },
+   "kid_vs_all_test_tweedie": {
+    "kid_x1e3": 10.489910086755483,
+    "se_x1e3": 0.9735529311001301,
+    "n_x": 512,
+    "n_y": 1000
+   },
+   "frac_pixels_outside_[-1,1]": 0.023530324921011925,
+   "frac_samples_saturated": 0.01171875,
+   "frac_samples_saturated_tweedie": 0.01171875,
+   "memo": {
+    "median": 420.455078125,
+    "mean": 436.74359130859375,
+    "q05": 219.93881225585938,
+    "ratio_to_test_median": 0.9728314280509949,
+    "frac_below_10pct_test_median": 0.0,
+    "memorisation_flag": false
+   }
+  },
+  "dog_e9995_s34420": {
+   "step": 34420,
+   "ema": 0.9995,
+   "reference": false,
+   "train_minutes": 132.50577100118002,
+   "ckpt": "iter05/dog_e9995_s34420.pth",
+   "prior_file": "/vol/iter05/prior_dog_e9995_s34420.pt",
+   "judge_target": {
+    "rate": 0.787109375,
+    "stderr": 0.018090927391404592,
+    "mean_prob": 0.7779420614242554,
+    "n": 512
+   },
+   "judge_cat": {
+    "rate": 0.134765625,
+    "stderr": 0.015091119809549278,
+    "mean_prob": 0.13779887557029724,
+    "n": 512
+   },
+   "judge_dog": {
+    "rate": 0.787109375,
+    "stderr": 0.018090927391404592,
+    "mean_prob": 0.7779420614242554,
+    "n": 512
+   },
+   "class_histogram": [
+    0,
+    0,
+    5,
+    69,
+    16,
+    403,
+    16,
+    3,
+    0,
+    0
+   ],
+   "kid_vs_all_test": {
+    "kid_x1e3": 11.86786834749265,
+    "se_x1e3": 0.9480200824327767,
+    "n_x": 512,
+    "n_y": 1000
+   },
+   "judge_target_tweedie": {
+    "rate": 0.798828125,
+    "stderr": 0.017716393786733522,
+    "mean_prob": 0.7860579490661621,
+    "n": 512
+   },
+   "kid_vs_all_test_tweedie": {
+    "kid_x1e3": 13.742450385958005,
+    "se_x1e3": 1.1880407109856606,
+    "n_x": 512,
+    "n_y": 1000
+   },
+   "frac_pixels_outside_[-1,1]": 0.010547637939453125,
+   "frac_samples_saturated": 0.005859375,
+   "frac_samples_saturated_tweedie": 0.005859375,
+   "memo": {
+    "median": 368.54119873046875,
+    "mean": 380.6810607910156,
+    "q05": 200.0836639404297,
+    "ratio_to_test_median": 0.852715253829956,
+    "frac_below_10pct_test_median": 0.0,
+    "memorisation_flag": false
+   }
+  },
+  "dog_e9999_s34420": {
+   "step": 34420,
+   "ema": 0.9999,
+   "reference": false,
+   "train_minutes": 132.50577100118002,
+   "ckpt": "iter05/dog_e9999_s34420.pth",
+   "prior_file": "/vol/iter05/prior_dog_e9999_s34420.pt",
+   "judge_target": {
+    "rate": 0.787109375,
+    "stderr": 0.018090927391404592,
+    "mean_prob": 0.7717084288597107,
+    "n": 512
+   },
+   "judge_cat": {
+    "rate": 0.130859375,
+    "stderr": 0.014904330259937343,
+    "mean_prob": 0.13465392589569092,
+    "n": 512
+   },
+   "judge_dog": {
+    "rate": 0.787109375,
+    "stderr": 0.018090927391404592,
+    "mean_prob": 0.7717084288597107,
+    "n": 512
+   },
+   "class_histogram": [
+    2,
+    0,
+    5,
+    67,
+    12,
+    403,
+    15,
+    7,
+    0,
+    1
+   ],
+   "kid_vs_all_test": {
+    "kid_x1e3": 11.692090514618059,
+    "se_x1e3": 1.0354839032515883,
+    "n_x": 512,
+    "n_y": 1000
+   },
+   "judge_target_tweedie": {
+    "rate": 0.79296875,
+    "stderr": 0.01790651240664172,
+    "mean_prob": 0.7849700450897217,
+    "n": 512
+   },
+   "kid_vs_all_test_tweedie": {
+    "kid_x1e3": 11.170719990480027,
+    "se_x1e3": 1.0010636178776622,
+    "n_x": 512,
+    "n_y": 1000
+   },
+   "frac_pixels_outside_[-1,1]": 0.020679473876953125,
+   "frac_samples_saturated": 0.01171875,
+   "frac_samples_saturated_tweedie": 0.01171875,
+   "memo": {
+    "median": 415.75048828125,
+    "mean": 432.2284851074219,
+    "q05": 224.17813110351562,
+    "ratio_to_test_median": 0.9619461297988892,
+    "frac_below_10pct_test_median": 0.0,
+    "memorisation_flag": false
+   }
+  },
+  "dog_ref04_s20119": {
+   "step": 20119,
+   "ema": 0.9995,
+   "reference": true,
+   "train_minutes": 77.50506755510966,
+   "ckpt": "iter04/dog_s20119.pth",
+   "prior_file": "/vol/iter05/prior_dog_ref04_s20119.pt",
+   "judge_target": {
+    "rate": 0.818359375,
+    "stderr": 0.017038978083216458,
+    "mean_prob": 0.8096526861190796,
+    "n": 512
+   },
+   "judge_cat": {
+    "rate": 0.109375,
+    "stderr": 0.013793405167798374,
+    "mean_prob": 0.11707114428281784,
+    "n": 512
+   },
+   "judge_dog": {
+    "rate": 0.818359375,
+    "stderr": 0.017038978083216458,
+    "mean_prob": 0.8096526861190796,
+    "n": 512
+   },
+   "class_histogram": [
+    5,
+    0,
+    5,
+    56,
+    12,
+    419,
+    9,
+    6,
+    0,
+    0
+   ],
+   "kid_vs_all_test": {
+    "kid_x1e3": 8.749315979583727,
+    "se_x1e3": 0.8848508005030453,
+    "n_x": 512,
+    "n_y": 1000
+   },
+   "judge_target_tweedie": {
+    "rate": 0.82421875,
+    "stderr": 0.016821802848421656,
+    "mean_prob": 0.8173827528953552,
+    "n": 512
+   },
+   "kid_vs_all_test_tweedie": {
+    "kid_x1e3": 9.448100355271993,
+    "se_x1e3": 1.0427606757730246,
+    "n_x": 512,
+    "n_y": 1000
+   },
+   "frac_pixels_outside_[-1,1]": 0.030658721923828125,
+   "frac_samples_saturated": 0.017578125,
+   "frac_samples_saturated_tweedie": 0.017578125,
+   "memo": {
+    "median": 412.6048583984375,
+    "mean": 431.4013366699219,
+    "q05": 210.7990264892578,
+    "ratio_to_test_median": 0.9546679258346558,
+    "frac_below_10pct_test_median": 0.0,
+    "memorisation_flag": false
+   }
+  }
+ },
+ "memo_test_first512": {
+  "median": 432.197265625,
+  "mean": 450.1306457519531,
+  "q05": 189.636962890625
+ },
+ "pick": {
+  "name": "dog_e9999_s28586",
+  "ckpt": "iter05/dog_e9999_s28586.pth",
+  "prior_file": "/vol/iter05/prior_dog_e9999_s28586.pt",
+  "rule": "memo>=0.5; lowest KID; within 1 se -> highest judge <= ceiling+2pt; tie -> latest step",
+  "lowest_kid": "dog_e9999_s28586",
+  "kid_threshold": 10.7213801952315,
+  "within_1se": [
+   "dog_e9999_s28586"
+  ],
+  "memo_warn": [],
+  "ceiling": 0.877
+ },
+ "minutes": 8.340936613082885
+}

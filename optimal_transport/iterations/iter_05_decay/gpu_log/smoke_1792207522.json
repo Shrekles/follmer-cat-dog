@@ -1,0 +1,224 @@
+{
+ "container_minutes": 1.6901135444641113,
+ "results": [
+  {
+   "task": "chain_smoke",
+   "sub": [
+    {
+     "task": "chain_decay cat",
+     "sub": [
+      {
+       "task": "resume_decay cat",
+       "last": "iter04/cat_last.pth",
+       "step0": 22457,
+       "steps": 20,
+       "images_seen": 5120,
+       "adam": "Adam state loaded from iter04/cat_last.pth",
+       "ema_init": "both EMAs initialised from the 0.9995 EMA in iter04/cat_last.pth",
+       "n_params": 9864771,
+       "loss_log": [
+        [
+         22462,
+         0.028154432773590088,
+         0.037661051750183104,
+         0.0001810926824431198
+        ],
+        [
+         22467,
+         0.02572258934378624,
+         0.0565584659576416,
+         0.00011648701203898287
+        ],
+        [
+         22472,
+         0.031002412736415862,
+         0.18121492862701416,
+         4.280926002304517e-05
+        ],
+        [
+         22477,
+         0.03013574369251728,
+         0.3498457074165344,
+         3.2188542810813718e-06
+        ]
+       ],
+       "snapshots": [
+        {
+         "step": 22467,
+         "path": "iter05/smoke/cat_e9995_s22467.pth",
+         "minutes": 87.56152874231339,
+         "ema": 0.9995,
+         "frac": 0.5
+        },
+        {
+         "step": 22467,
+         "path": "iter05/smoke/cat_e9999_s22467.pth",
+         "minutes": 87.56152874231339,
+         "ema": 0.9999,
+         "frac": 0.5
+        },
+        {
+         "step": 22472,
+         "path": "iter05/smoke/cat_e9995_s22472.pth",
+         "minutes": 87.68618534008661,
+         "ema": 0.9995,
+         "frac": 0.75
+        },
+        {
+         "step": 22472,
+         "path": "iter05/smoke/cat_e9999_s22472.pth",
+         "minutes": 87.68618534008661,
+         "ema": 0.9999,
+         "frac": 0.75
+        },
+        {
+         "step": 22477,
+         "path": "iter05/smoke/cat_e9995_s22477.pth",
+         "minutes": 87.85481598377227,
+         "ema": 0.9995,
+         "frac": 1.0
+        },
+        {
+         "step": 22477,
+         "path": "iter05/smoke/cat_e9999_s22477.pth",
+         "minutes": 87.85481598377227,
+         "ema": 0.9999,
+         "frac": 1.0
+        }
+       ],
+       "it_per_s": 0.952789888710667,
+       "peak_mem_gb": 6.241641998291016,
+       "minutes": 0.34984978040059406
+      },
+      {
+       "task": "snap_eval05 cat",
+       "pick": {
+        "name": "cat_e9999_s22477",
+        "ckpt": "iter05/smoke/cat_e9999_s22477.pth",
+        "prior_file": "/vol/iter05/smoke/prior_cat_e9999_s22477.pt",
+        "rule": "memo>=0.5; lowest KID; within 1 se -> highest judge <= ceiling+2pt; tie -> latest step",
+        "lowest_kid": "cat_e9999_s22472",
+        "kid_threshold": 238.4423257667274,
+        "within_1se": [
+         "cat_e9995_s22472",
+         "cat_e9995_s22477",
+         "cat_e9999_s22467",
+         "cat_e9999_s22472",
+         "cat_e9999_s22477"
+        ],
+        "memo_warn": [],
+        "ceiling": 0.851
+       },
+       "minutes": 0.27198878129323323,
+       "downloads": [
+        "iter05/smoke/snapstats_cat.json",
+        "iter05/smoke/memo_cat.json",
+        "iter05/smoke/prior_cat_e9999_s22467_lowest_ptarget_big.png",
+        "iter05/smoke/prior_cat_e9995_s22472_lowest_ptarget_big.png",
+        "iter05/smoke/prior_cat_e9999_s22472_lowest_ptarget_big.png",
+        "iter05/smoke/prior_cat_e9995_s22477_lowest_ptarget_big.png",
+        "iter05/smoke/prior_cat_e9999_s22477_lowest_ptarget_big.png",
+        "iter05/smoke/prior_cat_e9999_s22477_big.png",
+        "iter05/smoke/prior_cat_ref04_s17297_lowest_ptarget_big.png",
+        "iter05/smoke/prior_cat_ref04_s17297_big.png"
+       ]
+      }
+     ],
+     "pick": {
+      "name": "cat_e9999_s22477",
+      "ckpt": "iter05/smoke/cat_e9999_s22477.pth",
+      "prior_file": "/vol/iter05/smoke/prior_cat_e9999_s22477.pt",
+      "rule": "memo>=0.5; lowest KID; within 1 se -> highest judge <= ceiling+2pt; tie -> latest step",
+      "lowest_kid": "cat_e9999_s22472",
+      "kid_threshold": 238.4423257667274,
+      "within_1se": [
+       "cat_e9995_s22472",
+       "cat_e9995_s22477",
+       "cat_e9999_s22467",
+       "cat_e9999_s22472",
+       "cat_e9999_s22477"
+      ],
+      "memo_warn": [],
+      "ceiling": 0.851
+     },
+     "downloads": [
+      "iter05/smoke/snapstats_cat.json",
+      "iter05/smoke/memo_cat.json",
+      "iter05/smoke/prior_cat_e9999_s22467_lowest_ptarget_big.png",
+      "iter05/smoke/prior_cat_e9995_s22472_lowest_ptarget_big.png",
+      "iter05/smoke/prior_cat_e9999_s22472_lowest_ptarget_big.png",
+      "iter05/smoke/prior_cat_e9995_s22477_lowest_ptarget_big.png",
+      "iter05/smoke/prior_cat_e9999_s22477_lowest_ptarget_big.png",
+      "iter05/smoke/prior_cat_e9999_s22477_big.png",
+      "iter05/smoke/prior_cat_ref04_s17297_lowest_ptarget_big.png",
+      "iter05/smoke/prior_cat_ref04_s17297_big.png"
+     ],
+     "minutes": 0.8863085945447285
+    },
+    {
+     "task": "eval05",
+     "minutes": 0.7583326975504557,
+     "downloads": [
+      "iter05/smoke/flow_grid_big.png",
+      "iter05/smoke/flow_grid_dog_to_cat_big.png",
+      "iter05/smoke/steering_grid_big.png",
+      "iter05/smoke/best_pairs_big.png",
+      "iter05/smoke/best_pairs_dog_to_cat_big.png",
+      "iter05/smoke/best_pairs_cat_to_dog_M1_big.png",
+      "iter05/smoke/best_pairs_dog_to_cat_M2_big.png",
+      "iter05/smoke/best_pairs_cat_to_dog_M3_big.png",
+      "iter05/smoke/best_pairs_dog_to_cat_M4_big.png",
+      "iter05/smoke/best_pairs_cat_to_dog_FT_big.png",
+      "iter05/smoke/best_pairs_dog_to_cat_FT_big.png",
+      "iter05/smoke/same_noise_both_models_big.png",
+      "iter05/smoke/compare_cat_to_dog_big.png",
+      "iter05/smoke/compare_dog_to_cat_big.png",
+      "iter05/smoke/cat_to_dog_iter05_lowest_ptarget_big.png",
+      "iter05/smoke/cat_to_dog_M1_lowest_ptarget_big.png",
+      "iter05/smoke/cat_to_dog_M3_lowest_ptarget_big.png",
+      "iter05/smoke/dog_to_cat_iter05_lowest_ptarget_big.png",
+      "iter05/smoke/dog_to_cat_M2_lowest_ptarget_big.png",
+      "iter05/smoke/dog_to_cat_M4_lowest_ptarget_big.png",
+      "iter05/smoke/eval05.json",
+      "iter05/smoke/evalT_stats.json"
+     ]
+    }
+   ],
+   "downloads": [
+    "iter05/smoke/snapstats_cat.json",
+    "iter05/smoke/memo_cat.json",
+    "iter05/smoke/prior_cat_e9999_s22467_lowest_ptarget_big.png",
+    "iter05/smoke/prior_cat_e9995_s22472_lowest_ptarget_big.png",
+    "iter05/smoke/prior_cat_e9999_s22472_lowest_ptarget_big.png",
+    "iter05/smoke/prior_cat_e9995_s22477_lowest_ptarget_big.png",
+    "iter05/smoke/prior_cat_e9999_s22477_lowest_ptarget_big.png",
+    "iter05/smoke/prior_cat_e9999_s22477_big.png",
+    "iter05/smoke/prior_cat_ref04_s17297_lowest_ptarget_big.png",
+    "iter05/smoke/prior_cat_ref04_s17297_big.png",
+    "iter05/smoke/flow_grid_big.png",
+    "iter05/smoke/flow_grid_dog_to_cat_big.png",
+    "iter05/smoke/steering_grid_big.png",
+    "iter05/smoke/best_pairs_big.png",
+    "iter05/smoke/best_pairs_dog_to_cat_big.png",
+    "iter05/smoke/best_pairs_cat_to_dog_M1_big.png",
+    "iter05/smoke/best_pairs_dog_to_cat_M2_big.png",
+    "iter05/smoke/best_pairs_cat_to_dog_M3_big.png",
+    "iter05/smoke/best_pairs_dog_to_cat_M4_big.png",
+    "iter05/smoke/best_pairs_cat_to_dog_FT_big.png",
+    "iter05/smoke/best_pairs_dog_to_cat_FT_big.png",
+    "iter05/smoke/same_noise_both_models_big.png",
+    "iter05/smoke/compare_cat_to_dog_big.png",
+    "iter05/smoke/compare_dog_to_cat_big.png",
+    "iter05/smoke/cat_to_dog_iter05_lowest_ptarget_big.png",
+    "iter05/smoke/cat_to_dog_M1_lowest_ptarget_big.png",
+    "iter05/smoke/cat_to_dog_M3_lowest_ptarget_big.png",
+    "iter05/smoke/dog_to_cat_iter05_lowest_ptarget_big.png",
+    "iter05/smoke/dog_to_cat_M2_lowest_ptarget_big.png",
+    "iter05/smoke/dog_to_cat_M4_lowest_ptarget_big.png",
+    "iter05/smoke/eval05.json",
+    "iter05/smoke/evalT_stats.json"
+   ],
+   "minutes": 1.6876521507898967
+  }
+ ]
+}

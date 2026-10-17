@@ -1,0 +1,58 @@
+{
+ "test_first512": {
+  "median": 432.197265625,
+  "mean": 450.1306457519531,
+  "q05": 189.636962890625
+ },
+ "sets": {
+  "prior_dog_e9999_s28586": {
+   "median": 418.035888671875,
+   "mean": 433.3907470703125,
+   "q05": 214.23587036132812,
+   "ratio_to_test_median": 0.9672340154647827,
+   "frac_below_10pct_test_median": 0.0,
+   "memorisation_flag": false
+  },
+  "prior_dog_e9995_s31505": {
+   "median": 374.73681640625,
+   "mean": 389.78607177734375,
+   "q05": 204.44361877441406,
+   "ratio_to_test_median": 0.8670504093170166,
+   "frac_below_10pct_test_median": 0.0,
+   "memorisation_flag": false
+  },
+  "prior_dog_e9999_s31505": {
+   "median": 420.455078125,
+   "mean": 436.74359130859375,
+   "q05": 219.93881225585938,
+   "ratio_to_test_median": 0.9728314280509949,
+   "frac_below_10pct_test_median": 0.0,
+   "memorisation_flag": false
+  },
+  "prior_dog_e9995_s34420": {
+   "median": 368.54119873046875,
+   "mean": 380.6810607910156,
+   "q05": 200.0836639404297,
+   "ratio_to_test_median": 0.852715253829956,
+   "frac_below_10pct_test_median": 0.0,
+   "memorisation_flag": false
+  },
+  "prior_dog_e9999_s34420": {
+   "median": 415.75048828125,
+   "mean": 432.2284851074219,
+   "q05": 224.17813110351562,
+   "ratio_to_test_median": 0.9619461297988892,
+   "frac_below_10pct_test_median": 0.0,
+   "memorisation_flag": false
+  },
+  "prior_dog_ref04_s20119": {
+   "median": 412.6048583984375,
+   "mean": 431.4013366699219,
+   "q05": 210.7990264892578,
+   "ratio_to_test_median": 0.9546679258346558,
+   "frac_below_10pct_test_median": 0.0,
+   "memorisation_flag": false
+  }
+ },
+ "minutes": 0.0063529372215271
+}
