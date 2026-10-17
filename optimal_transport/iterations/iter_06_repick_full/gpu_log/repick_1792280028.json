@@ -1,0 +1,37 @@
+{
+ "container_minutes": 24.114180799325307,
+ "results": [
+  {
+   "task": "repick",
+   "selected": {
+    "cat_to_dog": [
+     "4_cat_s12129",
+     "4_dog_s20119"
+    ],
+    "dog_to_cat": [
+     "4_dog_s17541",
+     "4_cat_s22457"
+    ]
+   },
+   "minutes": 24.09194700717926,
+   "downloads": [
+    "iter06/probe_stage1_cat_to_dog_big.png",
+    "iter06/probe_stage1_dog_to_cat_big.png",
+    "iter06/cat_to_dog_repick_big.png",
+    "iter06/cat_to_dog_repick_b_big.png",
+    "iter06/cat_to_dog_repick_lowest_ptarget_big.png",
+    "iter06/best_pairs_cat_to_dog_repick_big.png",
+    "iter06/compare_cat_to_dog_big.png",
+    "iter06/dog_to_cat_repick_big.png",
+    "iter06/dog_to_cat_repick_b_big.png",
+    "iter06/dog_to_cat_repick_lowest_ptarget_big.png",
+    "iter06/best_pairs_dog_to_cat_repick_big.png",
+    "iter06/compare_dog_to_cat_big.png",
+    "iter06/repick06.json",
+    "iter06/evalT_stats.json",
+    "iter06/memo_T_dog.json",
+    "iter06/memo_T_cat.json"
+   ]
+  }
+ ]
+}

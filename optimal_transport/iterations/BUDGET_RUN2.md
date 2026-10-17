@@ -12,3 +12,7 @@ iter | job | GPU-min | running total (cap 600)
 05 | train_cat (container A: 45-min cosine resume 2e-4->2e-6 from iter04/cat_last.pth, 11,666 steps, + snapshot eval of 6 snapshots at n512/200 steps; container 53.69 min + ~0.5 startup) | 54.2 | 290.5
 05 | train_dog (container B: same for dog, 11,723 steps; container 53.48 min + ~0.5 startup) | 54.0 | 344.5
 05 | eval (composed ODE 512+512 with iter05 picks, +/- Tweedie; mixed pairs M1-M4; FT/iter04 re-scored +/- Tweedie; latent Gaussianity; all figures; container 19.97 min + ~0.5 startup) | 20.5 | 365.0
+06 | smoke 1 (failed at the first figure, empty grid at n=8; container 0.34 min + ~0.5 startup) | 0.8 | 365.8
+06 | smoke 2 (tiny ft_full + tiny repick, all code paths; container 0.91 min + ~0.5 startup) | 1.4 | 367.2
+06 | A: ft (FT composed ODE on test 512-999 both directions + 1,000-image eval; container 19.82 min + ~0.5 startup) | 20.3 | 387.5
+06 | B: repick (stages 1-2 on 64 probe images, 11 encoders/11 decoders per class; stage 3 n=512 + eval + figures; container 24.11 min + ~0.5 startup) | 24.6 | 412.1

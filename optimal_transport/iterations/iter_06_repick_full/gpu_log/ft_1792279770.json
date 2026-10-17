@@ -1,0 +1,21 @@
+{
+ "container_minutes": 19.824190481503805,
+ "results": [
+  {
+   "task": "ft_full",
+   "minutes": 19.809912991523742,
+   "downloads": [
+    "iter06/ft_cat_to_dog_512_big.png",
+    "iter06/ft_cat_to_dog_512_b_big.png",
+    "iter06/ft_cat_to_dog_1000_lowest_ptarget_big.png",
+    "iter06/ft_best_pairs_cat_to_dog_1000_big.png",
+    "iter06/ft_dog_to_cat_512_big.png",
+    "iter06/ft_dog_to_cat_512_b_big.png",
+    "iter06/ft_dog_to_cat_1000_lowest_ptarget_big.png",
+    "iter06/ft_best_pairs_dog_to_cat_1000_big.png",
+    "iter06/ft1000.json",
+    "iter06/ft1000_per_image.json"
+   ]
+  }
+ ]
+}

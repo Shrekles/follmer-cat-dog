@@ -1,0 +1,79 @@
+{
+ "container_minutes": 0.9148131370544433,
+ "results": [
+  {
+   "task": "chain_smoke",
+   "sub": [
+    {
+     "task": "ft_full",
+     "minutes": 0.3576229770978292,
+     "downloads": [
+      "iter06/smoke2/ft_cat_to_dog_512_big.png",
+      "iter06/smoke2/ft_cat_to_dog_1000_lowest_ptarget_big.png",
+      "iter06/smoke2/ft_best_pairs_cat_to_dog_1000_big.png",
+      "iter06/smoke2/ft_dog_to_cat_512_big.png",
+      "iter06/smoke2/ft_dog_to_cat_1000_lowest_ptarget_big.png",
+      "iter06/smoke2/ft_best_pairs_dog_to_cat_1000_big.png",
+      "iter06/smoke2/ft1000.json",
+      "iter06/smoke2/ft1000_per_image.json"
+     ]
+    },
+    {
+     "task": "repick",
+     "selected": {
+      "cat_to_dog": [
+       "4_cat_s17297",
+       "5_dog_e9999_s28586"
+      ],
+      "dog_to_cat": [
+       "4_dog_s20119",
+       "5_cat_e9995_s31247"
+      ]
+     },
+     "minutes": 0.5217742522557577,
+     "downloads": [
+      "iter06/smoke2/probe_stage1_cat_to_dog_big.png",
+      "iter06/smoke2/probe_stage1_dog_to_cat_big.png",
+      "iter06/smoke2/cat_to_dog_repick_big.png",
+      "iter06/smoke2/cat_to_dog_repick_lowest_ptarget_big.png",
+      "iter06/smoke2/best_pairs_cat_to_dog_repick_big.png",
+      "iter06/smoke2/compare_cat_to_dog_big.png",
+      "iter06/smoke2/dog_to_cat_repick_big.png",
+      "iter06/smoke2/dog_to_cat_repick_lowest_ptarget_big.png",
+      "iter06/smoke2/best_pairs_dog_to_cat_repick_big.png",
+      "iter06/smoke2/compare_dog_to_cat_big.png",
+      "iter06/smoke2/repick06.json",
+      "iter06/smoke2/evalT_stats.json",
+      "iter06/smoke2/memo_T_dog.json",
+      "iter06/smoke2/memo_T_cat.json"
+     ]
+    }
+   ],
+   "downloads": [
+    "iter06/smoke2/ft_cat_to_dog_512_big.png",
+    "iter06/smoke2/ft_cat_to_dog_1000_lowest_ptarget_big.png",
+    "iter06/smoke2/ft_best_pairs_cat_to_dog_1000_big.png",
+    "iter06/smoke2/ft_dog_to_cat_512_big.png",
+    "iter06/smoke2/ft_dog_to_cat_1000_lowest_ptarget_big.png",
+    "iter06/smoke2/ft_best_pairs_dog_to_cat_1000_big.png",
+    "iter06/smoke2/ft1000.json",
+    "iter06/smoke2/ft1000_per_image.json",
+    "iter06/smoke2/probe_stage1_cat_to_dog_big.png",
+    "iter06/smoke2/probe_stage1_dog_to_cat_big.png",
+    "iter06/smoke2/cat_to_dog_repick_big.png",
+    "iter06/smoke2/cat_to_dog_repick_lowest_ptarget_big.png",
+    "iter06/smoke2/best_pairs_cat_to_dog_repick_big.png",
+    "iter06/smoke2/compare_cat_to_dog_big.png",
+    "iter06/smoke2/dog_to_cat_repick_big.png",
+    "iter06/smoke2/dog_to_cat_repick_lowest_ptarget_big.png",
+    "iter06/smoke2/best_pairs_dog_to_cat_repick_big.png",
+    "iter06/smoke2/compare_dog_to_cat_big.png",
+    "iter06/smoke2/repick06.json",
+    "iter06/smoke2/evalT_stats.json",
+    "iter06/smoke2/memo_T_dog.json",
+    "iter06/smoke2/memo_T_cat.json"
+   ],
+   "minutes": 0.9141246676445007
+  }
+ ]
+}

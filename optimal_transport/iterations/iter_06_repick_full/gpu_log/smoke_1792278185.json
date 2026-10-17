@@ -1,0 +1,10 @@
+{
+ "container_minutes": 0.33953884045283,
+ "results": [
+  {
+   "task": "chain_smoke",
+   "error": "RuntimeError('Trying to create tensor with negative dimension -2: [3, 66, -2]')",
+   "minutes": 0
+  }
+ ]
+}
