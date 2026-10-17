@@ -1,0 +1,25 @@
+{
+ "container_minutes": 0.3595160404841105,
+ "results": [
+  {
+   "task": "eval_composed",
+   "minutes": 0.31912924846013385,
+   "downloads": [
+    "iter04/smoke_flow_grid_big.png",
+    "iter04/smoke_best_pairs_big.png",
+    "iter04/smoke_flow_grid_dog_to_cat_big.png",
+    "iter04/smoke_best_pairs_dog_to_cat_big.png",
+    "iter04/smoke_steering_grid_big.png",
+    "iter04/smoke_steering_grid.json",
+    "iter04/smoke_same_noise_both_models_big.png",
+    "iter04/smoke_cat_to_dog_scratch_big.png",
+    "iter04/smoke_cat_to_dog_scratch_lowest_ptarget_big.png",
+    "iter04/smoke_dog_to_cat_scratch_big.png",
+    "iter04/smoke_dog_to_cat_scratch_lowest_ptarget_big.png",
+    "iter04/smoke_eval04.json",
+    "iter04/smoke_evalT_stats.json"
+   ]
+  }
+ ],
+ "client_wall_minutes": 0.44642192920049034
+}

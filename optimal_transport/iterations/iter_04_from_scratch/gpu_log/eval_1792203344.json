@@ -1,0 +1,26 @@
+{
+ "container_minutes": 7.030934170881907,
+ "results": [
+  {
+   "task": "eval_composed",
+   "minutes": 7.008658587932587,
+   "downloads": [
+    "iter04/flow_grid_big.png",
+    "iter04/best_pairs_big.png",
+    "iter04/flow_grid_dog_to_cat_big.png",
+    "iter04/best_pairs_dog_to_cat_big.png",
+    "iter04/steering_grid_big.png",
+    "iter04/steering_grid.json",
+    "iter04/same_noise_both_models_big.png",
+    "iter04/cat_to_dog_scratch_big.png",
+    "iter04/cat_to_dog_scratch_b_big.png",
+    "iter04/cat_to_dog_scratch_lowest_ptarget_big.png",
+    "iter04/dog_to_cat_scratch_big.png",
+    "iter04/dog_to_cat_scratch_b_big.png",
+    "iter04/dog_to_cat_scratch_lowest_ptarget_big.png",
+    "iter04/eval04.json",
+    "iter04/evalT_stats.json"
+   ]
+  }
+ ]
+}

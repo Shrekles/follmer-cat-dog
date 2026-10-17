@@ -1,0 +1,191 @@
+{
+ "cls": "dog",
+ "n_samples": 256,
+ "heun_steps": 100,
+ "eps": 0.001,
+ "noise": "prior_z(n), seed 0",
+ "kid_floor_train_vs_test": {
+  "kid_x1e3": 0.18973767380581208,
+  "se_x1e3": 0.5504948203451931,
+  "n_x": 256,
+  "n_y": 1000
+ },
+ "ceiling_all_test": {
+  "rate": 0.877,
+  "stderr": 0.010386096475577337,
+  "mean_prob": 0.8709170818328857,
+  "n": 1000
+ },
+ "snapshots": {
+  "dog_s3108": {
+   "step": 3108,
+   "train_minutes": 11.875524830818176,
+   "ckpt": "iter04/dog_s3108.pth",
+   "prior_file": "/vol/iter04/prior_dog_s3108.pt",
+   "judge_target": {
+    "rate": 0.24609375,
+    "stderr": 0.02692086320725943,
+    "mean_prob": 0.23536992073059082,
+    "n": 256
+   },
+   "judge_cat": {
+    "rate": 0.26171875,
+    "stderr": 0.02747314355494783,
+    "mean_prob": 0.255849689245224,
+    "n": 256
+   },
+   "judge_dog": {
+    "rate": 0.24609375,
+    "stderr": 0.02692086320725943,
+    "mean_prob": 0.23536992073059082,
+    "n": 256
+   },
+   "class_histogram": [
+    18,
+    9,
+    42,
+    67,
+    8,
+    63,
+    38,
+    4,
+    3,
+    4
+   ],
+   "kid_vs_all_test": {
+    "kid_x1e3": 100.28678042730954,
+    "se_x1e3": 6.8708984181284904,
+    "n_x": 256,
+    "n_y": 1000
+   },
+   "frac_pixels_outside_[-1,1]": 0.22621409595012665,
+   "memo": {
+    "median": 445.4873046875,
+    "mean": 613.7561645507812,
+    "q05": 145.77357482910156,
+    "ratio_to_test_median": 1.0307499170303345,
+    "frac_below_10pct_test_median": 0.0,
+    "memorisation_flag": false
+   }
+  },
+  "dog_s6195": {
+   "step": 6195,
+   "train_minutes": 23.751425802707672,
+   "ckpt": "iter04/dog_s6195.pth",
+   "prior_file": "/vol/iter04/prior_dog_s6195.pt",
+   "judge_target": {
+    "rate": 0.58984375,
+    "stderr": 0.0307413669656022,
+    "mean_prob": 0.5891323089599609,
+    "n": 256
+   },
+   "judge_cat": {
+    "rate": 0.20703125,
+    "stderr": 0.025323632700274813,
+    "mean_prob": 0.19121158123016357,
+    "n": 256
+   },
+   "judge_dog": {
+    "rate": 0.58984375,
+    "stderr": 0.0307413669656022,
+    "mean_prob": 0.5891323089599609,
+    "n": 256
+   },
+   "class_histogram": [
+    3,
+    0,
+    14,
+    53,
+    4,
+    151,
+    16,
+    8,
+    1,
+    6
+   ],
+   "kid_vs_all_test": {
+    "kid_x1e3": 17.796623145029056,
+    "se_x1e3": 1.788170076906681,
+    "n_x": 256,
+    "n_y": 1000
+   },
+   "frac_pixels_outside_[-1,1]": 0.08388010412454605,
+   "memo": {
+    "median": 460.93865966796875,
+    "mean": 497.9971008300781,
+    "q05": 195.20252990722656,
+    "ratio_to_test_median": 1.0665006637573242,
+    "frac_below_10pct_test_median": 0.0,
+    "memorisation_flag": false
+   }
+  },
+  "dog_s12386": {
+   "step": 12386,
+   "train_minutes": 47.50148991743723,
+   "ckpt": "iter04/dog_s12386.pth",
+   "prior_file": "/vol/iter04/prior_dog_s12386.pt",
+   "judge_target": {
+    "rate": 0.796875,
+    "stderr": 0.02514529919840573,
+    "mean_prob": 0.7823288440704346,
+    "n": 256
+   },
+   "judge_cat": {
+    "rate": 0.1171875,
+    "stderr": 0.020102723486561426,
+    "mean_prob": 0.11890985071659088,
+    "n": 256
+   },
+   "judge_dog": {
+    "rate": 0.796875,
+    "stderr": 0.02514529919840573,
+    "mean_prob": 0.7823288440704346,
+    "n": 256
+   },
+   "class_histogram": [
+    3,
+    0,
+    3,
+    30,
+    5,
+    204,
+    6,
+    2,
+    0,
+    3
+   ],
+   "kid_vs_all_test": {
+    "kid_x1e3": 10.850582268318032,
+    "se_x1e3": 1.3960838550701737,
+    "n_x": 256,
+    "n_y": 1000
+   },
+   "frac_pixels_outside_[-1,1]": 0.04137929156422615,
+   "memo": {
+    "median": 454.77655029296875,
+    "mean": 467.06024169921875,
+    "q05": 213.35301208496094,
+    "ratio_to_test_median": 1.0522429943084717,
+    "frac_below_10pct_test_median": 0.0,
+    "memorisation_flag": false
+   }
+  }
+ },
+ "memo_test_first512": {
+  "median": 432.197265625,
+  "mean": 450.1306457519531,
+  "q05": 189.636962890625
+ },
+ "pick": {
+  "name": "dog_s12386",
+  "ckpt": "iter04/dog_s12386.pth",
+  "prior_file": "/vol/iter04/prior_dog_s12386.pt",
+  "rule": "lowest KID among snapshots with memo ratio >= 0.5",
+  "candidates": [
+   "dog_s12386",
+   "dog_s3108",
+   "dog_s6195"
+  ]
+ },
+ "minutes": 1.1132312854131063
+}

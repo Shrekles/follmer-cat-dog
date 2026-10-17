@@ -1,0 +1,193 @@
+{
+ "picked": {
+  "cat": {
+   "name": "cat_s30",
+   "ckpt": "iter04/smoke_cat_s30.pth",
+   "prior_file": "/vol/iter04/smoke_prior_cat_s30.pt",
+   "rule": "lowest KID among snapshots with memo ratio >= 0.5",
+   "candidates": [
+    "cat_s15",
+    "cat_s23",
+    "cat_s30",
+    "cat_s4",
+    "cat_s8"
+   ]
+  },
+  "dog": {
+   "name": "cat_s30",
+   "ckpt": "iter04/smoke_cat_s30.pth",
+   "prior_file": "/vol/iter04/smoke_prior_cat_s30.pt",
+   "rule": "lowest KID among snapshots with memo ratio >= 0.5",
+   "candidates": [
+    "cat_s15",
+    "cat_s23",
+    "cat_s30",
+    "cat_s4",
+    "cat_s8"
+   ]
+  }
+ },
+ "steps": 10,
+ "eps": 0.001,
+ "n": 8,
+ "flow": {},
+ "best_pairs": {
+  "cat_to_dog": {
+   "rule": "p_target(out)>=0.9 and p_source(in)>=0.5, lowest cost; filled by highest p_target if fewer than 16",
+   "n_qualifying": 0,
+   "idx": [
+    4,
+    3,
+    6,
+    5,
+    1,
+    2,
+    7,
+    0
+   ],
+   "cost": [
+    301.123046875,
+    307.14630126953125,
+    390.6063232421875,
+    379.240478515625,
+    177.94952392578125,
+    248.0126953125,
+    250.0364532470703,
+    144.37782287597656
+   ],
+   "p_target": [
+    0.9585564136505127,
+    0.022440137341618538,
+    0.004242000635713339,
+    0.0015821035485714674,
+    0.0005488549941219389,
+    1.0045544513559435e-05,
+    3.906608526449418e-06,
+    2.110977987967999e-07
+   ]
+  },
+  "dog_to_cat": {
+   "rule": "p_target(out)>=0.9 and p_source(in)>=0.5, lowest cost; filled by highest p_target if fewer than 16",
+   "n_qualifying": 0,
+   "idx": [
+    2,
+    7,
+    1,
+    0,
+    6,
+    4,
+    3,
+    5
+   ],
+   "cost": [
+    138.8120574951172,
+    279.1204833984375,
+    355.50421142578125,
+    266.7867431640625,
+    364.91314697265625,
+    305.59967041015625,
+    98.53882598876953,
+    178.71844482421875
+   ],
+   "p_target": [
+    0.1633586287498474,
+    0.01066166628152132,
+    0.008368285372853279,
+    0.0008989700581878424,
+    0.00011891566828126088,
+    2.1738014766015112e-06,
+    1.3368905911192996e-06,
+    2.6558879336231744e-13
+   ]
+  }
+ },
+ "steering": {
+  "columns": [
+   {
+    "setting": "s*=0.2 w=0",
+    "valid_coupling": false,
+    "cost_mean": 0.018491512164473534,
+    "cost_clamped_mean": 0.018491512164473534,
+    "judge_dog_rate": 0.125,
+    "judge_dog_mean_prob": 0.12389200925827026,
+    "n": 8
+   },
+   {
+    "setting": "s*=0.4 w=0",
+    "valid_coupling": false,
+    "cost_mean": 0.02079751528799534,
+    "cost_clamped_mean": 0.02079751528799534,
+    "judge_dog_rate": 0.125,
+    "judge_dog_mean_prob": 0.12388888746500015,
+    "n": 8
+   },
+   {
+    "setting": "s*=0.6 w=0",
+    "valid_coupling": false,
+    "cost_mean": 0.3486497700214386,
+    "cost_clamped_mean": 0.33613792061805725,
+    "judge_dog_rate": 0.125,
+    "judge_dog_mean_prob": 0.12388676404953003,
+    "n": 8
+   },
+   {
+    "setting": "s*=0.8 w=0",
+    "valid_coupling": false,
+    "cost_mean": 14.876436233520508,
+    "cost_clamped_mean": 12.895807266235352,
+    "judge_dog_rate": 0.125,
+    "judge_dog_mean_prob": 0.12314427644014359,
+    "n": 8
+   },
+   {
+    "setting": "s*=1.0 w=0",
+    "valid_coupling": true,
+    "cost_mean": 274.81158447265625,
+    "cost_clamped_mean": 139.2249755859375,
+    "judge_dog_rate": 0.125,
+    "judge_dog_mean_prob": 0.12342297285795212,
+    "n": 8
+   },
+   {
+    "setting": "s*=1.0 w=0.25",
+    "valid_coupling": false,
+    "cost_mean": 274.8116760253906,
+    "cost_clamped_mean": 139.22491455078125,
+    "judge_dog_rate": 0.125,
+    "judge_dog_mean_prob": 0.12342551350593567,
+    "n": 8
+   },
+   {
+    "setting": "s*=1.0 w=0.5",
+    "valid_coupling": false,
+    "cost_mean": 274.8118896484375,
+    "cost_clamped_mean": 139.22509765625,
+    "judge_dog_rate": 0.125,
+    "judge_dog_mean_prob": 0.12342078238725662,
+    "n": 8
+   },
+   {
+    "setting": "s*=1.0 w=1.0",
+    "valid_coupling": false,
+    "cost_mean": 274.81158447265625,
+    "cost_clamped_mean": 139.2249755859375,
+    "judge_dog_rate": 0.125,
+    "judge_dog_mean_prob": 0.12342297285795212,
+    "n": 8
+   }
+  ],
+  "n_images": 8,
+  "guidance": "decode with (1+w) s_dog - w s_cat (tilted law, NOT nu)",
+  "partial": "encode with cat model to s*, decode with dog model from s* (NOT a coupling for s*<1)"
+ },
+ "same_noise": {
+  "scratch_cat_vs_scratch_dog": {
+   "n": 16,
+   "matched_cost_mean": 0.0,
+   "mismatched_cost_mean": 6113.0634765625,
+   "frac_both_correct_class": 0.0,
+   "matched_over_mismatched": 0.0
+  }
+ },
+ "minutes": 0.31912924846013385
+}

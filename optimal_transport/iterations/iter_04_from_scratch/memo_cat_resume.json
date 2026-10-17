@@ -1,0 +1,42 @@
+{
+ "test_first512": {
+  "median": 408.4625244140625,
+  "mean": 442.702880859375,
+  "q05": 176.8557891845703
+ },
+ "sets": {
+  "prior_cat_s14714": {
+   "median": 438.118896484375,
+   "mean": 454.36419677734375,
+   "q05": 214.40399169921875,
+   "ratio_to_test_median": 1.0726048946380615,
+   "frac_below_10pct_test_median": 0.0,
+   "memorisation_flag": false
+  },
+  "prior_cat_s17297": {
+   "median": 434.48541259765625,
+   "mean": 452.30511474609375,
+   "q05": 215.40475463867188,
+   "ratio_to_test_median": 1.0637093782424927,
+   "frac_below_10pct_test_median": 0.0,
+   "memorisation_flag": false
+  },
+  "prior_cat_s19874": {
+   "median": 427.388427734375,
+   "mean": 443.9230041503906,
+   "q05": 216.65174865722656,
+   "ratio_to_test_median": 1.0463345050811768,
+   "frac_below_10pct_test_median": 0.0,
+   "memorisation_flag": false
+  },
+  "prior_cat_s22457": {
+   "median": 417.65484619140625,
+   "mean": 435.8194580078125,
+   "q05": 215.42494201660156,
+   "ratio_to_test_median": 1.0225046873092651,
+   "frac_below_10pct_test_median": 0.0,
+   "memorisation_flag": false
+  }
+ },
+ "minutes": 0.005951611200968424
+}

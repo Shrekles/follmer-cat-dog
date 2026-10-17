@@ -1,0 +1,203 @@
+{
+ "container_minutes": 41.6955061117808,
+ "results": [
+  {
+   "task": "chain_resume cat",
+   "sub": [
+    {
+     "task": "train cat",
+     "init": "iter04/cat_s12129.pth",
+     "step0": 12129,
+     "steps": 10328,
+     "images_seen": 2643968,
+     "epochs": 528.7936,
+     "n_params": 9864771,
+     "loss_log": [
+      [
+       500,
+       0.029171585105359554,
+       1.9577373186747233
+      ],
+      [
+       1000,
+       0.03026176430284977,
+       3.8875038981437684
+      ],
+      [
+       1500,
+       0.02978039365261793,
+       5.816532878081004
+      ],
+      [
+       2000,
+       0.028514445573091508,
+       7.746551517645518
+      ],
+      [
+       2500,
+       0.02953416872769594,
+       9.675761759281158
+      ],
+      [
+       3000,
+       0.028704259358346463,
+       11.636396185557048
+      ],
+      [
+       3500,
+       0.02770428583025932,
+       13.566434427102406
+      ],
+      [
+       4000,
+       0.029530203342437743,
+       15.495530688762665
+      ],
+      [
+       4500,
+       0.02775961793959141,
+       17.42550368309021
+      ],
+      [
+       5000,
+       0.027902486734092236,
+       19.354455626010896
+      ],
+      [
+       5500,
+       0.03018338941037655,
+       21.34011057217916
+      ],
+      [
+       6000,
+       0.030521061085164548,
+       23.26973534822464
+      ],
+      [
+       6500,
+       0.027272970229387284,
+       25.198324310779572
+      ],
+      [
+       7000,
+       0.030178026854991914,
+       27.126734908421835
+      ],
+      [
+       7500,
+       0.030421259254217146,
+       29.056155999501545
+      ],
+      [
+       8000,
+       0.029686719365417957,
+       31.020995998382567
+      ],
+      [
+       8500,
+       0.02939359173178673,
+       32.95039811134338
+      ],
+      [
+       9000,
+       0.028439337946474554,
+       34.87892256180445
+      ],
+      [
+       9500,
+       0.02894114125519991,
+       36.807565315564474
+      ],
+      [
+       10000,
+       0.02615952044725418,
+       38.73759044011434
+      ]
+     ],
+     "snapshots": [
+      {
+       "step": 14714,
+       "path": "iter04/cat_s14714.pth",
+       "minutes": 57.5060100754102
+      },
+      {
+       "step": 17297,
+       "path": "iter04/cat_s17297.pth",
+       "minutes": 67.50497418642044
+      },
+      {
+       "step": 19874,
+       "path": "iter04/cat_s19874.pth",
+       "minutes": 77.50333752632142
+      },
+      {
+       "step": 22457,
+       "path": "iter04/cat_s22457.pth",
+       "minutes": 87.50496620337168
+      }
+     ],
+     "it_per_s": 4.303122028575284,
+     "peak_mem_gb": 6.203903675079346,
+     "minutes": 40.001964199542996
+    },
+    {
+     "task": "snap_eval cat",
+     "pick": {
+      "name": "cat_s17297",
+      "ckpt": "iter04/cat_s17297.pth",
+      "prior_file": "/vol/iter04/prior_cat_s17297.pt",
+      "rule": "lowest KID among snapshots with memo ratio >= 0.5",
+      "candidates": [
+       "cat_s14714",
+       "cat_s17297",
+       "cat_s19874",
+       "cat_s22457"
+      ]
+     },
+     "minutes": 1.528672953446706,
+     "downloads": [
+      "iter04/prior_cat_s14714_big.png",
+      "iter04/prior_cat_s14714_lowest_ptarget_big.png",
+      "iter04/prior_cat_s17297_big.png",
+      "iter04/prior_cat_s17297_lowest_ptarget_big.png",
+      "iter04/prior_cat_s19874_big.png",
+      "iter04/prior_cat_s19874_lowest_ptarget_big.png",
+      "iter04/prior_cat_s22457_big.png",
+      "iter04/prior_cat_s22457_lowest_ptarget_big.png",
+      "iter04/snapstats_cat_resume.json",
+      "iter04/memo_cat_resume.json"
+     ]
+    }
+   ],
+   "pick": {
+    "name": "cat_s17297",
+    "ckpt": "iter04/cat_s17297.pth",
+    "prior_file": "/vol/iter04/prior_cat_s17297.pt",
+    "rule": "lowest KID among snapshots with memo ratio >= 0.5",
+    "candidates": [
+     "cat_s12129",
+     "cat_s14714",
+     "cat_s17297",
+     "cat_s19874",
+     "cat_s22457",
+     "cat_s3071",
+     "cat_s6140"
+    ]
+   },
+   "downloads": [
+    "iter04/prior_cat_s14714_big.png",
+    "iter04/prior_cat_s14714_lowest_ptarget_big.png",
+    "iter04/prior_cat_s17297_big.png",
+    "iter04/prior_cat_s17297_lowest_ptarget_big.png",
+    "iter04/prior_cat_s19874_big.png",
+    "iter04/prior_cat_s19874_lowest_ptarget_big.png",
+    "iter04/prior_cat_s22457_big.png",
+    "iter04/prior_cat_s22457_lowest_ptarget_big.png",
+    "iter04/snapstats_cat_resume.json",
+    "iter04/memo_cat_resume.json",
+    "iter04/snapstats_cat_all.json"
+   ],
+   "minutes": 41.69408419926961
+  }
+ ]
+}

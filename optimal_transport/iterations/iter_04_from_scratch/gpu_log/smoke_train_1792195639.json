@@ -1,0 +1,126 @@
+{
+ "container_minutes": 0.8394543766975403,
+ "results": [
+  {
+   "task": "chain_train cat",
+   "sub": [
+    {
+     "task": "train cat",
+     "steps": 30,
+     "images_seen": 7680,
+     "epochs": 1.536,
+     "n_params": 9864771,
+     "loss_log": [
+      [
+       5,
+       0.9991268873214721,
+       0.11759613355000814
+      ],
+      [
+       10,
+       0.9995061993598938,
+       0.18006479342778522
+      ],
+      [
+       15,
+       0.9988856554031372,
+       0.1987030824025472
+      ],
+      [
+       20,
+       0.9972332358360291,
+       0.27296120723088585
+      ],
+      [
+       25,
+       0.9957444310188294,
+       0.35053674777348837
+      ],
+      [
+       30,
+       0.9941649675369263,
+       0.3691981037457784
+      ]
+     ],
+     "snapshots": [
+      {
+       "step": 4,
+       "path": "iter04/smoke_cat_s4.pth",
+       "minutes": 0.03446745077768962
+      },
+      {
+       "step": 8,
+       "path": "iter04/smoke_cat_s8.pth",
+       "minutes": 0.12874167760213215
+      },
+      {
+       "step": 15,
+       "path": "iter04/smoke_cat_s15.pth",
+       "minutes": 0.19870710770289104
+      },
+      {
+       "step": 23,
+       "path": "iter04/smoke_cat_s23.pth",
+       "minutes": 0.28414440552393594
+      },
+      {
+       "step": 30,
+       "path": "iter04/smoke_cat_s30.pth",
+       "minutes": 0.3692023197809855
+      }
+     ],
+     "it_per_s": 1.3542710140516045,
+     "peak_mem_gb": 6.205856800079346,
+     "minutes": 0.3692023197809855
+    },
+    {
+     "task": "snap_eval cat",
+     "pick": {
+      "name": "cat_s30",
+      "ckpt": "iter04/smoke_cat_s30.pth",
+      "prior_file": "/vol/iter04/smoke_prior_cat_s30.pt",
+      "rule": "lowest KID among snapshots with memo ratio >= 0.5",
+      "candidates": [
+       "cat_s15",
+       "cat_s23",
+       "cat_s30",
+       "cat_s4",
+       "cat_s8"
+      ]
+     },
+     "minutes": 0.2243656833966573,
+     "downloads": [
+      "iter04/smoke_prior_cat_s4_big.png",
+      "iter04/smoke_prior_cat_s4_lowest_ptarget_big.png",
+      "iter04/smoke_prior_cat_s8_big.png",
+      "iter04/smoke_prior_cat_s8_lowest_ptarget_big.png",
+      "iter04/smoke_prior_cat_s15_big.png",
+      "iter04/smoke_prior_cat_s15_lowest_ptarget_big.png",
+      "iter04/smoke_prior_cat_s23_big.png",
+      "iter04/smoke_prior_cat_s23_lowest_ptarget_big.png",
+      "iter04/smoke_prior_cat_s30_big.png",
+      "iter04/smoke_prior_cat_s30_lowest_ptarget_big.png",
+      "iter04/smoke_snapstats_cat.json",
+      "iter04/smoke_memo_cat.json"
+     ]
+    }
+   ],
+   "downloads": [
+    "iter04/smoke_prior_cat_s4_big.png",
+    "iter04/smoke_prior_cat_s4_lowest_ptarget_big.png",
+    "iter04/smoke_prior_cat_s8_big.png",
+    "iter04/smoke_prior_cat_s8_lowest_ptarget_big.png",
+    "iter04/smoke_prior_cat_s15_big.png",
+    "iter04/smoke_prior_cat_s15_lowest_ptarget_big.png",
+    "iter04/smoke_prior_cat_s23_big.png",
+    "iter04/smoke_prior_cat_s23_lowest_ptarget_big.png",
+    "iter04/smoke_prior_cat_s30_big.png",
+    "iter04/smoke_prior_cat_s30_lowest_ptarget_big.png",
+    "iter04/smoke_snapstats_cat.json",
+    "iter04/smoke_memo_cat.json"
+   ],
+   "minutes": 0.8372090657552084
+  }
+ ],
+ "client_wall_minutes": 0.93178205092748
+}

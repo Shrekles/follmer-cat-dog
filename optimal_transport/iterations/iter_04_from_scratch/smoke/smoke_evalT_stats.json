@@ -1,0 +1,255 @@
+{
+ "runs": {
+  "cat_to_dog_scratch": {
+   "cost": {
+    "mean": 274.811580657959,
+    "stderr": 30.98929968753466,
+    "n": 8
+   },
+   "judge_target_on_outputs": {
+    "rate": 0.125,
+    "stderr": 0.11692679333668567,
+    "mean_prob": 0.12342297285795212,
+    "n": 8
+   },
+   "judge_source_on_outputs": {
+    "rate": 0.75,
+    "stderr": 0.15309310892394862,
+    "mean_prob": 0.7520080208778381,
+    "n": 8
+   },
+   "judge_source_on_inputs": {
+    "rate": 0.875,
+    "stderr": 0.11692679333668567,
+    "mean_prob": 0.8760620355606079,
+    "n": 8
+   },
+   "judge_target_on_inputs": {
+    "rate": 0.125,
+    "stderr": 0.11692679333668567,
+    "mean_prob": 0.12389317899942398,
+    "n": 8
+   },
+   "output_class_histogram": [
+    0,
+    1,
+    0,
+    6,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "output_range": [
+    -1.770554780960083,
+    1.7516216039657593
+   ],
+   "frac_output_pixels_outside_[-1,1]": 0.2561441957950592,
+   "cost_clamped": {
+    "mean": 139.22497272491455,
+    "stderr": 6.292408808323596,
+    "n": 8
+   },
+   "kid_vs_all_test_target": {
+    "kid_x1e3": 37.511056592193896,
+    "se_x1e3": 24.598587304353714,
+    "n_x": 8,
+    "n_y": 1000
+   },
+   "meta": {
+    "k": 10,
+    "s": 1.0,
+    "w": 0.0,
+    "valid_coupling": true,
+    "note": "composed PF-ODE, from-scratch iter04 models (encode source, decode target)",
+    "run": {
+     "direction": "cat_to_dog",
+     "n": 8,
+     "steps": 10,
+     "eps": 0.001,
+     "cat_ckpt": "iter04/smoke_cat_s30.pth",
+     "dog_ckpt": "iter04/smoke_cat_s30.pth",
+     "minutes": 0.038483822345733644
+    },
+    "file": "/vol/iter04/smoke_transport_cat_to_dog_scratch.pt"
+   }
+  },
+  "dog_to_cat_scratch": {
+   "cost": {
+    "mean": 248.4991979598999,
+    "stderr": 35.082448112158104,
+    "n": 8
+   },
+   "judge_target_on_outputs": {
+    "rate": 0.0,
+    "stderr": 0.0,
+    "mean_prob": 0.022926246747374535,
+    "n": 8
+   },
+   "judge_source_on_outputs": {
+    "rate": 1.0,
+    "stderr": 0.0,
+    "mean_prob": 0.9695735573768616,
+    "n": 8
+   },
+   "judge_source_on_inputs": {
+    "rate": 1.0,
+    "stderr": 0.0,
+    "mean_prob": 0.9950603246688843,
+    "n": 8
+   },
+   "judge_target_on_inputs": {
+    "rate": 0.0,
+    "stderr": 0.0,
+    "mean_prob": 0.00024783602566458285,
+    "n": 8
+   },
+   "output_class_histogram": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    8,
+    0,
+    0,
+    0,
+    0
+   ],
+   "output_range": [
+    -1.659717321395874,
+    1.699447512626648
+   ],
+   "frac_output_pixels_outside_[-1,1]": 0.2124837189912796,
+   "cost_clamped": {
+    "mean": 131.08143138885498,
+    "stderr": 9.710108829819337,
+    "n": 8
+   },
+   "kid_vs_all_test_target": {
+    "kid_x1e3": 55.73430337975127,
+    "se_x1e3": 16.543332487344742,
+    "n_x": 8,
+    "n_y": 1000
+   },
+   "meta": {
+    "k": 10,
+    "s": 1.0,
+    "w": 0.0,
+    "valid_coupling": true,
+    "note": "composed PF-ODE, from-scratch iter04 models (encode source, decode target)",
+    "run": {
+     "direction": "dog_to_cat",
+     "n": 8,
+     "steps": 10,
+     "eps": 0.001,
+     "cat_ckpt": "iter04/smoke_cat_s30.pth",
+     "dog_ckpt": "iter04/smoke_cat_s30.pth",
+     "minutes": 0.07855609258015951
+    },
+    "file": "/vol/iter04/smoke_transport_dog_to_cat_scratch.pt"
+   }
+  },
+  "prior_cat_s30": {
+   "judge_cat": {
+    "rate": 0.0,
+    "stderr": 0.0,
+    "mean_prob": 0.0001002803910523653,
+    "n": 16
+   },
+   "judge_dog": {
+    "rate": 0.0,
+    "stderr": 0.0,
+    "mean_prob": 1.3851719131707796e-06,
+    "n": 16
+   },
+   "judge_target": {
+    "rate": 0.0,
+    "stderr": 0.0,
+    "mean_prob": 1.3851719131707796e-06,
+    "n": 16
+   },
+   "class_histogram": [
+    0,
+    8,
+    8,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "kid_vs_all_test_target": {
+    "kid_x1e3": 722.5617314292041,
+    "se_x1e3": 13.019096106290817,
+    "n_x": 16,
+    "n_y": 1000
+   },
+   "meta": {
+    "ckpt": "iter04/smoke_cat_s30.pth",
+    "seed": 0,
+    "steps": 5,
+    "eps": 0.001,
+    "n": 16
+   },
+   "target": "dog"
+  }
+ },
+ "kid_refs": {
+  "train512_dog_vs_test_dog": {
+   "kid_x1e3": 0.3615376687684524,
+   "se_x1e3": 0.5111215868964791,
+   "n_x": 512,
+   "n_y": 1000
+  },
+  "test512_cat_vs_test_dog": {
+   "kid_x1e3": 30.57696632699969,
+   "se_x1e3": 1.8581231124699116,
+   "n_x": 512,
+   "n_y": 1000
+  },
+  "train512_cat_vs_test_cat": {
+   "kid_x1e3": 0.08834672519286713,
+   "se_x1e3": 0.40085267391987145,
+   "n_x": 512,
+   "n_y": 1000
+  },
+  "test512_dog_vs_test_cat": {
+   "kid_x1e3": 29.677533545064527,
+   "se_x1e3": 2.455941867083311,
+   "n_x": 512,
+   "n_y": 1000
+  }
+ },
+ "ceilings": {
+  "all_test_cat": {
+   "rate": 0.851,
+   "stderr": 0.011260506205317771,
+   "mean_prob": 0.8410322070121765,
+   "n": 1000
+  },
+  "first512_test_cat": {
+   "rate": 0.853515625,
+   "stderr": 0.01562666884093275,
+   "mean_prob": 0.848031222820282,
+   "n": 512
+  },
+  "all_test_dog": {
+   "rate": 0.877,
+   "stderr": 0.010386096475577337,
+   "mean_prob": 0.8709170818328857,
+   "n": 1000
+  },
+  "first512_test_dog": {
+   "rate": 0.884765625,
+   "stderr": 0.014111402042815701,
+   "mean_prob": 0.8771462440490723,
+   "n": 512
+  }
+ },
+ "minutes": 0.13234894275665282
+}

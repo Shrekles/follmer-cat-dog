@@ -1,0 +1,79 @@
+{
+ "container_minutes": 2.423072083791097,
+ "results": [
+  {
+   "task": "snap_eval_from_volume",
+   "sub": [
+    {
+     "task": "snap_eval cat",
+     "pick": {
+      "name": "cat_s12129",
+      "ckpt": "iter04/cat_s12129.pth",
+      "prior_file": "/vol/iter04/prior_cat_s12129.pt",
+      "rule": "lowest KID among snapshots with memo ratio >= 0.5",
+      "candidates": [
+       "cat_s12129",
+       "cat_s3071",
+       "cat_s6140"
+      ]
+     },
+     "minutes": 1.174176847934723,
+     "downloads": [
+      "iter04/prior_cat_s3071_big.png",
+      "iter04/prior_cat_s3071_lowest_ptarget_big.png",
+      "iter04/prior_cat_s6140_big.png",
+      "iter04/prior_cat_s6140_lowest_ptarget_big.png",
+      "iter04/prior_cat_s12129_big.png",
+      "iter04/prior_cat_s12129_lowest_ptarget_big.png",
+      "iter04/snapstats_cat.json",
+      "iter04/memo_cat.json"
+     ]
+    },
+    {
+     "task": "snap_eval dog",
+     "pick": {
+      "name": "dog_s12386",
+      "ckpt": "iter04/dog_s12386.pth",
+      "prior_file": "/vol/iter04/prior_dog_s12386.pt",
+      "rule": "lowest KID among snapshots with memo ratio >= 0.5",
+      "candidates": [
+       "dog_s12386",
+       "dog_s3108",
+       "dog_s6195"
+      ]
+     },
+     "minutes": 1.1132312854131063,
+     "downloads": [
+      "iter04/prior_dog_s3108_big.png",
+      "iter04/prior_dog_s3108_lowest_ptarget_big.png",
+      "iter04/prior_dog_s6195_big.png",
+      "iter04/prior_dog_s6195_lowest_ptarget_big.png",
+      "iter04/prior_dog_s12386_big.png",
+      "iter04/prior_dog_s12386_lowest_ptarget_big.png",
+      "iter04/snapstats_dog.json",
+      "iter04/memo_dog.json"
+     ]
+    }
+   ],
+   "downloads": [
+    "iter04/prior_cat_s3071_big.png",
+    "iter04/prior_cat_s3071_lowest_ptarget_big.png",
+    "iter04/prior_cat_s6140_big.png",
+    "iter04/prior_cat_s6140_lowest_ptarget_big.png",
+    "iter04/prior_cat_s12129_big.png",
+    "iter04/prior_cat_s12129_lowest_ptarget_big.png",
+    "iter04/snapstats_cat.json",
+    "iter04/memo_cat.json",
+    "iter04/prior_dog_s3108_big.png",
+    "iter04/prior_dog_s3108_lowest_ptarget_big.png",
+    "iter04/prior_dog_s6195_big.png",
+    "iter04/prior_dog_s6195_lowest_ptarget_big.png",
+    "iter04/prior_dog_s12386_big.png",
+    "iter04/prior_dog_s12386_lowest_ptarget_big.png",
+    "iter04/snapstats_dog.json",
+    "iter04/memo_dog.json"
+   ],
+   "minutes": 2.422411088148753
+  }
+ ]
+}

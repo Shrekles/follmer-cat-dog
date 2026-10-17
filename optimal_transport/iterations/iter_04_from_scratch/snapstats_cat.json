@@ -1,0 +1,191 @@
+{
+ "cls": "cat",
+ "n_samples": 256,
+ "heun_steps": 100,
+ "eps": 0.001,
+ "noise": "prior_z(n), seed 0",
+ "kid_floor_train_vs_test": {
+  "kid_x1e3": -0.1555536413215819,
+  "se_x1e3": 0.4365445056464523,
+  "n_x": 256,
+  "n_y": 1000
+ },
+ "ceiling_all_test": {
+  "rate": 0.851,
+  "stderr": 0.011260506205317771,
+  "mean_prob": 0.8410322070121765,
+  "n": 1000
+ },
+ "snapshots": {
+  "cat_s3071": {
+   "step": 3071,
+   "train_minutes": 11.876005427042644,
+   "ckpt": "iter04/cat_s3071.pth",
+   "prior_file": "/vol/iter04/prior_cat_s3071.pt",
+   "judge_target": {
+    "rate": 0.453125,
+    "stderr": 0.031112367816550763,
+    "mean_prob": 0.4303123950958252,
+    "n": 256
+   },
+   "judge_cat": {
+    "rate": 0.453125,
+    "stderr": 0.031112367816550763,
+    "mean_prob": 0.4303123950958252,
+    "n": 256
+   },
+   "judge_dog": {
+    "rate": 0.0234375,
+    "stderr": 0.009455525747576701,
+    "mean_prob": 0.023698383942246437,
+    "n": 256
+   },
+   "class_histogram": [
+    25,
+    10,
+    33,
+    116,
+    5,
+    6,
+    49,
+    2,
+    4,
+    6
+   ],
+   "kid_vs_all_test": {
+    "kid_x1e3": 136.51558915261663,
+    "se_x1e3": 7.918106392025948,
+    "n_x": 256,
+    "n_y": 1000
+   },
+   "frac_pixels_outside_[-1,1]": 0.2519136965274811,
+   "memo": {
+    "median": 427.5469970703125,
+    "mean": 595.7467651367188,
+    "q05": 142.4379425048828,
+    "ratio_to_test_median": 1.046722650527954,
+    "frac_below_10pct_test_median": 0.0,
+    "memorisation_flag": false
+   }
+  },
+  "cat_s6140": {
+   "step": 6140,
+   "train_minutes": 23.75098745028178,
+   "ckpt": "iter04/cat_s6140.pth",
+   "prior_file": "/vol/iter04/prior_cat_s6140.pt",
+   "judge_target": {
+    "rate": 0.69140625,
+    "stderr": 0.02886956438698525,
+    "mean_prob": 0.6774938106536865,
+    "n": 256
+   },
+   "judge_cat": {
+    "rate": 0.69140625,
+    "stderr": 0.02886956438698525,
+    "mean_prob": 0.6774938106536865,
+    "n": 256
+   },
+   "judge_dog": {
+    "rate": 0.0546875,
+    "stderr": 0.014210578330913328,
+    "mean_prob": 0.055081725120544434,
+    "n": 256
+   },
+   "class_histogram": [
+    9,
+    2,
+    12,
+    177,
+    5,
+    14,
+    22,
+    8,
+    1,
+    6
+   ],
+   "kid_vs_all_test": {
+    "kid_x1e3": 29.722278538699243,
+    "se_x1e3": 3.2960278913378716,
+    "n_x": 256,
+    "n_y": 1000
+   },
+   "frac_pixels_outside_[-1,1]": 0.11263402551412582,
+   "memo": {
+    "median": 455.0712890625,
+    "mean": 492.0633544921875,
+    "q05": 182.94088745117188,
+    "ratio_to_test_median": 1.1141078472137451,
+    "frac_below_10pct_test_median": 0.0,
+    "memorisation_flag": false
+   }
+  },
+  "cat_s12129": {
+   "step": 12129,
+   "train_minutes": 47.50300200382868,
+   "ckpt": "iter04/cat_s12129.pth",
+   "prior_file": "/vol/iter04/prior_cat_s12129.pt",
+   "judge_target": {
+    "rate": 0.8125,
+    "stderr": 0.024394523431243743,
+    "mean_prob": 0.7878766059875488,
+    "n": 256
+   },
+   "judge_cat": {
+    "rate": 0.8125,
+    "stderr": 0.024394523431243743,
+    "mean_prob": 0.7878766059875488,
+    "n": 256
+   },
+   "judge_dog": {
+    "rate": 0.04296875,
+    "stderr": 0.012674167336345127,
+    "mean_prob": 0.05606237053871155,
+    "n": 256
+   },
+   "class_histogram": [
+    4,
+    0,
+    9,
+    208,
+    5,
+    11,
+    10,
+    5,
+    1,
+    3
+   ],
+   "kid_vs_all_test": {
+    "kid_x1e3": 15.296581938887499,
+    "se_x1e3": 1.8754006596282125,
+    "n_x": 256,
+    "n_y": 1000
+   },
+   "frac_pixels_outside_[-1,1]": 0.057585399597883224,
+   "memo": {
+    "median": 454.51025390625,
+    "mean": 469.7939453125,
+    "q05": 223.38462829589844,
+    "ratio_to_test_median": 1.112734317779541,
+    "frac_below_10pct_test_median": 0.0,
+    "memorisation_flag": false
+   }
+  }
+ },
+ "memo_test_first512": {
+  "median": 408.4625244140625,
+  "mean": 442.702880859375,
+  "q05": 176.8557891845703
+ },
+ "pick": {
+  "name": "cat_s12129",
+  "ckpt": "iter04/cat_s12129.pth",
+  "prior_file": "/vol/iter04/prior_cat_s12129.pt",
+  "rule": "lowest KID among snapshots with memo ratio >= 0.5",
+  "candidates": [
+   "cat_s12129",
+   "cat_s3071",
+   "cat_s6140"
+  ]
+ },
+ "minutes": 1.174176847934723
+}

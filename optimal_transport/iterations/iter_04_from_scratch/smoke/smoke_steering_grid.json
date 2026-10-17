@@ -1,0 +1,79 @@
+{
+ "columns": [
+  {
+   "setting": "s*=0.2 w=0",
+   "valid_coupling": false,
+   "cost_mean": 0.018491512164473534,
+   "cost_clamped_mean": 0.018491512164473534,
+   "judge_dog_rate": 0.125,
+   "judge_dog_mean_prob": 0.12389200925827026,
+   "n": 8
+  },
+  {
+   "setting": "s*=0.4 w=0",
+   "valid_coupling": false,
+   "cost_mean": 0.02079751528799534,
+   "cost_clamped_mean": 0.02079751528799534,
+   "judge_dog_rate": 0.125,
+   "judge_dog_mean_prob": 0.12388888746500015,
+   "n": 8
+  },
+  {
+   "setting": "s*=0.6 w=0",
+   "valid_coupling": false,
+   "cost_mean": 0.3486497700214386,
+   "cost_clamped_mean": 0.33613792061805725,
+   "judge_dog_rate": 0.125,
+   "judge_dog_mean_prob": 0.12388676404953003,
+   "n": 8
+  },
+  {
+   "setting": "s*=0.8 w=0",
+   "valid_coupling": false,
+   "cost_mean": 14.876436233520508,
+   "cost_clamped_mean": 12.895807266235352,
+   "judge_dog_rate": 0.125,
+   "judge_dog_mean_prob": 0.12314427644014359,
+   "n": 8
+  },
+  {
+   "setting": "s*=1.0 w=0",
+   "valid_coupling": true,
+   "cost_mean": 274.81158447265625,
+   "cost_clamped_mean": 139.2249755859375,
+   "judge_dog_rate": 0.125,
+   "judge_dog_mean_prob": 0.12342297285795212,
+   "n": 8
+  },
+  {
+   "setting": "s*=1.0 w=0.25",
+   "valid_coupling": false,
+   "cost_mean": 274.8116760253906,
+   "cost_clamped_mean": 139.22491455078125,
+   "judge_dog_rate": 0.125,
+   "judge_dog_mean_prob": 0.12342551350593567,
+   "n": 8
+  },
+  {
+   "setting": "s*=1.0 w=0.5",
+   "valid_coupling": false,
+   "cost_mean": 274.8118896484375,
+   "cost_clamped_mean": 139.22509765625,
+   "judge_dog_rate": 0.125,
+   "judge_dog_mean_prob": 0.12342078238725662,
+   "n": 8
+  },
+  {
+   "setting": "s*=1.0 w=1.0",
+   "valid_coupling": false,
+   "cost_mean": 274.81158447265625,
+   "cost_clamped_mean": 139.2249755859375,
+   "judge_dog_rate": 0.125,
+   "judge_dog_mean_prob": 0.12342297285795212,
+   "n": 8
+  }
+ ],
+ "n_images": 8,
+ "guidance": "decode with (1+w) s_dog - w s_cat (tilted law, NOT nu)",
+ "partial": "encode with cat model to s*, decode with dog model from s* (NOT a coupling for s*<1)"
+}

@@ -1,0 +1,42 @@
+{
+ "test_first512": {
+  "median": 432.197265625,
+  "mean": 450.1306457519531,
+  "q05": 189.636962890625
+ },
+ "sets": {
+  "prior_dog_s14961": {
+   "median": 430.9352722167969,
+   "mean": 445.38397216796875,
+   "q05": 213.26902770996094,
+   "ratio_to_test_median": 0.9970800280570984,
+   "frac_below_10pct_test_median": 0.0,
+   "memorisation_flag": false
+  },
+  "prior_dog_s17541": {
+   "median": 429.751220703125,
+   "mean": 442.1075439453125,
+   "q05": 210.28701782226562,
+   "ratio_to_test_median": 0.9943404197692871,
+   "frac_below_10pct_test_median": 0.0,
+   "memorisation_flag": false
+  },
+  "prior_dog_s20119": {
+   "median": 426.0419921875,
+   "mean": 439.2170104980469,
+   "q05": 213.37391662597656,
+   "ratio_to_test_median": 0.9857581853866577,
+   "frac_below_10pct_test_median": 0.0,
+   "memorisation_flag": false
+  },
+  "prior_dog_s22697": {
+   "median": 415.891845703125,
+   "mean": 429.833251953125,
+   "q05": 212.36985778808594,
+   "ratio_to_test_median": 0.9622731804847717,
+   "frac_below_10pct_test_median": 0.0,
+   "memorisation_flag": false
+  }
+ },
+ "minutes": 0.016632608572642007
+}

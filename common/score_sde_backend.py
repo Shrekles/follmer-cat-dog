@@ -124,6 +124,47 @@ def load_model(repo, config_name, ckpt_path, device):
     return config, sde, eps, model
 
 
+def apply_model_overrides(config, overrides):
+    """Set config.model.<key> = value for each (key, value) in overrides (lists become tuples)."""
+    for k, v in (overrides or {}).items():
+        setattr(config.model, k, tuple(v) if isinstance(v, list) else v)
+    return config
+
+
+def build_network(repo, config_name, device, overrides=None):
+    """Randomly initialised network for config_name with config.model overrides applied (iteration 04+)."""
+    sde_lib, mutils = import_score_sde(repo)
+    config = importlib.import_module("configs." + config_name.replace("/", ".")).get_config()
+    apply_model_overrides(config, overrides)
+    config.device = device
+    model = mutils.get_model(config.model.name)(config).float().to(device)
+    sde, eps = build_sde(sde_lib, config)
+    return config, sde, eps, model
+
+
+def load_model_auto(repo, config_name, ckpt_path, device):
+    """Like load_model, but rebuilds the architecture from ckpt["config_overrides"] when the checkpoint
+    carries one (iteration-04 from-scratch models). Checkpoints without it load exactly as load_model."""
+    ckpt = torch.load(ckpt_path, map_location="cpu", weights_only=False)
+    config, sde, eps, model = build_network(repo, config_name, device, ckpt.get("config_overrides"))
+    sd = {k.removeprefix("module."): v for k, v in ckpt["model"].items()}
+    missing, unexpected = model.load_state_dict(sd, strict=bool(ckpt.get("config_overrides")))
+    if missing or unexpected:
+        print(f"[score_sde] missing={missing} unexpected={unexpected}")
+    for p, s in zip(model.parameters(), ckpt.get("ema", {}).get("shadow_params", [])):
+        p.data.copy_(s.to(device))
+    model.eval()
+    return config, sde, eps, model
+
+
+def load_score_model_auto(repo, config_name, ckpt_path, device):
+    """load_score_model counterpart of load_model_auto."""
+    config, sde, eps, model = load_model_auto(repo, config_name, ckpt_path, device)
+    _, mutils = import_score_sde(repo)
+    score_fn = mutils.get_score_fn(sde, model, train=False, continuous=config.training.continuous)
+    return config, sde, eps, score_fn
+
+
 class SNRMap:
     """Maps Föllmer time t ∈ (0,1) to model time s with m(s)²/σ(s)² = t/(1-t)."""
 

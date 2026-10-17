@@ -1,0 +1,243 @@
+{
+ "cls": "dog",
+ "n_samples": 256,
+ "heun_steps": 100,
+ "eps": 0.001,
+ "noise": "prior_z(n), seed 0",
+ "kid_floor_train_vs_test": {
+  "kid_x1e3": 0.18973767380581208,
+  "se_x1e3": 0.5504948203451931,
+  "n_x": 256,
+  "n_y": 1000
+ },
+ "ceiling_all_test": {
+  "rate": 0.877,
+  "stderr": 0.010386096475577337,
+  "mean_prob": 0.8709170818328857,
+  "n": 1000
+ },
+ "snapshots": {
+  "dog_s14961": {
+   "step": 14961,
+   "train_minutes": 57.503796235720316,
+   "ckpt": "iter04/dog_s14961.pth",
+   "prior_file": "/vol/iter04/prior_dog_s14961.pt",
+   "judge_target": {
+    "rate": 0.81640625,
+    "stderr": 0.024197033405536764,
+    "mean_prob": 0.8012160658836365,
+    "n": 256
+   },
+   "judge_cat": {
+    "rate": 0.11328125,
+    "stderr": 0.019808517777875165,
+    "mean_prob": 0.1117348000407219,
+    "n": 256
+   },
+   "judge_dog": {
+    "rate": 0.81640625,
+    "stderr": 0.024197033405536764,
+    "mean_prob": 0.8012160658836365,
+    "n": 256
+   },
+   "class_histogram": [
+    3,
+    0,
+    3,
+    29,
+    4,
+    209,
+    4,
+    4,
+    0,
+    0
+   ],
+   "kid_vs_all_test": {
+    "kid_x1e3": 9.052053014126926,
+    "se_x1e3": 1.3404793571680784,
+    "n_x": 256,
+    "n_y": 1000
+   },
+   "frac_pixels_outside_[-1,1]": 0.03386688232421875,
+   "memo": {
+    "median": 430.9352722167969,
+    "mean": 445.38397216796875,
+    "q05": 213.26902770996094,
+    "ratio_to_test_median": 0.9970800280570984,
+    "frac_below_10pct_test_median": 0.0,
+    "memorisation_flag": false
+   }
+  },
+  "dog_s17541": {
+   "step": 17541,
+   "train_minutes": 67.5015065352122,
+   "ckpt": "iter04/dog_s17541.pth",
+   "prior_file": "/vol/iter04/prior_dog_s17541.pt",
+   "judge_target": {
+    "rate": 0.81640625,
+    "stderr": 0.024197033405536764,
+    "mean_prob": 0.8056626319885254,
+    "n": 256
+   },
+   "judge_cat": {
+    "rate": 0.109375,
+    "stderr": 0.019506820659607595,
+    "mean_prob": 0.11493882536888123,
+    "n": 256
+   },
+   "judge_dog": {
+    "rate": 0.81640625,
+    "stderr": 0.024197033405536764,
+    "mean_prob": 0.8056626319885254,
+    "n": 256
+   },
+   "class_histogram": [
+    2,
+    0,
+    3,
+    28,
+    5,
+    209,
+    5,
+    4,
+    0,
+    0
+   ],
+   "kid_vs_all_test": {
+    "kid_x1e3": 8.698719350678452,
+    "se_x1e3": 1.4255467103794217,
+    "n_x": 256,
+    "n_y": 1000
+   },
+   "frac_pixels_outside_[-1,1]": 0.029829660430550575,
+   "memo": {
+    "median": 429.751220703125,
+    "mean": 442.1075439453125,
+    "q05": 210.28701782226562,
+    "ratio_to_test_median": 0.9943404197692871,
+    "frac_below_10pct_test_median": 0.0,
+    "memorisation_flag": false
+   }
+  },
+  "dog_s20119": {
+   "step": 20119,
+   "train_minutes": 77.50506755510966,
+   "ckpt": "iter04/dog_s20119.pth",
+   "prior_file": "/vol/iter04/prior_dog_s20119.pt",
+   "judge_target": {
+    "rate": 0.828125,
+    "stderr": 0.023579485288378197,
+    "mean_prob": 0.8167825937271118,
+    "n": 256
+   },
+   "judge_cat": {
+    "rate": 0.09765625,
+    "stderr": 0.01855308124215169,
+    "mean_prob": 0.10508769005537033,
+    "n": 256
+   },
+   "judge_dog": {
+    "rate": 0.828125,
+    "stderr": 0.023579485288378197,
+    "mean_prob": 0.8167825937271118,
+    "n": 256
+   },
+   "class_histogram": [
+    2,
+    0,
+    2,
+    25,
+    6,
+    212,
+    5,
+    4,
+    0,
+    0
+   ],
+   "kid_vs_all_test": {
+    "kid_x1e3": 8.224001979777462,
+    "se_x1e3": 1.3087114784866571,
+    "n_x": 256,
+    "n_y": 1000
+   },
+   "frac_pixels_outside_[-1,1]": 0.02757771871984005,
+   "memo": {
+    "median": 426.0419921875,
+    "mean": 439.2170104980469,
+    "q05": 213.37391662597656,
+    "ratio_to_test_median": 0.9857581853866577,
+    "frac_below_10pct_test_median": 0.0,
+    "memorisation_flag": false
+   }
+  },
+  "dog_s22697": {
+   "step": 22697,
+   "train_minutes": 87.50512030522029,
+   "ckpt": "iter04/dog_s22697.pth",
+   "prior_file": "/vol/iter04/prior_dog_s22697.pt",
+   "judge_target": {
+    "rate": 0.83984375,
+    "stderr": 0.022921931500095458,
+    "mean_prob": 0.8153764009475708,
+    "n": 256
+   },
+   "judge_cat": {
+    "rate": 0.0859375,
+    "stderr": 0.01751698351040244,
+    "mean_prob": 0.09652208536863327,
+    "n": 256
+   },
+   "judge_dog": {
+    "rate": 0.83984375,
+    "stderr": 0.022921931500095458,
+    "mean_prob": 0.8153764009475708,
+    "n": 256
+   },
+   "class_histogram": [
+    1,
+    0,
+    3,
+    22,
+    5,
+    215,
+    6,
+    3,
+    0,
+    1
+   ],
+   "kid_vs_all_test": {
+    "kid_x1e3": 8.940759849610735,
+    "se_x1e3": 1.2979888124391437,
+    "n_x": 256,
+    "n_y": 1000
+   },
+   "frac_pixels_outside_[-1,1]": 0.0237757358700037,
+   "memo": {
+    "median": 415.891845703125,
+    "mean": 429.833251953125,
+    "q05": 212.36985778808594,
+    "ratio_to_test_median": 0.9622731804847717,
+    "frac_below_10pct_test_median": 0.0,
+    "memorisation_flag": false
+   }
+  }
+ },
+ "memo_test_first512": {
+  "median": 432.197265625,
+  "mean": 450.1306457519531,
+  "q05": 189.636962890625
+ },
+ "pick": {
+  "name": "dog_s20119",
+  "ckpt": "iter04/dog_s20119.pth",
+  "prior_file": "/vol/iter04/prior_dog_s20119.pt",
+  "rule": "lowest KID among snapshots with memo ratio >= 0.5",
+  "candidates": [
+   "dog_s14961",
+   "dog_s17541",
+   "dog_s20119",
+   "dog_s22697"
+  ]
+ },
+ "minutes": 1.5512682835261027
+}

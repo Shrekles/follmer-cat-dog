@@ -1,0 +1,266 @@
+{
+ "picked": {
+  "cat": {
+   "name": "cat_s17297",
+   "ckpt": "iter04/cat_s17297.pth",
+   "prior_file": "/vol/iter04/prior_cat_s17297.pt",
+   "rule": "lowest KID among snapshots with memo ratio >= 0.5",
+   "candidates": [
+    "cat_s12129",
+    "cat_s14714",
+    "cat_s17297",
+    "cat_s19874",
+    "cat_s22457",
+    "cat_s3071",
+    "cat_s6140"
+   ]
+  },
+  "dog": {
+   "name": "dog_s20119",
+   "ckpt": "iter04/dog_s20119.pth",
+   "prior_file": "/vol/iter04/prior_dog_s20119.pt",
+   "rule": "lowest KID among snapshots with memo ratio >= 0.5",
+   "candidates": [
+    "dog_s12386",
+    "dog_s14961",
+    "dog_s17541",
+    "dog_s20119",
+    "dog_s22697",
+    "dog_s3108",
+    "dog_s6195"
+   ]
+  }
+ },
+ "steps": 200,
+ "eps": 0.001,
+ "n": 512,
+ "flow": {},
+ "best_pairs": {
+  "cat_to_dog": {
+   "rule": "p_target(out)>=0.9 and p_source(in)>=0.5, lowest cost; filled by highest p_target if fewer than 16",
+   "n_qualifying": 307,
+   "idx": [
+    450,
+    121,
+    186,
+    300,
+    217,
+    41,
+    248,
+    349,
+    221,
+    103,
+    133,
+    30,
+    208,
+    2,
+    214,
+    455
+   ],
+   "cost": [
+    19.35785675048828,
+    28.966794967651367,
+    37.3602180480957,
+    38.43667984008789,
+    38.608856201171875,
+    40.57647705078125,
+    42.111083984375,
+    44.01557922363281,
+    45.97764587402344,
+    46.32404708862305,
+    46.53421401977539,
+    48.06681823730469,
+    49.55126953125,
+    49.62620162963867,
+    49.665164947509766,
+    51.23001480102539
+   ],
+   "p_target": [
+    0.9991077780723572,
+    0.9991862177848816,
+    0.999723494052887,
+    0.9999923706054688,
+    0.9624927043914795,
+    0.9999932050704956,
+    0.9999138116836548,
+    0.9786513447761536,
+    0.9999676942825317,
+    1.0,
+    0.9999949932098389,
+    0.9999998807907104,
+    0.9993630051612854,
+    0.990208625793457,
+    0.9992534518241882,
+    0.9924503564834595
+   ]
+  },
+  "dog_to_cat": {
+   "rule": "p_target(out)>=0.9 and p_source(in)>=0.5, lowest cost; filled by highest p_target if fewer than 16",
+   "n_qualifying": 296,
+   "idx": [
+    331,
+    122,
+    40,
+    196,
+    469,
+    307,
+    275,
+    53,
+    245,
+    143,
+    351,
+    347,
+    389,
+    325,
+    499,
+    461
+   ],
+   "cost": [
+    29.618492126464844,
+    31.516569137573242,
+    34.38087844848633,
+    37.40746307373047,
+    37.588844299316406,
+    37.79816436767578,
+    41.4071044921875,
+    44.33457946777344,
+    46.430877685546875,
+    48.201847076416016,
+    48.589656829833984,
+    50.19721603393555,
+    50.85262680053711,
+    52.605709075927734,
+    52.6885986328125,
+    57.94164276123047
+   ],
+   "p_target": [
+    0.999996542930603,
+    0.9934048056602478,
+    0.9994350075721741,
+    0.9957411289215088,
+    0.9317554235458374,
+    0.940521776676178,
+    0.9983086585998535,
+    0.9910966157913208,
+    0.9748572707176208,
+    0.9999628067016602,
+    0.9950835704803467,
+    0.9994184970855713,
+    0.9961997866630554,
+    0.9988486766815186,
+    0.9999997615814209,
+    0.9629976749420166
+   ]
+  }
+ },
+ "steering": {
+  "columns": [
+   {
+    "setting": "s*=0.2 w=0",
+    "valid_coupling": false,
+    "cost_mean": 9.720932006835938,
+    "cost_clamped_mean": 9.709639549255371,
+    "judge_dog_rate": 0.4375,
+    "judge_dog_mean_prob": 0.4457748830318451,
+    "n": 64
+   },
+   {
+    "setting": "s*=0.4 w=0",
+    "valid_coupling": false,
+    "cost_mean": 40.29081726074219,
+    "cost_clamped_mean": 40.197227478027344,
+    "judge_dog_rate": 0.6875,
+    "judge_dog_mean_prob": 0.6827008724212646,
+    "n": 64
+   },
+   {
+    "setting": "s*=0.6 w=0",
+    "valid_coupling": false,
+    "cost_mean": 75.68470764160156,
+    "cost_clamped_mean": 75.54228210449219,
+    "judge_dog_rate": 0.828125,
+    "judge_dog_mean_prob": 0.8005579710006714,
+    "n": 64
+   },
+   {
+    "setting": "s*=0.8 w=0",
+    "valid_coupling": false,
+    "cost_mean": 98.77462768554688,
+    "cost_clamped_mean": 98.5926742553711,
+    "judge_dog_rate": 0.828125,
+    "judge_dog_mean_prob": 0.8238906264305115,
+    "n": 64
+   },
+   {
+    "setting": "s*=1.0 w=0",
+    "valid_coupling": true,
+    "cost_mean": 117.50232696533203,
+    "cost_clamped_mean": 117.24528503417969,
+    "judge_dog_rate": 0.8125,
+    "judge_dog_mean_prob": 0.7994945049285889,
+    "n": 64
+   },
+   {
+    "setting": "s*=1.0 w=0.25",
+    "valid_coupling": false,
+    "cost_mean": 173.41970825195312,
+    "cost_clamped_mean": 172.84666442871094,
+    "judge_dog_rate": 0.890625,
+    "judge_dog_mean_prob": 0.8864824771881104,
+    "n": 64
+   },
+   {
+    "setting": "s*=1.0 w=0.5",
+    "valid_coupling": false,
+    "cost_mean": 237.29458618164062,
+    "cost_clamped_mean": 236.09500122070312,
+    "judge_dog_rate": 0.953125,
+    "judge_dog_mean_prob": 0.954187273979187,
+    "n": 64
+   },
+   {
+    "setting": "s*=1.0 w=1.0",
+    "valid_coupling": false,
+    "cost_mean": 386.81939697265625,
+    "cost_clamped_mean": 382.69085693359375,
+    "judge_dog_rate": 0.984375,
+    "judge_dog_mean_prob": 0.9815418720245361,
+    "n": 64
+   }
+  ],
+  "n_images": 64,
+  "guidance": "decode with (1+w) s_dog - w s_cat (tilted law, NOT nu)",
+  "partial": "encode with cat model to s*, decode with dog model from s* (NOT a coupling for s*<1)"
+ },
+ "same_noise": {
+  "scratch_cat_vs_scratch_dog": {
+   "n": 256,
+   "matched_cost_mean": 115.6846923828125,
+   "mismatched_cost_mean": 1620.909912109375,
+   "frac_both_correct_class": 0.68359375,
+   "matched_over_mismatched": 0.07137021713456361
+  },
+  "finetuned_cat_vs_finetuned_dog": {
+   "n": 512,
+   "matched_cost_mean": 89.14707946777344,
+   "mismatched_cost_mean": 1525.708984375,
+   "frac_both_correct_class": 0.638671875,
+   "matched_over_mismatched": 0.058429936757757345
+  },
+  "scratch_cat_vs_finetuned_cat": {
+   "n": 256,
+   "matched_cost_mean": 76.48149108886719,
+   "mismatched_cost_mean": 1598.4134521484375,
+   "frac_both_correct_class": 0.7109375,
+   "matched_over_mismatched": 0.04784837801888362
+  },
+  "scratch_dog_vs_finetuned_dog": {
+   "n": 256,
+   "matched_cost_mean": 72.67395782470703,
+   "mismatched_cost_mean": 1454.05078125,
+   "frac_both_correct_class": 0.734375,
+   "matched_over_mismatched": 0.04998034371415254
+  }
+ },
+ "minutes": 7.008658587932587
+}

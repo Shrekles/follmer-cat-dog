@@ -1,0 +1,203 @@
+{
+ "container_minutes": 41.72969267765681,
+ "results": [
+  {
+   "task": "chain_resume dog",
+   "sub": [
+    {
+     "task": "train dog",
+     "init": "iter04/dog_s12386.pth",
+     "step0": 12386,
+     "steps": 10311,
+     "images_seen": 2639616,
+     "epochs": 527.9232,
+     "n_params": 9864771,
+     "loss_log": [
+      [
+       500,
+       0.030171101354062556,
+       1.957867733637492
+      ],
+      [
+       1000,
+       0.03034816011786461,
+       3.8896226127942404
+      ],
+      [
+       1500,
+       0.02968637701123953,
+       5.851857578754425
+      ],
+      [
+       2000,
+       0.02888007406145334,
+       7.7834763646125795
+      ],
+      [
+       2500,
+       0.02906074672937393,
+       9.713569927215577
+      ],
+      [
+       3000,
+       0.028096279129385948,
+       11.677778963247935
+      ],
+      [
+       3500,
+       0.028142949938774107,
+       13.609331905841827
+      ],
+      [
+       4000,
+       0.02862326204776764,
+       15.53957345088323
+      ],
+      [
+       4500,
+       0.028013524040579794,
+       17.471322778860728
+      ],
+      [
+       5000,
+       0.028573142364621162,
+       19.4020308415095
+      ],
+      [
+       5500,
+       0.030290675722062586,
+       21.37978262901306
+      ],
+      [
+       6000,
+       0.030820145457983016,
+       23.312717938423155
+      ],
+      [
+       6500,
+       0.027919334731996058,
+       25.243570959568025
+      ],
+      [
+       7000,
+       0.030550056137144566,
+       27.17380562623342
+      ],
+      [
+       7500,
+       0.03094845376908779,
+       29.10507978995641
+      ],
+      [
+       8000,
+       0.029070945270359517,
+       31.07779406309128
+      ],
+      [
+       8500,
+       0.029427524469792844,
+       33.00933654705683
+      ],
+      [
+       9000,
+       0.028957463800907135,
+       34.939689576625824
+      ],
+      [
+       9500,
+       0.030092388205230237,
+       36.8701474905014
+      ],
+      [
+       10000,
+       0.026857160963118076,
+       38.80336388349533
+      ]
+     ],
+     "snapshots": [
+      {
+       "step": 14961,
+       "path": "iter04/dog_s14961.pth",
+       "minutes": 57.503796235720316
+      },
+      {
+       "step": 17541,
+       "path": "iter04/dog_s17541.pth",
+       "minutes": 67.5015065352122
+      },
+      {
+       "step": 20119,
+       "path": "iter04/dog_s20119.pth",
+       "minutes": 77.50506755510966
+      },
+      {
+       "step": 22697,
+       "path": "iter04/dog_s22697.pth",
+       "minutes": 87.50512030522029
+      }
+     ],
+     "it_per_s": 4.295860109048561,
+     "peak_mem_gb": 6.203903675079346,
+     "minutes": 40.00363038778305
+    },
+    {
+     "task": "snap_eval dog",
+     "pick": {
+      "name": "dog_s20119",
+      "ckpt": "iter04/dog_s20119.pth",
+      "prior_file": "/vol/iter04/prior_dog_s20119.pt",
+      "rule": "lowest KID among snapshots with memo ratio >= 0.5",
+      "candidates": [
+       "dog_s14961",
+       "dog_s17541",
+       "dog_s20119",
+       "dog_s22697"
+      ]
+     },
+     "minutes": 1.5512682835261027,
+     "downloads": [
+      "iter04/prior_dog_s14961_big.png",
+      "iter04/prior_dog_s14961_lowest_ptarget_big.png",
+      "iter04/prior_dog_s17541_big.png",
+      "iter04/prior_dog_s17541_lowest_ptarget_big.png",
+      "iter04/prior_dog_s20119_big.png",
+      "iter04/prior_dog_s20119_lowest_ptarget_big.png",
+      "iter04/prior_dog_s22697_big.png",
+      "iter04/prior_dog_s22697_lowest_ptarget_big.png",
+      "iter04/snapstats_dog_resume.json",
+      "iter04/memo_dog_resume.json"
+     ]
+    }
+   ],
+   "pick": {
+    "name": "dog_s20119",
+    "ckpt": "iter04/dog_s20119.pth",
+    "prior_file": "/vol/iter04/prior_dog_s20119.pt",
+    "rule": "lowest KID among snapshots with memo ratio >= 0.5",
+    "candidates": [
+     "dog_s12386",
+     "dog_s14961",
+     "dog_s17541",
+     "dog_s20119",
+     "dog_s22697",
+     "dog_s3108",
+     "dog_s6195"
+    ]
+   },
+   "downloads": [
+    "iter04/prior_dog_s14961_big.png",
+    "iter04/prior_dog_s14961_lowest_ptarget_big.png",
+    "iter04/prior_dog_s17541_big.png",
+    "iter04/prior_dog_s17541_lowest_ptarget_big.png",
+    "iter04/prior_dog_s20119_big.png",
+    "iter04/prior_dog_s20119_lowest_ptarget_big.png",
+    "iter04/prior_dog_s22697_big.png",
+    "iter04/prior_dog_s22697_lowest_ptarget_big.png",
+    "iter04/snapstats_dog_resume.json",
+    "iter04/memo_dog_resume.json",
+    "iter04/snapstats_dog_all.json"
+   ],
+   "minutes": 41.72834677696228
+  }
+ ]
+}
