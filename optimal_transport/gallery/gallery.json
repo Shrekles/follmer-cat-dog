@@ -1,0 +1,218 @@
+[
+ {
+  "direction": "cat_to_dog",
+  "model": "fine-tuned",
+  "test_index": 455,
+  "cost": 30.3,
+  "p_tgt": 1.0,
+  "p_src_out": 0.0,
+  "p_src_in": 0.999
+ },
+ {
+  "direction": "cat_to_dog",
+  "model": "fine-tuned",
+  "test_index": 283,
+  "cost": 31.5,
+  "p_tgt": 1.0,
+  "p_src_out": 0.0,
+  "p_src_in": 1.0
+ },
+ {
+  "direction": "cat_to_dog",
+  "model": "fine-tuned",
+  "test_index": 305,
+  "cost": 36.1,
+  "p_tgt": 0.987,
+  "p_src_out": 0.013,
+  "p_src_in": 0.994
+ },
+ {
+  "direction": "cat_to_dog",
+  "model": "fine-tuned",
+  "test_index": 103,
+  "cost": 36.8,
+  "p_tgt": 1.0,
+  "p_src_out": 0.0,
+  "p_src_in": 1.0
+ },
+ {
+  "direction": "cat_to_dog",
+  "model": "fine-tuned",
+  "test_index": 20,
+  "cost": 37.4,
+  "p_tgt": 1.0,
+  "p_src_out": 0.0,
+  "p_src_in": 0.904
+ },
+ {
+  "direction": "cat_to_dog",
+  "model": "fine-tuned",
+  "test_index": 340,
+  "cost": 40.3,
+  "p_tgt": 0.986,
+  "p_src_out": 0.014,
+  "p_src_in": 1.0
+ },
+ {
+  "direction": "cat_to_dog",
+  "model": "fine-tuned",
+  "test_index": 499,
+  "cost": 43.7,
+  "p_tgt": 1.0,
+  "p_src_out": 0.0,
+  "p_src_in": 1.0
+ },
+ {
+  "direction": "cat_to_dog",
+  "model": "fine-tuned",
+  "test_index": 52,
+  "cost": 39.7,
+  "p_tgt": 1.0,
+  "p_src_out": 0.0,
+  "p_src_in": 1.0
+ },
+ {
+  "direction": "cat_to_dog",
+  "model": "from scratch",
+  "test_index": 317,
+  "cost": 50.3,
+  "p_tgt": 1.0,
+  "p_src_out": 0.0,
+  "p_src_in": 1.0
+ },
+ {
+  "direction": "cat_to_dog",
+  "model": "from scratch",
+  "test_index": 133,
+  "cost": 45.3,
+  "p_tgt": 1.0,
+  "p_src_out": 0.0,
+  "p_src_in": 1.0
+ },
+ {
+  "direction": "cat_to_dog",
+  "model": "from scratch",
+  "test_index": 217,
+  "cost": 39.9,
+  "p_tgt": 0.991,
+  "p_src_out": 0.004,
+  "p_src_in": 0.944
+ },
+ {
+  "direction": "cat_to_dog",
+  "model": "from scratch",
+  "test_index": 349,
+  "cost": 45.0,
+  "p_tgt": 1.0,
+  "p_src_out": 0.0,
+  "p_src_in": 1.0
+ },
+ {
+  "direction": "dog_to_cat",
+  "model": "fine-tuned",
+  "test_index": 307,
+  "cost": 34.3,
+  "p_tgt": 1.0,
+  "p_src_out": 0.0,
+  "p_src_in": 1.0
+ },
+ {
+  "direction": "dog_to_cat",
+  "model": "fine-tuned",
+  "test_index": 331,
+  "cost": 37.2,
+  "p_tgt": 1.0,
+  "p_src_out": 0.0,
+  "p_src_in": 0.999
+ },
+ {
+  "direction": "dog_to_cat",
+  "model": "fine-tuned",
+  "test_index": 377,
+  "cost": 37.2,
+  "p_tgt": 0.995,
+  "p_src_out": 0.003,
+  "p_src_in": 1.0
+ },
+ {
+  "direction": "dog_to_cat",
+  "model": "fine-tuned",
+  "test_index": 261,
+  "cost": 30.9,
+  "p_tgt": 1.0,
+  "p_src_out": 0.0,
+  "p_src_in": 1.0
+ },
+ {
+  "direction": "dog_to_cat",
+  "model": "fine-tuned",
+  "test_index": 104,
+  "cost": 39.5,
+  "p_tgt": 1.0,
+  "p_src_out": 0.0,
+  "p_src_in": 0.995
+ },
+ {
+  "direction": "dog_to_cat",
+  "model": "fine-tuned",
+  "test_index": 347,
+  "cost": 37.9,
+  "p_tgt": 0.998,
+  "p_src_out": 0.002,
+  "p_src_in": 1.0
+ },
+ {
+  "direction": "dog_to_cat",
+  "model": "fine-tuned",
+  "test_index": 143,
+  "cost": 33.4,
+  "p_tgt": 0.999,
+  "p_src_out": 0.001,
+  "p_src_in": 0.996
+ },
+ {
+  "direction": "dog_to_cat",
+  "model": "from scratch",
+  "test_index": 187,
+  "cost": 63.9,
+  "p_tgt": 1.0,
+  "p_src_out": 0.0,
+  "p_src_in": 0.95
+ },
+ {
+  "direction": "dog_to_cat",
+  "model": "from scratch",
+  "test_index": 120,
+  "cost": 73.1,
+  "p_tgt": 1.0,
+  "p_src_out": 0.0,
+  "p_src_in": 0.993
+ },
+ {
+  "direction": "dog_to_cat",
+  "model": "from scratch",
+  "test_index": 413,
+  "cost": 68.0,
+  "p_tgt": 0.999,
+  "p_src_out": 0.0,
+  "p_src_in": 1.0
+ },
+ {
+  "direction": "dog_to_cat",
+  "model": "from scratch",
+  "test_index": 363,
+  "cost": 63.7,
+  "p_tgt": 1.0,
+  "p_src_out": 0.0,
+  "p_src_in": 1.0
+ },
+ {
+  "direction": "dog_to_cat",
+  "model": "from scratch",
+  "test_index": 499,
+  "cost": 42.7,
+  "p_tgt": 1.0,
+  "p_src_out": 0.0,
+  "p_src_in": 1.0
+ }
+]

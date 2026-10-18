@@ -63,6 +63,10 @@ first 512 test images:
 
 ## 4. Gallery: most striking pairs
 
+A curated 24-pair gallery, chosen by judge scores plus inspection at 5× zoom, is in
+[`gallery/`](gallery/README.md) (`gallery_cat_to_dog.png`, `gallery_dog_to_cat.png`).
+The table below is the validator's earlier selection.
+
 Selected by the validator agent. Figures are in `iterations/`.
 
 | # | Pair | Figure |
